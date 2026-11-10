@@ -16,8 +16,8 @@ export function About({ onBack }: { onBack: () => void }) {
           <dd>close your eyes</dd>
           <dt>mouse</dt>
           <dd>click any time</dd>
-          <dt>privacy</dt>
-          <dd>video never leaves your device</dd>
+          <dt>local</dt>
+          <dd>everything runs on your device, there is no server and your video never leaves it</dd>
         </dl>
         <nav>
           <a href="https://devpost.com/software/eyedecide-4dwxhn" target="_blank" rel="noreferrer">

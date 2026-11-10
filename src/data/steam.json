@@ -1,0 +1,389 @@
+{
+ "source": "SteamCharts",
+ "asOf": "Nov 2026",
+ "decks": [
+  {
+   "id": "steam",
+   "items": [
+    {
+     "name": "Counter-Strike 2",
+     "value": 1818368,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/162664aa5da85f418105350c5d67ca565f6c3713/header.jpg",
+     "sub": "Peak March 2025"
+    },
+    {
+     "name": "Dota 2",
+     "value": 1291328,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/header.jpg",
+     "sub": "Peak March 2016"
+    },
+    {
+     "name": "PUBG",
+     "value": 3236027,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578080/841ea38bc58cabb70aef65365cf50bc2d79329d9/header.jpg",
+     "sub": "Peak January 2018"
+    },
+    {
+     "name": "Black Myth: Wukong",
+     "value": 2406967,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg",
+     "sub": "Peak August 2024"
+    },
+    {
+     "name": "Palworld",
+     "value": 2101535,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/6912f19c43a95ff5fe514eedd35e68bf12335459/header.jpg",
+     "sub": "Peak January 2024"
+    },
+    {
+     "name": "Cyberpunk 2077",
+     "value": 830387,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/48a93d6445a67520ea49833c93dae8f2e68fc540/header_alt_assets_9.jpg",
+     "sub": "Peak December 2020"
+    },
+    {
+     "name": "Elden Ring",
+     "value": 952523,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg",
+     "sub": "Peak March 2022"
+    },
+    {
+     "name": "Lost Ark",
+     "value": 1324761,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1599340/header.jpg",
+     "sub": "Peak February 2022"
+    },
+    {
+     "name": "New World: Aeternum",
+     "value": 913027,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1063730/bd98bbdc4fdf388d07afa6ec8d781cb863bccfb0/header.jpg",
+     "sub": "Peak October 2021"
+    },
+    {
+     "name": "Monster Hunter Wilds",
+     "value": 1179869,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2246340/header.jpg",
+     "sub": "Peak March 2025"
+    },
+    {
+     "name": "GTA V",
+     "value": 360761,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg",
+     "sub": "Peak April 2015"
+    },
+    {
+     "name": "Apex Legends",
+     "value": 624473,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/4219c147f1e094297c726d537518babba7f3ae2d/header.jpg",
+     "sub": "Peak February 2023"
+    },
+    {
+     "name": "Rust",
+     "value": 259646,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/header.jpg",
+     "sub": "Peak January 2025"
+    },
+    {
+     "name": "Team Fortress 2",
+     "value": 253225,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/440/header.jpg",
+     "sub": "Peak July 2023"
+    },
+    {
+     "name": "Garry's Mod",
+     "value": 73750,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg",
+     "sub": "Peak January 2015"
+    },
+    {
+     "name": "Terraria",
+     "value": 486918,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg",
+     "sub": "Peak May 2020"
+    },
+    {
+     "name": "The Witcher 3",
+     "value": 137043,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/4b5b1ba5061b8a992cc69ac58b4245434edb4296/header.jpg",
+     "sub": "Peak Nov 2026"
+    },
+    {
+     "name": "Baldur's Gate 3",
+     "value": 875343,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg",
+     "sub": "Peak August 2023"
+    },
+    {
+     "name": "HELLDIVERS 2",
+     "value": 458208,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/850e2f9e5bb15c5706bb9a1edc832f4f782e8be5/header.jpg",
+     "sub": "Peak February 2024"
+    },
+    {
+     "name": "Dead by Daylight",
+     "value": 168845,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/381210/header.jpg",
+     "sub": "Peak June 2026"
+    },
+    {
+     "name": "Rainbow Six Siege",
+     "value": 200476,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/1c7b1ea3405a69c54429e2aa3dc31f3cbbeaa456/header_alt_assets_28.jpg",
+     "sub": "Peak March 2024"
+    },
+    {
+     "name": "Battlefield 2042",
+     "value": 107006,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1517290/header.jpg",
+     "sub": "Peak October 2023"
+    },
+    {
+     "name": "Warframe",
+     "value": 181509,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/230410/1a3e7c2a05ce4e5cad5ac4c7e858cf5b0934704e/header.jpg",
+     "sub": "Peak July 2021"
+    },
+    {
+     "name": "War Thunder",
+     "value": 125317,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236390/38881c549e623fe432af4e7b4bc3952b443906f5/header.jpg",
+     "sub": "Peak April 2026"
+    },
+    {
+     "name": "Marvel Rivals",
+     "value": 642333,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2767030/c61f65c5968af5d85b0393005991ecee0184fcaf/header.jpg",
+     "sub": "Peak January 2025"
+    },
+    {
+     "name": "Lethal Company",
+     "value": 239369,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1966720/header.jpg",
+     "sub": "Peak December 2023"
+    },
+    {
+     "name": "Valheim",
+     "value": 498478,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/892970/df65cafab20dae97a243c7cc988e8bf959e4b906/header.jpg",
+     "sub": "Peak February 2021"
+    },
+    {
+     "name": "Among Us",
+     "value": 438524,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/d611f3f87743b5121532023b1d3ee2dd0e96e772/header.jpg",
+     "sub": "Peak September 2020"
+    },
+    {
+     "name": "Hades",
+     "value": 54015,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg",
+     "sub": "Peak May 2024"
+    },
+    {
+     "name": "Stardew Valley",
+     "value": 236614,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg",
+     "sub": "Peak March 2024"
+    },
+    {
+     "name": "Naraka: Bladepoint",
+     "value": 385770,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1203220/5857b2eed59cad31bea023c1b59fbb7c7064e222/header.jpg",
+     "sub": "Peak July 2024"
+    },
+    {
+     "name": "Skyrim Special Edition",
+     "value": 69777,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/489830/header.jpg",
+     "sub": "Peak October 2016"
+    },
+    {
+     "name": "Skyrim",
+     "value": 90780,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/72850/header.jpg",
+     "sub": "Peak April 2015"
+    },
+    {
+     "name": "Civilization V",
+     "value": 91020,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/8930/header.jpg",
+     "sub": "Peak July 2013"
+    },
+    {
+     "name": "Civilization VI",
+     "value": 162314,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/header.jpg",
+     "sub": "Peak October 2016"
+    },
+    {
+     "name": "Starfield",
+     "value": 330597,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1716740/header.jpg",
+     "sub": "Peak September 2023"
+    },
+    {
+     "name": "Red Dead Redemption 2",
+     "value": 99759,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg",
+     "sub": "Peak February 2025"
+    },
+    {
+     "name": "Monster Hunter: World",
+     "value": 329333,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/header.jpg",
+     "sub": "Peak August 2018"
+    },
+    {
+     "name": "God of War",
+     "value": 73529,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1593500/header.jpg",
+     "sub": "Peak January 2022"
+    },
+    {
+     "name": "Hollow Knight",
+     "value": 95428,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/3c3489495136b26b34f8a9543c7f5645b99d388c/header.jpg",
+     "sub": "Peak September 2025"
+    },
+    {
+     "name": "Hollow Knight: Silksong",
+     "value": 462134,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/7983574d464e6559ac7e24275727f73a8bcca1f3/header.jpg",
+     "sub": "Peak September 2025"
+    },
+    {
+     "name": "ARC Raiders",
+     "value": 465097,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1808500/41ee6c5c81a5797132879892586465b917acc563/header_alt_assets_9.jpg",
+     "sub": "Peak January 2026"
+    },
+    {
+     "name": "It Takes Two",
+     "value": 69976,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/header.jpg",
+     "sub": "Peak December 2024"
+    },
+    {
+     "name": "Sons Of The Forest",
+     "value": 411804,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1326470/header.jpg",
+     "sub": "Peak Nov 2026"
+    },
+    {
+     "name": "The Finals",
+     "value": 242399,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2073850/4b0efa1275c8cedc030209eb174af726a5ca1776/header.jpg",
+     "sub": "Peak December 2023"
+    },
+    {
+     "name": "Halo Infinite",
+     "value": 256619,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1240440/2262ffb4f1659df1c1cbf2c70af40560b4fa12e4/header.jpg",
+     "sub": "Peak November 2021"
+    },
+    {
+     "name": "ARK: Survival Ascended",
+     "value": 98047,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2399830/d934813ca531af0fce69fe36bc972f1c90d1aa19/header.jpg",
+     "sub": "Peak October 2023"
+    },
+    {
+     "name": "ARK: Survival Evolved",
+     "value": 247292,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/346110/header.jpg",
+     "sub": "Peak June 2022"
+    },
+    {
+     "name": "Hunt: Showdown",
+     "value": 59968,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/594650/8cf55bcd74fc14c93f3a9cc7d0a442afabab6f88/header_alt_assets_29.jpg",
+     "sub": "Peak August 2024"
+    },
+    {
+     "name": "Ready or Not",
+     "value": 55174,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1144200/2b44644b033a996a9efb95051bb01809215d0d23/header.jpg",
+     "sub": "Peak December 2023"
+    },
+    {
+     "name": "Overwatch",
+     "value": 164636,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/5c208b2699cd38ed6125d039be388fa744db54a4/header_alt_assets_23.jpg",
+     "sub": "Peak February 2026"
+    },
+    {
+     "name": "Delta Force",
+     "value": 246418,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2507950/cea88d74c3fd2cd872e83dab8be8b7557ae9dc48/header.jpg",
+     "sub": "Peak September 2025"
+    },
+    {
+     "name": "Schedule I",
+     "value": 455652,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3164500/header.jpg",
+     "sub": "Peak April 2025"
+    },
+    {
+     "name": "PEAK",
+     "value": 169910,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/31bac6b2eccf09b368f5e95ce510bae2baf3cfcd/header.jpg",
+     "sub": "Peak August 2025"
+    },
+    {
+     "name": "Phasmophobia",
+     "value": 112241,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/739630/c227a2855aba60f3657bc0c3a46515b8c41fb2b6/header.jpg",
+     "sub": "Peak October 2020"
+    },
+    {
+     "name": "Portal 2",
+     "value": 14984,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620/faffc0f560786e2f05104a8d2fac837c6969bf13/header.jpg",
+     "sub": "Peak June 2017"
+    },
+    {
+     "name": "Half-Life 2",
+     "value": 64085,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220/header.jpg",
+     "sub": "Peak November 2024"
+    },
+    {
+     "name": "Left 4 Dead 2",
+     "value": 161590,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/header.jpg",
+     "sub": "Peak December 2013"
+    },
+    {
+     "name": "Fallout 4",
+     "value": 471955,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg",
+     "sub": "Peak November 2015"
+    },
+    {
+     "name": "Cities: Skylines",
+     "value": 57421,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/header.jpg",
+     "sub": "Peak March 2015"
+    },
+    {
+     "name": "Split Fiction",
+     "value": 258641,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2001120/header.jpg",
+     "sub": "Peak March 2025"
+    },
+    {
+     "name": "Enshrouded",
+     "value": 160361,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1203620/98ca939f51b39bdd41e0e9198a9ccf8421148770/header_alt_assets_2.jpg",
+     "sub": "Peak January 2024"
+    },
+    {
+     "name": "R.E.P.O.",
+     "value": 266908,
+     "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3241660/62177765c05399116f0453fe1177b00ceed698c4/header_alt_assets_3.jpg",
+     "sub": "Peak March 2025"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+node_modules
+dist
+# copied from node_modules on install / fetched on demand
+public/mediapipe
+public/models
+.DS_Store
+*.log
+coverage
+.vite

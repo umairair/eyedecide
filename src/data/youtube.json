@@ -1,0 +1,569 @@
+{
+ "source": "YouTube",
+ "asOf": "Nov 2026",
+ "decks": [
+  {
+   "id": "youtube",
+   "items": [
+    {
+     "name": "Despacito",
+     "value": 9168939294,
+     "sub": "Luis Fonsi",
+     "images": [
+      "https://i.ytimg.com/vi/kJQP7kiw5Fk/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/kJQP7kiw5Fk/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Baby Shark Dance",
+     "value": 17537600979,
+     "sub": "Pinkfong",
+     "images": [
+      "https://i.ytimg.com/vi/XqZsoesa55w/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/XqZsoesa55w/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Gangnam Style",
+     "value": 6122278720,
+     "sub": "PSY",
+     "images": [
+      "https://i.ytimg.com/vi/9bZkp7q19f0/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Never Gonna Give You Up",
+     "value": 1835506172,
+     "sub": "Rick Astley",
+     "images": [
+      "https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Shape of You",
+     "value": 6840996641,
+     "sub": "Ed Sheeran",
+     "images": [
+      "https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "See You Again",
+     "value": 7137824558,
+     "sub": "Wiz Khalifa",
+     "images": [
+      "https://i.ytimg.com/vi/RgKAFK5djSk/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/RgKAFK5djSk/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Uptown Funk",
+     "value": 5936632290,
+     "sub": "Mark Ronson",
+     "images": [
+      "https://i.ytimg.com/vi/OPf0YbXqDm0/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/OPf0YbXqDm0/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Counting Stars",
+     "value": 4551793879,
+     "sub": "OneRepublic",
+     "images": [
+      "https://i.ytimg.com/vi/hT_nvWreIhg/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/hT_nvWreIhg/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Roar",
+     "value": 4400558415,
+     "sub": "Katy Perry",
+     "images": [
+      "https://i.ytimg.com/vi/CevxZvSJLk8/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/CevxZvSJLk8/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Sorry",
+     "value": 4177057897,
+     "sub": "Justin Bieber",
+     "images": [
+      "https://i.ytimg.com/vi/fRh_vgS2dFE/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/fRh_vgS2dFE/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Sugar",
+     "value": 4448228886,
+     "sub": "Maroon 5",
+     "images": [
+      "https://i.ytimg.com/vi/09R8_2nJtjg/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/09R8_2nJtjg/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Dark Horse",
+     "value": 4273247220,
+     "sub": "Katy Perry",
+     "images": [
+      "https://i.ytimg.com/vi/0KSOMA3QBU0/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/0KSOMA3QBU0/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Faded",
+     "value": 4060482862,
+     "sub": "Alan Walker",
+     "images": [
+      "https://i.ytimg.com/vi/60ItHLz5WEA/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/60ItHLz5WEA/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Let Her Go",
+     "value": 4177786770,
+     "sub": "Passenger",
+     "images": [
+      "https://i.ytimg.com/vi/RBumgq5yVrA/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/RBumgq5yVrA/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Lean On",
+     "value": 3987963941,
+     "sub": "Major Lazer",
+     "images": [
+      "https://i.ytimg.com/vi/YqeW9_5kURI/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/YqeW9_5kURI/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Waka Waka",
+     "value": 4815132328,
+     "sub": "Shakira",
+     "images": [
+      "https://i.ytimg.com/vi/pRpeEdMmmQ0/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/pRpeEdMmmQ0/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Perfect",
+     "value": 4258961227,
+     "sub": "Ed Sheeran",
+     "images": [
+      "https://i.ytimg.com/vi/2Vv-BfVoq4g/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Axel F",
+     "value": 6285795465,
+     "sub": "Crazy Frog",
+     "images": [
+      "https://i.ytimg.com/vi/k85mRPqvMbE/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/k85mRPqvMbE/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Me at the zoo",
+     "value": 448119254,
+     "sub": "Jawed Karim",
+     "images": [
+      "https://i.ytimg.com/vi/jNQXAC9IVRw/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Charlie Bit My Finger",
+     "value": 889585786,
+     "sub": "Viral, 2007",
+     "images": [
+      "https://i.ytimg.com/vi/_OBlgSz8sSM/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Evolution of Dance",
+     "value": 315866489,
+     "sub": "Judson Laipply",
+     "images": [
+      "https://i.ytimg.com/vi/dMH0bHeiRNg/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Sweet Child O' Mine",
+     "value": 2030998721,
+     "sub": "Guns N' Roses",
+     "images": [
+      "https://i.ytimg.com/vi/1w7OgIMMRc4/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/1w7OgIMMRc4/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Bohemian Rhapsody",
+     "value": 2115203111,
+     "sub": "Queen",
+     "images": [
+      "https://i.ytimg.com/vi/fJ9rUzIMcZQ/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Smells Like Teen Spirit",
+     "value": 2272134113,
+     "sub": "Nirvana",
+     "images": [
+      "https://i.ytimg.com/vi/hTWKbfoikeg/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/hTWKbfoikeg/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Sandstorm",
+     "value": 324032941,
+     "sub": "Darude",
+     "images": [
+      "https://i.ytimg.com/vi/y6120QOlsfU/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "HEYYEYAAEYAAAEYAEYAA",
+     "value": 233491928,
+     "sub": "Viral, 2005",
+     "images": [
+      "https://i.ytimg.com/vi/ZZ5LpwO-An4/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "All Star",
+     "value": 570571359,
+     "sub": "Smash Mouth",
+     "images": [
+      "https://i.ytimg.com/vi/L_jWHffIx5E/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/L_jWHffIx5E/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Trololo",
+     "value": 41688265,
+     "sub": "Eduard Khil",
+     "images": [
+      "https://i.ytimg.com/vi/oavMtUWDBTM/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "I Want It That Way",
+     "value": 1832524014,
+     "sub": "Backstreet Boys",
+     "images": [
+      "https://i.ytimg.com/vi/4fndeDfaWCg/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/4fndeDfaWCg/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Without Me",
+     "value": 2494049315,
+     "sub": "Eminem",
+     "images": [
+      "https://i.ytimg.com/vi/YVkUvmDQ3HY/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/YVkUvmDQ3HY/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Love the Way You Lie",
+     "value": 3225859574,
+     "sub": "Eminem",
+     "images": [
+      "https://i.ytimg.com/vi/uelHwf8o7_U/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/uelHwf8o7_U/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Blank Space",
+     "value": 3879743280,
+     "sub": "Taylor Swift",
+     "images": [
+      "https://i.ytimg.com/vi/e-ORhEE9VVg/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/e-ORhEE9VVg/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Shake It Off",
+     "value": 3749650032,
+     "sub": "Taylor Swift",
+     "images": [
+      "https://i.ytimg.com/vi/nfWlot6h_JM/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/nfWlot6h_JM/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Baby",
+     "value": 3793261361,
+     "sub": "Justin Bieber",
+     "images": [
+      "https://i.ytimg.com/vi/kffacxfA7G4/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/kffacxfA7G4/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Thinking Out Loud",
+     "value": 4061476900,
+     "sub": "Ed Sheeran",
+     "images": [
+      "https://i.ytimg.com/vi/lp-EO5I60KA/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/lp-EO5I60KA/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Mr. Brightside",
+     "value": 657482502,
+     "sub": "The Killers",
+     "images": [
+      "https://i.ytimg.com/vi/gGdGFtwCNBE/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/gGdGFtwCNBE/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Somebody That I Used to Know",
+     "value": 2736904057,
+     "sub": "Gotye",
+     "images": [
+      "https://i.ytimg.com/vi/8UVNT4wvIGY/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/8UVNT4wvIGY/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Party Rock Anthem",
+     "value": 2598595301,
+     "sub": "LMFAO",
+     "images": [
+      "https://i.ytimg.com/vi/KQ6zr6kCPj8/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/KQ6zr6kCPj8/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Someone Like You",
+     "value": 2598088650,
+     "sub": "Adele",
+     "images": [
+      "https://i.ytimg.com/vi/hLQl3WQQoQ0/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/hLQl3WQQoQ0/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Rolling in the Deep",
+     "value": 2951309535,
+     "sub": "Adele",
+     "images": [
+      "https://i.ytimg.com/vi/rYEDA3JcQqw/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/rYEDA3JcQqw/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Hello",
+     "value": 3287538415,
+     "sub": "Adele",
+     "images": [
+      "https://i.ytimg.com/vi/YQHsXMglC9A/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/YQHsXMglC9A/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Happy",
+     "value": 1585257980,
+     "sub": "Pharrell Williams",
+     "images": [
+      "https://i.ytimg.com/vi/ZbZSe6N_BXs/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/ZbZSe6N_BXs/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Closer",
+     "value": 3485821244,
+     "sub": "The Chainsmokers",
+     "images": [
+      "https://i.ytimg.com/vi/PT2_F-1esPk/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/PT2_F-1esPk/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Diamonds",
+     "value": 2643163749,
+     "sub": "Rihanna",
+     "images": [
+      "https://i.ytimg.com/vi/lWA2pjMjpBs/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/lWA2pjMjpBs/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Numb",
+     "value": 2826984907,
+     "sub": "Linkin Park",
+     "images": [
+      "https://i.ytimg.com/vi/kXYiU_JCYtU/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/kXYiU_JCYtU/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "In the End",
+     "value": 2377207595,
+     "sub": "Linkin Park",
+     "images": [
+      "https://i.ytimg.com/vi/eVTXPUF4Oz4/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/eVTXPUF4Oz4/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Take On Me",
+     "value": 2530514893,
+     "sub": "a-ha",
+     "images": [
+      "https://i.ytimg.com/vi/djV11Xbc914/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/djV11Xbc914/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Billie Jean",
+     "value": 2380439082,
+     "sub": "Michael Jackson",
+     "images": [
+      "https://i.ytimg.com/vi/Zi_XLOBDo_Y/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/Zi_XLOBDo_Y/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Thriller",
+     "value": 1217706839,
+     "sub": "Michael Jackson",
+     "images": [
+      "https://i.ytimg.com/vi/sOnqjkJTMaA/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/sOnqjkJTMaA/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "PPAP",
+     "value": 516347568,
+     "sub": "Pikotaro",
+     "images": [
+      "https://i.ytimg.com/vi/Ct6BUPvE2sM/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/Ct6BUPvE2sM/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Chandelier",
+     "value": 2960857448,
+     "sub": "Sia",
+     "images": [
+      "https://i.ytimg.com/vi/2vjPBrBU-TM/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/2vjPBrBU-TM/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Masha and the Bear",
+     "value": 4674257720,
+     "sub": "Animaccord",
+     "images": [
+      "https://i.ytimg.com/vi/KYniUCGPGLs/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/KYniUCGPGLs/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Bath Song",
+     "value": 7693163263,
+     "sub": "CoComelon",
+     "images": [
+      "https://i.ytimg.com/vi/WRVsOCh907o/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/WRVsOCh907o/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Wheels on the Bus",
+     "value": 9716427590,
+     "sub": "CoComelon",
+     "images": [
+      "https://i.ytimg.com/vi/e_04ZrNroTo/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/e_04ZrNroTo/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "All of Me",
+     "value": 2746373932,
+     "sub": "John Legend",
+     "images": [
+      "https://i.ytimg.com/vi/450p7goxZqg/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/450p7goxZqg/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Hymn for the Weekend",
+     "value": 2306173769,
+     "sub": "Coldplay",
+     "images": [
+      "https://i.ytimg.com/vi/YykjpeuMNEk/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/YykjpeuMNEk/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Paradise",
+     "value": 2110873763,
+     "sub": "Coldplay",
+     "images": [
+      "https://i.ytimg.com/vi/1G4isv_Fylg/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/1G4isv_Fylg/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Call Me Maybe",
+     "value": 1890113335,
+     "sub": "Carly Rae Jepsen",
+     "images": [
+      "https://i.ytimg.com/vi/fWNaR-rxAic/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/fWNaR-rxAic/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Stressed Out",
+     "value": 3285737087,
+     "sub": "twenty one pilots",
+     "images": [
+      "https://i.ytimg.com/vi/pXRviuL6vMY/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/pXRviuL6vMY/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Believer",
+     "value": 3074576211,
+     "sub": "Imagine Dragons",
+     "images": [
+      "https://i.ytimg.com/vi/7wtfhZwyrcc/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/7wtfhZwyrcc/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Radioactive",
+     "value": 1575955448,
+     "sub": "Imagine Dragons",
+     "images": [
+      "https://i.ytimg.com/vi/ktvTqknDobU/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/ktvTqknDobU/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "What Does the Fox Say?",
+     "value": 1211812058,
+     "sub": "Ylvis",
+     "images": [
+      "https://i.ytimg.com/vi/jofNR_WkoCE/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/jofNR_WkoCE/hqdefault.jpg"
+     ]
+    },
+    {
+     "name": "Muppets Bohemian Rhapsody",
+     "value": 200321277,
+     "sub": "The Muppets",
+     "images": [
+      "https://i.ytimg.com/vi/tgbNymZ7vqY/maxresdefault.jpg",
+      "https://i.ytimg.com/vi/tgbNymZ7vqY/hqdefault.jpg"
+     ]
+    }
+   ]
+  }
+ ]
+}

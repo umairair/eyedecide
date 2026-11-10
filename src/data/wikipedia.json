@@ -1,0 +1,341 @@
+{
+ "source": "Wikimedia Pageviews",
+ "asOf": "Nov 2025 to Oct 2026",
+ "decks": [
+  {
+   "id": "wikipedia",
+   "items": [
+    {
+     "name": "Cristiano Ronaldo",
+     "value": 1296651,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_%28cropped%29.jpg/960px-Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_%28cropped%29.jpg"
+    },
+    {
+     "name": "Taylor Swift",
+     "value": 564534,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png/960px-Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png"
+    },
+    {
+     "name": "Elon Musk",
+     "value": 722695,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Elon_Musk_-_54820081119_%283x4_cropped%2C_Rule_of_thirds%29.jpg/960px-Elon_Musk_-_54820081119_%283x4_cropped%2C_Rule_of_thirds%29.jpg"
+    },
+    {
+     "name": "Lionel Messi",
+     "value": 1276076,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg/960px-Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg"
+    },
+    {
+     "name": "Michael Jackson",
+     "value": 1403050,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Michael_Jackson_1983_%283x4_cropped%29_%28contrast%29.jpg/960px-Michael_Jackson_1983_%283x4_cropped%29_%28contrast%29.jpg"
+    },
+    {
+     "name": "Albert Einstein",
+     "value": 372971,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Albert_Einstein_Head_cleaned.jpg/960px-Albert_Einstein_Head_cleaned.jpg"
+    },
+    {
+     "name": "World War II",
+     "value": 720371,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Bundesarchiv_Bild_101I-646-5188-17%2C_Flugzeuge_Junkers_Ju_87.jpg"
+    },
+    {
+     "name": "The Beatles",
+     "value": 325353,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/The_Beatles_1963_Dezo_Hoffman_Capitol_Records_press_photo_2.jpg/960px-The_Beatles_1963_Dezo_Hoffman_Capitol_Records_press_photo_2.jpg"
+    },
+    {
+     "name": "Cat",
+     "value": 280722,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Siam_lilacpoint.jpg/960px-Siam_lilacpoint.jpg"
+    },
+    {
+     "name": "Dog",
+     "value": 168848,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Huskiesatrest.jpg/960px-Huskiesatrest.jpg"
+    },
+    {
+     "name": "Pizza",
+     "value": 49216,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/960px-Pizza-3007395.jpg"
+    },
+    {
+     "name": "Banana",
+     "value": 67948,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg"
+    },
+    {
+     "name": "Coffee",
+     "value": 56507,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Latte_and_dark_coffee.jpg/960px-Latte_and_dark_coffee.jpg"
+    },
+    {
+     "name": "Bitcoin",
+     "value": 111397,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/960px-Bitcoin.svg.png"
+    },
+    {
+     "name": "ChatGPT",
+     "value": 2565333,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/OpenAI_logo_2025_%28symbol%29.svg/960px-OpenAI_logo_2025_%28symbol%29.svg.png"
+    },
+    {
+     "name": "Pokémon",
+     "value": 122728,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/960px-International_Pok%C3%A9mon_logo.svg.png"
+    },
+    {
+     "name": "Harry Potter",
+     "value": 199139,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Harry_Potter_logo.svg/960px-Harry_Potter_logo.svg.png"
+    },
+    {
+     "name": "Titanic",
+     "value": 214885,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/RMS_Titanic_3_%28cropped_to_ship%29.jpg/960px-RMS_Titanic_3_%28cropped_to_ship%29.jpg"
+    },
+    {
+     "name": "Moon",
+     "value": 179723,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/960px-FullMoon2010.jpg"
+    },
+    {
+     "name": "Google",
+     "value": 709744,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Googleplex_HQ_%28cropped%29.jpg/960px-Googleplex_HQ_%28cropped%29.jpg"
+    },
+    {
+     "name": "LeBron James",
+     "value": 564433,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/LeBron_James_%2851959977144%29_%28cropped2%29.jpg/960px-LeBron_James_%2851959977144%29_%28cropped2%29.jpg"
+    },
+    {
+     "name": "Squid Game",
+     "value": 92832,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Squid_Game_2021_vector_logo_english.svg/960px-Squid_Game_2021_vector_logo_english.svg.png"
+    },
+    {
+     "name": "Sonic the Hedgehog",
+     "value": 68763,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Sonic_The_Hedgehog.svg/960px-Sonic_The_Hedgehog.svg.png"
+    },
+    {
+     "name": "Capybara",
+     "value": 113602,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Capybaracropped.jpg/960px-Capybaracropped.jpg"
+    },
+    {
+     "name": "Axolotl",
+     "value": 125237,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Axolotl_ganz.jpg/960px-Axolotl_ganz.jpg"
+    },
+    {
+     "name": "Platypus",
+     "value": 80500,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Duck-billed_platypus_%28Ornithorhynchus_anatinus%29_Scottsdale.jpg/960px-Duck-billed_platypus_%28Ornithorhynchus_anatinus%29_Scottsdale.jpg"
+    },
+    {
+     "name": "Naked mole-rat",
+     "value": 22723,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Webs180130-rat.jpg"
+    },
+    {
+     "name": "Turritopsis dohrnii",
+     "value": 34931,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Turritopsis_dohrnii.jpg"
+    },
+    {
+     "name": "Tardigrade",
+     "value": 81472,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/SEM_image_of_Milnesium_tardigradum_in_active_state_-_journal.pone.0045682.g001-2_%28white_background%29.png/960px-SEM_image_of_Milnesium_tardigradum_in_active_state_-_journal.pone.0045682.g001-2_%28white_background%29.png"
+    },
+    {
+     "name": "Mantis shrimp",
+     "value": 39331,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/OdontodactylusScyllarus2.jpg/960px-OdontodactylusScyllarus2.jpg"
+    },
+    {
+     "name": "Shoebill",
+     "value": 62002,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Balaeniceps_rex_-Ueno_Zoo%2C_Tokyo%2C_Japan-8a.jpg/960px-Balaeniceps_rex_-Ueno_Zoo%2C_Tokyo%2C_Japan-8a.jpg"
+    },
+    {
+     "name": "Goose",
+     "value": 23181,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Anser_anser_1_%28Piotr_Kuczynski%29_%28cropped%29.jpg/960px-Anser_anser_1_%28Piotr_Kuczynski%29_%28cropped%29.jpg"
+    },
+    {
+     "name": "Okapi",
+     "value": 42337,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Saint-Aignan_%28Loir-et-Cher%29._Okapi.jpg/960px-Saint-Aignan_%28Loir-et-Cher%29._Okapi.jpg"
+    },
+    {
+     "name": "Aye-aye",
+     "value": 20115,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Wild_aye_aye.jpg/960px-Wild_aye_aye.jpg"
+    },
+    {
+     "name": "Pink fairy armadillo",
+     "value": 9562,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Pink_Fairy_Armadillo_%28Chlamyphorus_truncatus%29.jpg/960px-Pink_Fairy_Armadillo_%28Chlamyphorus_truncatus%29.jpg"
+    },
+    {
+     "name": "Emu War",
+     "value": 71895,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/b/be/Deceased_emu_during_Emu_War.jpg"
+    },
+    {
+     "name": "Great Molasses Flood",
+     "value": 57039,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/BostonMolassesDisaster.jpg/960px-BostonMolassesDisaster.jpg"
+    },
+    {
+     "name": "Dancing plague of 1518",
+     "value": 50148,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Dancingplague2_%28alt%29.jpg/960px-Dancingplague2_%28alt%29.jpg"
+    },
+    {
+     "name": "Boaty McBoatface",
+     "value": 13868,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Drawing_of_BoatyMcBoatface.png/960px-Drawing_of_BoatyMcBoatface.png"
+    },
+    {
+     "name": "Tarrare",
+     "value": 41723,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/M%C3%A9moire_sur_la_polyphagie_I.jpg/960px-M%C3%A9moire_sur_la_polyphagie_I.jpg"
+    },
+    {
+     "name": "Year Without a Summer",
+     "value": 32584,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/1816_summer.png/960px-1816_summer.png"
+    },
+    {
+     "name": "Phineas Gage",
+     "value": 44445,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Phineas_Gage_Cased_Daguerreotype_WilgusPhoto2008-12-19_EnhancedRetouched_Color.jpg"
+    },
+    {
+     "name": "Great Stink",
+     "value": 16503,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/The_silent_highwayman.jpg/960px-The_silent_highwayman.jpg"
+    },
+    {
+     "name": "Pig War",
+     "value": 16508,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/The_Pig_War_Map.svg/960px-The_Pig_War_Map.svg.png"
+    },
+    {
+     "name": "Anglo-Zanzibar War",
+     "value": 20412,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/AngloZanzibarWar.jpg"
+    },
+    {
+     "name": "Toilet paper orientation",
+     "value": 4885,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Toilet_paper_orientation_over.jpg/960px-Toilet_paper_orientation_over.jpg"
+    },
+    {
+     "name": "Florida Man",
+     "value": 19149,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Florida_Man_headline.png"
+    },
+    {
+     "name": "The Backrooms",
+     "value": 356738,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/b/bb/HobbyTown_USA_Oshkosh_interior_under_construction_2002_%28The_Backrooms%29.jpg"
+    },
+    {
+     "name": "Cicada 3301",
+     "value": 32319,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/8/81/Cicada3301%27s_First_Message.jpg"
+    },
+    {
+     "name": "Dyatlov Pass incident",
+     "value": 99045,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%D0%B4%D1%8F%D1%82%D0%BB%D0%BE%D0%B2%D1%86%D0%B0%D0%BC_%D0%BD%D0%B0_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%BA%D0%BB%D0%B0%D0%B4%D0%B1%D0%B8%D1%89%D0%B5.jpg/960px-%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%D0%B4%D1%8F%D1%82%D0%BB%D0%BE%D0%B2%D1%86%D0%B0%D0%BC_%D0%BD%D0%B0_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%BA%D0%BB%D0%B0%D0%B4%D0%B1%D0%B8%D1%89%D0%B5.jpg"
+    },
+    {
+     "name": "Voynich manuscript",
+     "value": 105655,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Voynich_Manuscript_%2832%29.jpg/960px-Voynich_Manuscript_%2832%29.jpg"
+    },
+    {
+     "name": "Bermuda Triangle",
+     "value": 109995,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Bermuda_Triangle.png"
+    },
+    {
+     "name": "Area 51",
+     "value": 128182,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Sentinel-Homey.png/960px-Sentinel-Homey.png"
+    },
+    {
+     "name": "Wow! signal",
+     "value": 50350,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Wow_signal.jpg/960px-Wow_signal.jpg"
+    },
+    {
+     "name": "Antikythera mechanism",
+     "value": 74037,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Antikythera_Fragment_A_%28Front%29.webp/960px-Antikythera_Fragment_A_%28Front%29.webp"
+    },
+    {
+     "name": "Infinite monkey theorem",
+     "value": 20505,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Chimpanzee_seated_at_typewriter.jpg/960px-Chimpanzee_seated_at_typewriter.jpg"
+    },
+    {
+     "name": "Monty Hall problem",
+     "value": 54007,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Monty_open_door.svg/960px-Monty_open_door.svg.png"
+    },
+    {
+     "name": "Ship of Theseus",
+     "value": 53440,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Ship_of_Theseus.svg/960px-Ship_of_Theseus.svg.png"
+    },
+    {
+     "name": "Dunning–Kruger effect",
+     "value": 120090,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Dunning%E2%80%93Kruger_Effect2.svg/960px-Dunning%E2%80%93Kruger_Effect2.svg.png"
+    },
+    {
+     "name": "Fermi paradox",
+     "value": 61989,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Enrico_Fermi_1943-49.jpg/960px-Enrico_Fermi_1943-49.jpg"
+    },
+    {
+     "name": "Kessler syndrome",
+     "value": 29268,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Debris-GEO1280.jpg/960px-Debris-GEO1280.jpg"
+    },
+    {
+     "name": "Paris syndrome",
+     "value": 24070,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Tour_eiffel_at_sunrise_from_the_trocadero.jpg/960px-Tour_eiffel_at_sunrise_from_the_trocadero.jpg"
+    },
+    {
+     "name": "Stendhal syndrome",
+     "value": 11357,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Stendhal.jpg/960px-Stendhal.jpg"
+    },
+    {
+     "name": "Spontaneous human combustion",
+     "value": 29377,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Bleak_house_%281895%29_%2814585886260%29.jpg/960px-Bleak_house_%281895%29_%2814585886260%29.jpg"
+    },
+    {
+     "name": "Uncanny valley",
+     "value": 62205,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Mori_Uncanny_Valley.svg/960px-Mori_Uncanny_Valley.svg.png"
+    },
+    {
+     "name": "Lake Nyos disaster",
+     "value": 32686,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Tml15-16_Nc.jpg/960px-Tml15-16_Nc.jpg"
+    }
+   ]
+  }
+ ]
+}

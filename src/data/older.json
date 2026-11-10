@@ -1,0 +1,501 @@
+{
+ "source": "Wikidata",
+ "asOf": "",
+ "decks": [
+  {
+   "id": "older",
+   "items": [
+    {
+     "name": "Keanu Reeves",
+     "value": 22401,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Keanu%20Reeves%20at%20TIFF%202025%2002%20(Cropped).jpg?width=640"
+    },
+    {
+     "name": "Jennifer Aniston",
+     "value": 20778,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/JenniferAnistonHWoFFeb2012.jpg?width=640"
+    },
+    {
+     "name": "Brad Pitt",
+     "value": 22660,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brad%20Pitt%202019%20by%20Glenn%20Francis.jpg?width=640"
+    },
+    {
+     "name": "Tom Cruise",
+     "value": 23193,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tom%20Cruise%20at%2053rd%20Saturn%20Awards%202026-01.jpg?width=640"
+    },
+    {
+     "name": "Will Smith",
+     "value": 20917,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Will%20Smith%20by%20Gage%20Skidmore%202.jpg?width=640"
+    },
+    {
+     "name": "Johnny Depp",
+     "value": 22852,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Johnny%20Depp%202020.jpg?width=640"
+    },
+    {
+     "name": "Leonardo DiCaprio",
+     "value": 18679,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20DiCaprio%20-%20BFI%20Southbank%203%20(crop).jpg?width=640"
+    },
+    {
+     "name": "Jennifer Lopez",
+     "value": 20615,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jennifer%20Lopez%20at%20the%202025%20Sundance%20Film%20Festival%20(cropped%203).jpg?width=640"
+    },
+    {
+     "name": "Paul Rudd",
+     "value": 20724,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Paul%20Rudd%20and%20Kate%20Mara%20at%20the%202024%20Toronto%20International%20Film%20Festival%208%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Nicole Kidman",
+     "value": 21380,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nicole%20Kidman-66060%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Morgan Freeman",
+     "value": 32356,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Academy%20Award-winning%20actor%20Morgan%20Freeman%20narrates%20for%20the%20opening%20ceremony%20(26904746425)%20(cropped)%203.jpg?width=640"
+    },
+    {
+     "name": "Samuel L. Jackson",
+     "value": 28135,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/SamuelLJackson.jpg?width=640"
+    },
+    {
+     "name": "Denzel Washington",
+     "value": 25937,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Denzel%20Washington%20at%20the%202025%20Cannes%20Film%20Festival.jpg?width=640"
+    },
+    {
+     "name": "Dwayne Johnson",
+     "value": 19602,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dwayne%20Johnson-1809%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Vin Diesel",
+     "value": 21352,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vin%20Diesel%202013.jpg?width=640"
+    },
+    {
+     "name": "Jason Statham",
+     "value": 21344,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jason%20Statham%202018.jpg?width=640"
+    },
+    {
+     "name": "Robert Downey Jr.",
+     "value": 22187,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert%20Downey%20Jr%202014%20Comic%20Con%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Scarlett Johansson",
+     "value": 15015,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Scarlett%20Johansson-8588.jpg?width=640"
+    },
+    {
+     "name": "Chris Hemsworth",
+     "value": 15484,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Hemsworth%20-%20Crime%20101.jpg?width=640"
+    },
+    {
+     "name": "Zendaya",
+     "value": 10714,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Zendaya-byPhilipRomano.jpg?width=640"
+    },
+    {
+     "name": "Tom Holland",
+     "value": 10806,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/TomHolland-byPhilipRomano.jpg?width=640"
+    },
+    {
+     "name": "Timothée Chalamet",
+     "value": 10963,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Timoth%C3%A9e%20Chalamet-63541%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Margot Robbie",
+     "value": 12967,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/SYDNEY%2C%20AUSTRALIA%20-%20JANUARY%2023%20Margot%20Robbie%20arrives%20at%20the%20Australian%20Premiere%20of%20'I%2C%20Tonya'%20on%20January%2023%2C%202018%20in%20Sydney%2C%20Australia%20(25980753838)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Ryan Reynolds",
+     "value": 17967,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Deadpool%202%20Japan%20Premiere%20Red%20Carpet%20Ryan%20Reynolds%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Ryan Gosling",
+     "value": 16486,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GoslingBFI081223%20(22%20of%2030)%20(53388157347)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Emma Stone",
+     "value": 13570,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Emma%20Stone%20at%20the%202025%20Cannes%20Film%20Festival%2004.jpg?width=640"
+    },
+    {
+     "name": "Jackie Chan",
+     "value": 26202,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jackie%20Chan%20-%202025%20Locarno%20Film%20Festival.jpg?width=640"
+    },
+    {
+     "name": "Arnold Schwarzenegger",
+     "value": 28645,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arnold%20Schwarzenegger%202025%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Sylvester Stallone",
+     "value": 29034,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sylvester%20Stallone%20Cannes%202019.jpg?width=640"
+    },
+    {
+     "name": "Harrison Ford",
+     "value": 30488,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Harrison%20Ford%20-%20Televerse%202025-03.jpg?width=640"
+    },
+    {
+     "name": "Meryl Streep",
+     "value": 27952,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Meryl%20Streep-%20Press%20conference%20for%20the%20film%20%22The%20Devil%20Wears%20Prada%202%22%20-%2055194765350%20(cropped1).jpg?width=640"
+    },
+    {
+     "name": "Tom Hanks",
+     "value": 25378,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tom%20Hanks%20at%20the%20Elvis%20Premiere%202022.jpg?width=640"
+    },
+    {
+     "name": "Pedro Pascal",
+     "value": 18537,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pedro%20Pascal%20by%20Gage%20Skidmore.jpg?width=640"
+    },
+    {
+     "name": "Jenna Ortega",
+     "value": 8497,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jenna%20Ortega%20at%20the%202026%20Sundance%20Film%20Festival%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Sydney Sweeney",
+     "value": 10338,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney%20Sweeney%20at%20the%202024%20Toronto%20International%20Film%20Festival%2004%20(Cropped).jpg?width=640"
+    },
+    {
+     "name": "Florence Pugh",
+     "value": 10956,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Florence%20Pugh%20at%20the%202024%20Toronto%20International%20Film%20Festival%2013%20(cropped%202%20%E2%80%93%20color%20adjusted).jpg?width=640"
+    },
+    {
+     "name": "Cillian Murphy",
+     "value": 18118,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/CillianMurphy-TIFF2025-01-Cropped%20(cropped).png?width=640"
+    },
+    {
+     "name": "Danny DeVito",
+     "value": 29630,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Danny%20DeVito%20cropped%20and%20edited%20for%20brightness.jpg?width=640"
+    },
+    {
+     "name": "Taylor Swift",
+     "value": 13168,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Taylor%20Swift%20at%20the%202023%20MTV%20Video%20Music%20Awards%20(3).png?width=640"
+    },
+    {
+     "name": "Beyoncé",
+     "value": 16190,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Beyonc%C3%A9%20-%20Tottenham%20Hotspur%20Stadium%20-%201st%20June%202023%20(10%20of%20118)%20(52946364598)%20(best%20crop).jpg?width=640"
+    },
+    {
+     "name": "Rihanna",
+     "value": 13830,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rihanna%20visits%20U.S.%20Embassy%20in%20Barbados%202024%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Drake",
+     "value": 14314,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Drake%20July%202016.jpg?width=640"
+    },
+    {
+     "name": "Kanye West",
+     "value": 17739,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kanye%20West%20at%20the%202009%20Tribeca%20Film%20Festival%20(crop%202).jpg?width=640"
+    },
+    {
+     "name": "Eminem",
+     "value": 19434,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eminem%202021%20Color%20Corrected.jpg?width=640"
+    },
+    {
+     "name": "Snoop Dogg",
+     "value": 19797,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Snoop%20Dogg%202019%20by%20Glenn%20Francis.jpg?width=640"
+    },
+    {
+     "name": "Madonna",
+     "value": 24610,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/MadonnaO2171023%20(97%20of%20133)%20(53269593787)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Lady Gaga",
+     "value": 14532,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lady%20Gaga%20at%20Oscars%202016.jpg?width=640"
+    },
+    {
+     "name": "Ariana Grande",
+     "value": 11877,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ariana%20Grande%20promoting%20Wicked%20(2024).jpg?width=640"
+    },
+    {
+     "name": "Billie Eilish",
+     "value": 8780,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/BillieEilishO2140725-39%20-%2054665577407%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Ed Sheeran",
+     "value": 12737,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ed%20Sheeran-6886%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Justin Bieber",
+     "value": 11629,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Justin%20Bieber%20in%202015.jpg?width=640"
+    },
+    {
+     "name": "Bruno Mars",
+     "value": 14695,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/BrunoMars24KMagicWorldTourLive%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "The Weeknd",
+     "value": 13103,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Weeknd%20Portrait%20by%20Brian%20Ziff.jpg?width=640"
+    },
+    {
+     "name": "Shakira",
+     "value": 17865,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2023-11-16%20Gala%20de%20los%20Latin%20Grammy%2C%2003%20(cropped)01.jpg?width=640"
+    },
+    {
+     "name": "Mariah Carey",
+     "value": 20734,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mariah%20Carey%20Library%20of%20Congress%202023%202%20(cropped)02.jpg?width=640"
+    },
+    {
+     "name": "Cher",
+     "value": 29081,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cher%20(50537941963)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Dolly Parton",
+     "value": 29202,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Young-Dolly-Parton.jpg?width=640"
+    },
+    {
+     "name": "Mick Jagger",
+     "value": 30110,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rolling%20Stones%2004.jpg?width=640"
+    },
+    {
+     "name": "Paul McCartney",
+     "value": 30513,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ACL18051018-122%20(43716152470).jpg?width=640"
+    },
+    {
+     "name": "Elton John",
+     "value": 28772,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Elton%20John%202023.jpg?width=640"
+    },
+    {
+     "name": "Bad Bunny",
+     "value": 11620,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bad%20Bunny%202019%20by%20Glenn%20Francis%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Dua Lipa",
+     "value": 11090,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dua%20Lipa-69798%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Harry Styles",
+     "value": 11657,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/HarryStylesWembley170623%20(14%20of%2093)%20(52982076132)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Olivia Rodrigo",
+     "value": 8351,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasto2025-546%20(cropped%202).jpg?width=640"
+    },
+    {
+     "name": "Sabrina Carpenter",
+     "value": 9732,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sabrina%20Carpenter%20-%20O2%20Arena%202025%20-%20086%20(cropped%202).jpg?width=640"
+    },
+    {
+     "name": "Post Malone",
+     "value": 11139,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Post%20Malone%20July%202021%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Pharrell Williams",
+     "value": 19264,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pharrell%20Williams%202024%20(54133384149).jpg?width=640"
+    },
+    {
+     "name": "Cristiano Ronaldo",
+     "value": 14940,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cristiano%20Ronaldo%20Croatia%20v%20Portugal%202%20July%202026-075%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Lionel Messi",
+     "value": 14071,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Leo%20Messi%20Argentina%20v%20Egypt%207%20July%202026-1.jpg?width=640"
+    },
+    {
+     "name": "LeBron James",
+     "value": 14977,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/LeBron%20James%20(51959977144)%20(cropped2).jpg?width=640"
+    },
+    {
+     "name": "Serena Williams",
+     "value": 16168,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Serena%20Williams%20at%202013%20US%20Open.jpg?width=640"
+    },
+    {
+     "name": "Tom Brady",
+     "value": 17683,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tom%20Brady%202021.png?width=640"
+    },
+    {
+     "name": "Usain Bolt",
+     "value": 14378,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Usain%20Bolt%20Rio%20100m%20final%202016k.jpg?width=640"
+    },
+    {
+     "name": "Roger Federer",
+     "value": 16217,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Federer%20WM16%20(37)%20(28136155830).jpg?width=640"
+    },
+    {
+     "name": "Tiger Woods",
+     "value": 18265,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tiger%20Woods%20in%20May%202019.jpg?width=640"
+    },
+    {
+     "name": "Michael Jordan",
+     "value": 22964,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Michael%20Jordan.jpg?width=640"
+    },
+    {
+     "name": "Shaquille O'Neal",
+     "value": 19659,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shaquille%20O'Neal%20October%202017%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Kylian Mbappé",
+     "value": 9874,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kylian%20Mbappe%20France%20v%20Senegal%2016%20June%202026-391%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Simone Biles",
+     "value": 10520,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Simone%20Biles%20National%20Team%202024.jpg?width=640"
+    },
+    {
+     "name": "Elon Musk",
+     "value": 19911,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Elon%20Musk%20(54816836217)%20(cropped%202)%20(b).jpg?width=640"
+    },
+    {
+     "name": "Mark Zuckerberg",
+     "value": 15207,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mark%20Zuckerberg%20F8%202019%20Keynote%20(32830578717)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Jeff Bezos",
+     "value": 22635,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jeff%20Bezos%20at%20Amazon%20Spheres%20Grand%20Opening%20in%20Seattle%20-%202018%20(39074799225)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Bill Gates",
+     "value": 25633,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bill%20Gates%20at%20the%20European%20Commission%20-%202025%20-%20P067383-987995%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Oprah Winfrey",
+     "value": 26270,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pre%20Inaugural%20Reception%20(52639556983)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "MrBeast",
+     "value": 10101,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/MrBeast%20in%202026%20(cropped%204).png?width=640"
+    },
+    {
+     "name": "Kim Kardashian",
+     "value": 16508,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/President%20Trump%20Meets%20with%20Sentencing%20Commutation%20Recipients%20(49624188912)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Kylie Jenner",
+     "value": 10371,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Guests%20at%20the%202026%20Met%20Gala%20134%20(Kylie%20Jenner).jpg?width=640"
+    },
+    {
+     "name": "Barack Obama",
+     "value": 23526,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/President%20Barack%20Obama.jpg?width=640"
+    },
+    {
+     "name": "Donald Trump",
+     "value": 29056,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Official%20Presidential%20Portrait%20of%20President%20Donald%20J.%20Trump%20(2025)%20(3x4).jpg?width=640"
+    },
+    {
+     "name": "Joe Biden",
+     "value": 30358,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Joe%20Biden%20presidential%20portrait.jpg?width=640"
+    },
+    {
+     "name": "Charles III",
+     "value": 28172,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/King%20Charles%20III%20(July%202023).jpg?width=640"
+    },
+    {
+     "name": "Pope Leo XIV",
+     "value": 25677,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Leo%20XIV%20(13%20October%202025).jpg?width=640"
+    },
+    {
+     "name": "Gordon Ramsay",
+     "value": 21604,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gordon%20Ramsay%20colour%20Allan%20Warren.jpg?width=640"
+    },
+    {
+     "name": "David Attenborough",
+     "value": 36398,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/David%20Attenborough%20in%202025.jpg?width=640"
+    },
+    {
+     "name": "Martha Stewart",
+     "value": 30832,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Martha%20Stewart%202011%20Shankbone.JPG?width=640"
+    },
+    {
+     "name": "Steve Harvey",
+     "value": 25186,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Steve%20Harvey%20Miss%20Universe%202016.jpg?width=640"
+    },
+    {
+     "name": "Jimmy Fallon",
+     "value": 18732,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jimmy%20Fallon%2C%20Montclair%20Film%20Festival%2C%202013.jpg?width=640"
+    },
+    {
+     "name": "Conan O'Brien",
+     "value": 22904,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Conan%20O'Brien%20MFF%202025.jpg?width=640"
+    }
+   ]
+  }
+ ]
+}

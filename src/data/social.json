@@ -1,0 +1,409 @@
+{
+ "source": "Wikipedia",
+ "asOf": "Nov 2026",
+ "decks": [
+  {
+   "id": "instagram",
+   "topic": "Instagram",
+   "question": "More followers?",
+   "unit": "Instagram followers",
+   "source": "Wikipedia, most-followed Instagram accounts",
+   "items": [
+    {
+     "name": "Cristiano Ronaldo",
+     "value": 679000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cristiano%20Ronaldo%20Croatia%20v%20Portugal%202%20July%202026-075%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Lionel Messi",
+     "value": 517000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Leo%20Messi%20Argentina%20v%20Egypt%207%20July%202026-1.jpg?width=640"
+    },
+    {
+     "name": "Selena Gomez",
+     "value": 402000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Selena%20Gomez%20at%20the%202024%20Toronto%20International%20Film%20Festival%2010%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Kylie Jenner",
+     "value": 381000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Guests%20at%20the%202026%20Met%20Gala%20134%20(Kylie%20Jenner).jpg?width=640"
+    },
+    {
+     "name": "Dwayne Johnson",
+     "value": 380000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dwayne%20Johnson-1809%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Ariana Grande",
+     "value": 362000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ariana%20Grande%20promoting%20Wicked%20(2024).jpg?width=640"
+    },
+    {
+     "name": "Kim Kardashian",
+     "value": 343000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/President%20Trump%20Meets%20with%20Sentencing%20Commutation%20Recipients%20(49624188912)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Beyoncé",
+     "value": 298000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Beyonc%C3%A9%20-%20Tottenham%20Hotspur%20Stadium%20-%201st%20June%202023%20(10%20of%20118)%20(52946364598)%20(best%20crop).jpg?width=640"
+    },
+    {
+     "name": "Khloé Kardashian",
+     "value": 291000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Khloe%20Kardashian.png?width=640"
+    },
+    {
+     "name": "Justin Bieber",
+     "value": 285000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Justin%20Bieber%20in%202015.jpg?width=640"
+    },
+    {
+     "name": "Kendall Jenner",
+     "value": 277000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kendall%20Jenner%20for%20Adanola%202%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Taylor Swift",
+     "value": 272000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Taylor%20Swift%20at%20the%202023%20MTV%20Video%20Music%20Awards%20(3).png?width=640"
+    },
+    {
+     "name": "Virat Kohli",
+     "value": 270000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Virat%20Kohli%20in%20PMO%20New%20Delhi.jpg?width=640"
+    },
+    {
+     "name": "Neymar",
+     "value": 241000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Neymar%20Junior%20Brazil%20V%20Morocco%2013%20June%202026-40.jpg?width=640"
+    },
+    {
+     "name": "Jennifer Lopez",
+     "value": 239000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jennifer%20Lopez%20at%20the%202025%20Sundance%20Film%20Festival%20(cropped%203).jpg?width=640"
+    },
+    {
+     "name": "Kourtney Kardashian",
+     "value": 208000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kourtney%20Kardashian%202%202009.jpg?width=640"
+    },
+    {
+     "name": "Miley Cyrus",
+     "value": 205000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Miley%20Cyrus%20Primavera19%20-226%20(48986293772)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Katy Perry",
+     "value": 195000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katy%20Perry%202026%20Tribeca%20Film%20Festival%20(cropped%201).jpg?width=640"
+    },
+    {
+     "name": "Zendaya",
+     "value": 178000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Zendaya-byPhilipRomano.jpg?width=640"
+    },
+    {
+     "name": "Kevin Hart",
+     "value": 171000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kevin%20Hart%202014%20(cropped%202).jpg?width=640"
+    },
+    {
+     "name": "Cardi B",
+     "value": 160000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cardi%20B%20at%202026%20Essence%20Festival%20of%20Culture%2002%20(cropped)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "LeBron James",
+     "value": 153000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/LeBron%20James%20(51959977144)%20(cropped2).jpg?width=640"
+    },
+    {
+     "name": "Demi Lovato",
+     "value": 147000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Demi%20Lovato%20Interview%20Feb%202020.png?width=640"
+    },
+    {
+     "name": "Rihanna",
+     "value": 145000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rihanna%20visits%20U.S.%20Embassy%20in%20Barbados%202024%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Drake",
+     "value": 139000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Drake%20July%202016.jpg?width=640"
+    },
+    {
+     "name": "Chris Brown",
+     "value": 139000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Brown%20in%20Tampa%2C%202015.jpg?width=640"
+    },
+    {
+     "name": "Kylian Mbappé",
+     "value": 137000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kylian%20Mbappe%20France%20v%20Senegal%2016%20June%202026-391%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Ellen DeGeneres",
+     "value": 129000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ellen%20DeGeneres%202011.jpg?width=640"
+    },
+    {
+     "name": "Billie Eilish",
+     "value": 123000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/BillieEilishO2140725-39%20-%2054665577407%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Narendra Modi",
+     "value": 106000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Official%20Photograph%20of%20Prime%20Minister%20Narendra%20Modi%20Portrait.png?width=640"
+    },
+    {
+     "name": "Lisa",
+     "value": 105000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/20240314%20Lisa%20Manoban%2007.png?width=640"
+    },
+    {
+     "name": "Vin Diesel",
+     "value": 103000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vin%20Diesel%202013.jpg?width=640"
+    },
+    {
+     "name": "Shakira",
+     "value": 103000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2023-11-16%20Gala%20de%20los%20Latin%20Grammy%2C%2003%20(cropped)01.jpg?width=640"
+    },
+    {
+     "name": "Gal Gadot",
+     "value": 103000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gal%20Gadot%20for%20Revlon%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Priyanka Chopra",
+     "value": 92700000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Priyanka%20Chopra%20at%20Bulgary%20launch%2C%202024%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Shraddha Kapoor",
+     "value": 92700000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shraddha%20Kapoor%20promoting%20Street%20Dancer%203D.jpg?width=640"
+    },
+    {
+     "name": "MrBeast",
+     "value": 91100000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/MrBeast%20in%202026%20(cropped%204).png?width=640"
+    },
+    {
+     "name": "Jennie",
+     "value": 89300000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jennie%202026%20GDA%201.jpg?width=640"
+    },
+    {
+     "name": "Dua Lipa",
+     "value": 89000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dua%20Lipa-69798%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "David Beckham",
+     "value": 87600000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/David%20Beckham%202009.jpg?width=640"
+    },
+    {
+     "name": "Snoop Dogg",
+     "value": 86700000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Snoop%20Dogg%202019%20by%20Glenn%20Francis.jpg?width=640"
+    },
+    {
+     "name": "Alia Bhatt",
+     "value": 85100000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alia%20Bhatt%20attends%20at%20the%202026%20Cannes%20Film%20Festival%20(cropped)%20(cropped).jpg?width=640"
+    }
+   ]
+  },
+  {
+   "id": "tiktok",
+   "topic": "TikTok",
+   "question": "More followers?",
+   "unit": "TikTok followers",
+   "source": "Wikipedia, most-followed TikTok accounts",
+   "items": [
+    {
+     "name": "Khaby Lame",
+     "value": 163000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/KhabyLame.jpg?width=640"
+    },
+    {
+     "name": "Charli D'Amelio",
+     "value": 160300000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charli%20D'Amelio%20in%20Nov%202020%205.jpg?width=640"
+    },
+    {
+     "name": "MrBeast",
+     "value": 145900000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/MrBeast%20in%202026%20(cropped%204).png?width=640"
+    },
+    {
+     "name": "Bella Poarch",
+     "value": 91500000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bella%20Poarch%20-%20Pink%20Aura%20Tour.jpg?width=640"
+    },
+    {
+     "name": "Addison Rae",
+     "value": 87600000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/LanaWembley030725-16%20(cropped%202).jpg?width=640"
+    },
+    {
+     "name": "Zach King",
+     "value": 86800000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Zach%20King%20Photo.jpg?width=640"
+    },
+    {
+     "name": "Kimberly Loaiza",
+     "value": 83500000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kimberly%20Loaiza.jpg?width=640"
+    },
+    {
+     "name": "BTS",
+     "value": 81000000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/BTS_during_a_White_House_press_conference_May_31%2C_2022_%28cropped%29.jpg/960px-BTS_during_a_White_House_press_conference_May_31%2C_2022_%28cropped%29.jpg"
+    },
+    {
+     "name": "Dwayne Johnson",
+     "value": 79700000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dwayne%20Johnson-1809%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Will Smith",
+     "value": 77900000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Will%20Smith%20by%20Gage%20Skidmore%202.jpg?width=640"
+    },
+    {
+     "name": "Domelipa",
+     "value": 75300000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Domelipa%202019.jpg?width=640"
+    },
+    {
+     "name": "Billie Eilish",
+     "value": 74800000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/BillieEilishO2140725-39%20-%2054665577407%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "CZN Burak",
+     "value": 73300000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/CZN%20Burak%202022.jpg?width=640"
+    },
+    {
+     "name": "FC Barcelona",
+     "value": 72500000,
+     "image": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/960px-FC_Barcelona_%28crest%29.svg.png"
+    },
+    {
+     "name": "Lamine Yamal",
+     "value": 70500000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lamine%20Yamal%20Argentina%20v%20Spain%2019%20July%202026-214%20(new%20cropped).jpg?width=640"
+    },
+    {
+     "name": "Jason Derulo",
+     "value": 66300000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jason%20Derulo%202.0.jpg?width=640"
+    },
+    {
+     "name": "Kylie Jenner",
+     "value": 59700000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Guests%20at%20the%202026%20Met%20Gala%20134%20(Kylie%20Jenner).jpg?width=640"
+    },
+    {
+     "name": "Champions League",
+     "value": 59200000,
+     "image": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f5/UEFA_Champions_League.svg/960px-UEFA_Champions_League.svg.png"
+    },
+    {
+     "name": "Selena Gomez",
+     "value": 58600000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Selena%20Gomez%20at%20the%202024%20Toronto%20International%20Film%20Festival%2010%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Younes Zarou",
+     "value": 57600000,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Younes_Zarou_in_2022.jpg"
+    },
+    {
+     "name": "Shakira",
+     "value": 56800000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2023-11-16%20Gala%20de%20los%20Latin%20Grammy%2C%2003%20(cropped)01.jpg?width=640"
+    },
+    {
+     "name": "Karol G",
+     "value": 56300000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2023-11-16%20Gala%20de%20los%20Latin%20Grammy%2C%2015%20(cropped%202).jpg?width=640"
+    },
+    {
+     "name": "Paris Saint-Germain",
+     "value": 56300000,
+     "image": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/960px-Paris_Saint-Germain_F.C..svg.png"
+    },
+    {
+     "name": "Ria Ricis",
+     "value": 54900000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ria%20Ricis%20in%202020.png?width=640"
+    },
+    {
+     "name": "IShowSpeed",
+     "value": 54300000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/IShowSpeed%20at%20Chinatown%20(Portrait)%2004.jpg?width=640"
+    },
+    {
+     "name": "Dixie D'Amelio",
+     "value": 53700000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dixie%20D'Amelio%202.jpg?width=640"
+    },
+    {
+     "name": "Spencer X",
+     "value": 53500000,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Spencer_X_2020.png"
+    },
+    {
+     "name": "Rosé",
+     "value": 53400000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Blackpink%20Ros%C3%A9%20Rimowa%201.jpg?width=640"
+    },
+    {
+     "name": "Loren Gray",
+     "value": 52700000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2023%20-%20Centre%20Stage%20SAM%209438%20(53331112032)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Blackpink",
+     "value": 52600000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/20240809_Blackpink_Pink_Carpet_09.png/960px-20240809_Blackpink_Pink_Carpet_09.png"
+    },
+    {
+     "name": "Brent Rivera",
+     "value": 50900000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brent%20Rivera%202020%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Kristina Collins",
+     "value": 50300000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brittany%20Brosky%20%26%20KallMeKris%20at%20VidCon%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Michael Le",
+     "value": 49700000,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Justmaiko_2019_Michael_Le.png"
+    },
+    {
+     "name": "Neymar",
+     "value": 47900000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Neymar%20Junior%20Brazil%20V%20Morocco%2013%20June%202026-40.jpg?width=640"
+    },
+    {
+     "name": "La Liga",
+     "value": 46600000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/LaLiga_EA_Sports_2023_Vertical_Logo.svg/960px-LaLiga_EA_Sports_2023_Vertical_Logo.svg.png"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1027 @@
+{
+ "source": "Wikipedia",
+ "asOf": "",
+ "decks": [
+  {
+   "id": "rivers",
+   "topic": "Geography",
+   "question": "Longer river?",
+   "unit": "km",
+   "format": "km",
+   "items": [
+    {
+     "name": "Nile",
+     "value": 6650,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Beautiful_nature_along_Nile_River_01.jpg/960px-Beautiful_nature_along_Nile_River_01.jpg"
+    },
+    {
+     "name": "Amazon",
+     "value": 6400,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Amazon_River_ESA387332.jpg/960px-Amazon_River_ESA387332.jpg"
+    },
+    {
+     "name": "Yangtze",
+     "value": 6300,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Dusk_on_the_Yangtze_River.jpg/960px-Dusk_on_the_Yangtze_River.jpg"
+    },
+    {
+     "name": "Yenisei",
+     "value": 5539,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/%D0%A1%D0%BB%D0%B8%D1%8F%D0%BD%D0%B8%D0%B5_%D1%80%D0%B5%D0%BA_%D0%95%D0%BD%D0%B8%D1%81%D0%B5%D0%B9.jpg/960px-%D0%A1%D0%BB%D0%B8%D1%8F%D0%BD%D0%B8%D0%B5_%D1%80%D0%B5%D0%BA_%D0%95%D0%BD%D0%B8%D1%81%D0%B5%D0%B9.jpg"
+    },
+    {
+     "name": "Yellow River",
+     "value": 5464,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Yellow_River_-_panoramio.jpg/960px-Yellow_River_-_panoramio.jpg"
+    },
+    {
+     "name": "Paraná",
+     "value": 4880,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Cuenca_Paran%C3%A1.png/960px-Cuenca_Paran%C3%A1.png"
+    },
+    {
+     "name": "Congo",
+     "value": 4700,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Aerial_view_of_the_Congo_River_near_Kisangani.jpg/960px-Aerial_view_of_the_Congo_River_near_Kisangani.jpg"
+    },
+    {
+     "name": "Amur",
+     "value": 4444,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Amur_River.JPG/960px-Amur_River.JPG"
+    },
+    {
+     "name": "Lena",
+     "value": 4400,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Lone-maiden-formation.jpg"
+    },
+    {
+     "name": "Mekong",
+     "value": 4350,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Mekong-River-Near-Luang-Prabang.jpg/960px-Mekong-River-Near-Luang-Prabang.jpg"
+    },
+    {
+     "name": "Niger",
+     "value": 4200,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Niger%2C_Niamey%2C_Pont_Kennedy_%281%29.jpg/960px-Niger%2C_Niamey%2C_Pont_Kennedy_%281%29.jpg"
+    },
+    {
+     "name": "Volga",
+     "value": 3531,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Yaroslavl._Volga_River._Cathedral_of_the_Dormition_P5212700_2200.jpg/960px-Yaroslavl._Volga_River._Cathedral_of_the_Dormition_P5212700_2200.jpg"
+    },
+    {
+     "name": "Indus",
+     "value": 3180,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Nanga_Parbat_Indus_Gorge.jpg/960px-Nanga_Parbat_Indus_Gorge.jpg"
+    },
+    {
+     "name": "Rio Grande",
+     "value": 3051,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Rio_Grande_in_Big_Bend_NP.jpg/960px-Rio_Grande_in_Big_Bend_NP.jpg"
+    },
+    {
+     "name": "Danube",
+     "value": 2850,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/View_from_Gell%C3%A9rt_Hill_to_the_Danube%2C_Hungary_-_Budapest_%2828493220635%29.jpg/960px-View_from_Gell%C3%A9rt_Hill_to_the_Danube%2C_Hungary_-_Budapest_%2828493220635%29.jpg"
+    },
+    {
+     "name": "Euphrates",
+     "value": 2800,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/The_Euphrates_River_in_Turkey%2C_Rumkale_%2852031477798%29.jpg/960px-The_Euphrates_River_in_Turkey%2C_Rumkale_%2852031477798%29.jpg"
+    },
+    {
+     "name": "Zambezi",
+     "value": 2574,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/b/be/Zambezi_River_at_junction_of_Namibia%2C_Zambia%2C_Zimbabwe_%26_Botswana.jpg"
+    },
+    {
+     "name": "Colorado",
+     "value": 2330,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Horseshoe_Bend_13_February_2023.jpg/960px-Horseshoe_Bend_13_February_2023.jpg"
+    },
+    {
+     "name": "Rhine",
+     "value": 1230,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Middle_Bridge%2C_Basel%2C_Switzerland.JPG/960px-Middle_Bridge%2C_Basel%2C_Switzerland.JPG"
+    },
+    {
+     "name": "Loire",
+     "value": 1006,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/La_Loire_%C3%A0_La_Bohalle_par_Cramos.JPG/960px-La_Loire_%C3%A0_La_Bohalle_par_Cramos.JPG"
+    },
+    {
+     "name": "Seine",
+     "value": 777,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Bercy%2C_Paris_01.jpg/960px-Bercy%2C_Paris_01.jpg"
+    },
+    {
+     "name": "Thames",
+     "value": 346,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/London_Thames_Sunset_panorama_-_Feb_2008.jpg/960px-London_Thames_Sunset_panorama_-_Feb_2008.jpg"
+    }
+   ]
+  },
+  {
+   "id": "tall",
+   "topic": "Geography",
+   "question": "Taller?",
+   "unit": "meters",
+   "format": "m",
+   "items": [
+    {
+     "name": "Burj Khalifa",
+     "value": 828,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Burj_Khalifa_%28worlds_tallest_building%29_and_the_Dubai_skyline_%2825781049892%29.jpg/960px-Burj_Khalifa_%28worlds_tallest_building%29_and_the_Dubai_skyline_%2825781049892%29.jpg"
+    },
+    {
+     "name": "Merdeka 118",
+     "value": 679,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Merdeka_Tower_20241022_-_full_2_%28Cropped%29.jpg/960px-Merdeka_Tower_20241022_-_full_2_%28Cropped%29.jpg"
+    },
+    {
+     "name": "Tokyo Skytree",
+     "value": 634,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Tokyo_Skytree_2014_%E2%85%A2.jpg/960px-Tokyo_Skytree_2014_%E2%85%A2.jpg"
+    },
+    {
+     "name": "Shanghai Tower",
+     "value": 632,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/20191114_Shanghai_Tower_%282%29.jpg/960px-20191114_Shanghai_Tower_%282%29.jpg"
+    },
+    {
+     "name": "Mecca Clock Tower",
+     "value": 601,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Abraj_Al_Bait_Tower_2017.jpg/960px-Abraj_Al_Bait_Tower_2017.jpg"
+    },
+    {
+     "name": "CN Tower",
+     "value": 553,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/4/48/CN_Tower_logo.png"
+    },
+    {
+     "name": "One World Trade Center",
+     "value": 541,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/One_WTC_logo.svg/960px-One_WTC_logo.svg.png"
+    },
+    {
+     "name": "Taipei 101",
+     "value": 508,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Taipei_101_logo.svg/960px-Taipei_101_logo.svg.png"
+    },
+    {
+     "name": "Petronas Towers",
+     "value": 452,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Petronas_Towers_Logo.svg/960px-Petronas_Towers_Logo.svg.png"
+    },
+    {
+     "name": "Empire State Building",
+     "value": 443,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Empire_State_Building_%28aerial_view%29.jpg"
+    },
+    {
+     "name": "Eiffel Tower",
+     "value": 330,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/960px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg"
+    },
+    {
+     "name": "Golden Gate Bridge",
+     "value": 227,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Golden_Gate_Bridge_as_seen_from_Battery_East.jpg/960px-Golden_Gate_Bridge_as_seen_from_Battery_East.jpg"
+    },
+    {
+     "name": "Gateway Arch",
+     "value": 192,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/St_Louis_night_expblend_cropped.jpg/960px-St_Louis_night_expblend_cropped.jpg"
+    },
+    {
+     "name": "Space Needle",
+     "value": 184,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Space_Needle_2011-07-04.jpg/960px-Space_Needle_2011-07-04.jpg"
+    },
+    {
+     "name": "Washington Monument",
+     "value": 169,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Washington_Monument_2022.jpg/960px-Washington_Monument_2022.jpg"
+    },
+    {
+     "name": "Great Pyramid",
+     "value": 139,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg/960px-Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg"
+    },
+    {
+     "name": "Big Ben",
+     "value": 96,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster%2C_London.jpg/960px-Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster%2C_London.jpg"
+    },
+    {
+     "name": "Statue of Liberty",
+     "value": 93,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Front_view_of_Statue_of_Liberty_%28cropped%29.jpg/960px-Front_view_of_Statue_of_Liberty_%28cropped%29.jpg"
+    },
+    {
+     "name": "Sydney Opera House",
+     "value": 65,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Sydney_Opera_House_2026.jpg/960px-Sydney_Opera_House_2026.jpg"
+    },
+    {
+     "name": "Leaning Tower of Pisa",
+     "value": 56,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Italy_-_Pisa_-_Leaning_Tower.jpg/960px-Italy_-_Pisa_-_Leaning_Tower.jpg"
+    },
+    {
+     "name": "Arc de Triomphe",
+     "value": 50,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Arc_de_Triomphe_-_Ao%C3%BBt_2026.jpg/960px-Arc_de_Triomphe_-_Ao%C3%BBt_2026.jpg"
+    },
+    {
+     "name": "Christ the Redeemer",
+     "value": 30,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Christ_the_Redeemer_-_Cristo_Redentor.jpg/960px-Christ_the_Redeemer_-_Cristo_Redentor.jpg"
+    }
+   ]
+  },
+  {
+   "id": "planets",
+   "topic": "Space",
+   "question": "Bigger?",
+   "unit": "diameter",
+   "format": "km",
+   "items": [
+    {
+     "name": "The Sun",
+     "value": 1392700,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/The_Sun_in_white_light.jpg/960px-The_Sun_in_white_light.jpg"
+    },
+    {
+     "name": "Jupiter",
+     "value": 139820,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Jupiter_OPAL_2024.png/960px-Jupiter_OPAL_2024.png"
+    },
+    {
+     "name": "Saturn",
+     "value": 116460,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Saturn_global_view_from_Cassini%2C_rings_open_Better_Colour.png/960px-Saturn_global_view_from_Cassini%2C_rings_open_Better_Colour.png"
+    },
+    {
+     "name": "Uranus",
+     "value": 50724,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Uranus_Voyager2_color_calibrated.png"
+    },
+    {
+     "name": "Neptune",
+     "value": 49244,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Neptune_Voyager2_color_calibrated.png/960px-Neptune_Voyager2_color_calibrated.png"
+    },
+    {
+     "name": "Earth",
+     "value": 12742,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Meteosat-12-fci-march-equinox-2025-noon.jpg/960px-Meteosat-12-fci-march-equinox-2025-noon.jpg"
+    },
+    {
+     "name": "Venus",
+     "value": 12104,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Venus_from_Mariner_10.jpg/960px-Venus_from_Mariner_10.jpg"
+    },
+    {
+     "name": "Mars",
+     "value": 6779,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png/960px-Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png"
+    },
+    {
+     "name": "Ganymede",
+     "value": 5268,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Ganymede_-_Perijove_34_Composite.png/960px-Ganymede_-_Perijove_34_Composite.png"
+    },
+    {
+     "name": "Titan",
+     "value": 5149,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Titan_in_true_color_by_Kevin_M._Gill.jpg"
+    },
+    {
+     "name": "Mercury",
+     "value": 4879,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Mercury_in_true_color.jpg/960px-Mercury_in_true_color.jpg"
+    },
+    {
+     "name": "Callisto",
+     "value": 4821,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Callisto_VGR2_C2060635_OGB.png/960px-Callisto_VGR2_C2060635_OGB.png"
+    },
+    {
+     "name": "Io",
+     "value": 3643,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Io_highest_resolution_natural_color.png/960px-Io_highest_resolution_natural_color.png"
+    },
+    {
+     "name": "The Moon",
+     "value": 3474,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/960px-FullMoon2010.jpg"
+    },
+    {
+     "name": "Europa",
+     "value": 3122,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Europa_-_Perijove_45_%28cropped%29.png/960px-Europa_-_Perijove_45_%28cropped%29.png"
+    },
+    {
+     "name": "Triton",
+     "value": 2707,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Triton-usgs23-with-frame.jpg/960px-Triton-usgs23-with-frame.jpg"
+    },
+    {
+     "name": "Pluto",
+     "value": 2377,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Pluto_in_True_Color_-_High-Res.png/960px-Pluto_in_True_Color_-_High-Res.png"
+    },
+    {
+     "name": "Ceres",
+     "value": 940,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Ceres_-_RC3_-_Haulani_Crater_%2822381131691%29_%28cropped%29.jpg"
+    }
+   ]
+  },
+  {
+   "id": "hot",
+   "topic": "Science",
+   "question": "Hotter?",
+   "unit": "temperature",
+   "format": "celsius",
+   "items": [
+    {
+     "name": "Sun's core",
+     "value": 15700000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/02_Sun_Structure_%282819311727%29.jpg/960px-02_Sun_Structure_%282819311727%29.jpg"
+    },
+    {
+     "name": "Lightning bolt",
+     "value": 30000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Port_and_lighthouse_overnight_storm_with_lightning_in_Port-la-Nouvelle.jpg/960px-Port_and_lighthouse_overnight_storm_with_lightning_in_Port-la-Nouvelle.jpg"
+    },
+    {
+     "name": "Sun's surface",
+     "value": 5772,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Highest_resolution_photo_of_Sun_%28NSF%29_as_of_January_20%2C_2020.jpg/960px-Highest_resolution_photo_of_Sun_%28NSF%29_as_of_January_20%2C_2020.jpg"
+    },
+    {
+     "name": "Lava",
+     "value": 1473,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/001_Volcano_eruption_of_Litli-Hr%C3%BAtur_in_Iceland_in_2023_Photo_by_Giles_Laurent.jpg/960px-001_Volcano_eruption_of_Litli-Hr%C3%BAtur_in_Iceland_in_2023_Photo_by_Giles_Laurent.jpg"
+    },
+    {
+     "name": "Venus",
+     "value": 737,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Venus_from_Mariner_10.jpg/960px-Venus_from_Mariner_10.jpg"
+    },
+    {
+     "name": "Mercury",
+     "value": 440,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Mercury_in_true_color.jpg/960px-Mercury_in_true_color.jpg"
+    },
+    {
+     "name": "Death Valley record",
+     "value": 330,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Death_Valley_from_space.JPG"
+    },
+    {
+     "name": "Human body",
+     "value": 310,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/MIT_4.401_Introduction_to_Building_Technology%2C_Spring_2006_-_Human_Body_Temperature_-_3029642097.jpg/960px-MIT_4.401_Introduction_to_Building_Technology%2C_Spring_2006_-_Human_Body_Temperature_-_3029642097.jpg"
+    },
+    {
+     "name": "Earth average",
+     "value": 288,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Meteosat-12-fci-march-equinox-2025-noon.jpg/960px-Meteosat-12-fci-march-equinox-2025-noon.jpg"
+    },
+    {
+     "name": "Mars average",
+     "value": 210,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png/960px-Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png"
+    },
+    {
+     "name": "Antarctica record",
+     "value": 184,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Vostok_Station_2024.png/960px-Vostok_Station_2024.png"
+    },
+    {
+     "name": "Jupiter",
+     "value": 165,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Jupiter_OPAL_2024.png/960px-Jupiter_OPAL_2024.png"
+    },
+    {
+     "name": "Saturn",
+     "value": 134,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Saturn_global_view_from_Cassini%2C_rings_open_Better_Colour.png/960px-Saturn_global_view_from_Cassini%2C_rings_open_Better_Colour.png"
+    },
+    {
+     "name": "Liquid nitrogen",
+     "value": 77,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Liquidnitrogen.jpg/960px-Liquidnitrogen.jpg"
+    },
+    {
+     "name": "Uranus",
+     "value": 76,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Uranus_Voyager2_color_calibrated.png"
+    },
+    {
+     "name": "Neptune",
+     "value": 72,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Neptune_Voyager2_color_calibrated.png/960px-Neptune_Voyager2_color_calibrated.png"
+    },
+    {
+     "name": "Pluto",
+     "value": 44,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Pluto_in_True_Color_-_High-Res.png/960px-Pluto_in_True_Color_-_High-Res.png"
+    },
+    {
+     "name": "Boomerang Nebula",
+     "value": 1,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Boomerang_nebula.jpg/960px-Boomerang_nebula.jpg"
+    }
+   ]
+  },
+  {
+   "id": "melt",
+   "topic": "Science",
+   "question": "Higher melting point?",
+   "unit": "melts at",
+   "format": "celsius",
+   "items": [
+    {
+     "name": "Tungsten",
+     "value": 3695,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Wolfram_evaporated_crystals_and_1cm3_cube.jpg/960px-Wolfram_evaporated_crystals_and_1cm3_cube.jpg"
+    },
+    {
+     "name": "Platinum",
+     "value": 2041,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Platinum_crystals.jpg/960px-Platinum_crystals.jpg"
+    },
+    {
+     "name": "Titanium",
+     "value": 1941,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Titan-crystal_bar.JPG/960px-Titan-crystal_bar.JPG"
+    },
+    {
+     "name": "Iron",
+     "value": 1811,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Iron_electrolytic_and_1cm3_cube.jpg/960px-Iron_electrolytic_and_1cm3_cube.jpg"
+    },
+    {
+     "name": "Copper",
+     "value": 1358,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/NatCopper.jpg/960px-NatCopper.jpg"
+    },
+    {
+     "name": "Gold",
+     "value": 1337,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Gold-crystals.jpg/960px-Gold-crystals.jpg"
+    },
+    {
+     "name": "Silver",
+     "value": 1235,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Silver_crystal.jpg/960px-Silver_crystal.jpg"
+    },
+    {
+     "name": "Aluminium",
+     "value": 933,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Aluminium-4.jpg"
+    },
+    {
+     "name": "Zinc",
+     "value": 693,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Zinc_fragment_sublimed_and_1cm3_cube.jpg/960px-Zinc_fragment_sublimed_and_1cm3_cube.jpg"
+    },
+    {
+     "name": "Lead",
+     "value": 601,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Lead_electrolytic_and_1cm3_cube.jpg/960px-Lead_electrolytic_and_1cm3_cube.jpg"
+    },
+    {
+     "name": "Tin",
+     "value": 505,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Sn-Alpha-Beta.jpg/960px-Sn-Alpha-Beta.jpg"
+    },
+    {
+     "name": "Sodium",
+     "value": 371,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Na_%28Sodium%29.jpg/960px-Na_%28Sodium%29.jpg"
+    },
+    {
+     "name": "Chocolate",
+     "value": 307,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Three_Bars_%281%29.jpg/960px-Three_Bars_%281%29.jpg"
+    },
+    {
+     "name": "Gallium",
+     "value": 303,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Gallium_bar_cracked_open_to_show_crystal_structure_with_scale_1.png/960px-Gallium_bar_cracked_open_to_show_crystal_structure_with_scale_1.png"
+    },
+    {
+     "name": "Ice",
+     "value": 273,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Ice_Block%2C_Canal_Park%2C_Duluth_%2832752478892%29.jpg/960px-Ice_Block%2C_Canal_Park%2C_Duluth_%2832752478892%29.jpg"
+    },
+    {
+     "name": "Mercury",
+     "value": 234,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Pouring_liquid_mercury_bionerd.jpg/960px-Pouring_liquid_mercury_bionerd.jpg"
+    }
+   ]
+  },
+  {
+   "id": "landmarks",
+   "topic": "History",
+   "question": "Older?",
+   "unit": "built",
+   "format": "year",
+   "items": [
+    {
+     "name": "Stonehenge",
+     "value": 4526,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Stonehenge2007_07_30.jpg/960px-Stonehenge2007_07_30.jpg"
+    },
+    {
+     "name": "Great Pyramid",
+     "value": 4586,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg/960px-Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg"
+    },
+    {
+     "name": "Parthenon",
+     "value": 2458,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/The_Parthenon_in_Athens.jpg/960px-The_Parthenon_in_Athens.jpg"
+    },
+    {
+     "name": "Colosseum",
+     "value": 1946,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/960px-Colosseo_2020.jpg"
+    },
+    {
+     "name": "Hagia Sophia",
+     "value": 1489,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Hagia_Sophia_%28228968325%29.jpeg/960px-Hagia_Sophia_%28228968325%29.jpeg"
+    },
+    {
+     "name": "Angkor Wat",
+     "value": 876,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Angkor_Wat.jpg/960px-Angkor_Wat.jpg"
+    },
+    {
+     "name": "Notre-Dame",
+     "value": 681,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Notre-Dame_de_Paris%2C_4_October_2017.jpg/960px-Notre-Dame_de_Paris%2C_4_October_2017.jpg"
+    },
+    {
+     "name": "Leaning Tower of Pisa",
+     "value": 654,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Italy_-_Pisa_-_Leaning_Tower.jpg/960px-Italy_-_Pisa_-_Leaning_Tower.jpg"
+    },
+    {
+     "name": "Forbidden City",
+     "value": 606,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/The_Forbidden_City_-_View_from_Coal_Hill.jpg/960px-The_Forbidden_City_-_View_from_Coal_Hill.jpg"
+    },
+    {
+     "name": "Machu Picchu",
+     "value": 576,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Machu_Picchu%2C_2023_%28012%29.jpg/960px-Machu_Picchu%2C_2023_%28012%29.jpg"
+    },
+    {
+     "name": "St. Peter's Basilica",
+     "value": 400,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg/960px-Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg"
+    },
+    {
+     "name": "Taj Mahal",
+     "value": 373,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/960px-Taj_Mahal_%28Edited%29.jpeg"
+    },
+    {
+     "name": "Big Ben",
+     "value": 167,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster%2C_London.jpg/960px-Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster%2C_London.jpg"
+    },
+    {
+     "name": "Brooklyn Bridge",
+     "value": 143,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg/960px-Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg"
+    },
+    {
+     "name": "Statue of Liberty",
+     "value": 140,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Front_view_of_Statue_of_Liberty_%28cropped%29.jpg/960px-Front_view_of_Statue_of_Liberty_%28cropped%29.jpg"
+    },
+    {
+     "name": "Eiffel Tower",
+     "value": 137,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/960px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg"
+    },
+    {
+     "name": "Empire State Building",
+     "value": 95,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Empire_State_Building_%28aerial_view%29.jpg"
+    },
+    {
+     "name": "Golden Gate Bridge",
+     "value": 89,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Golden_Gate_Bridge_as_seen_from_Battery_East.jpg/960px-Golden_Gate_Bridge_as_seen_from_Battery_East.jpg"
+    },
+    {
+     "name": "Mount Rushmore",
+     "value": 85,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Mount_Rushmore_detail_view_%28100MP%29.jpg/960px-Mount_Rushmore_detail_view_%28100MP%29.jpg"
+    },
+    {
+     "name": "Sydney Opera House",
+     "value": 53,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Sydney_Opera_House_2026.jpg/960px-Sydney_Opera_House_2026.jpg"
+    },
+    {
+     "name": "Burj Khalifa",
+     "value": 16,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Burj_Khalifa_%28worlds_tallest_building%29_and_the_Dubai_skyline_%2825781049892%29.jpg/960px-Burj_Khalifa_%28worlds_tallest_building%29_and_the_Dubai_skyline_%2825781049892%29.jpg"
+    }
+   ]
+  },
+  {
+   "id": "inventions",
+   "topic": "Technology",
+   "question": "Invented first?",
+   "unit": "invented",
+   "format": "year",
+   "items": [
+    {
+     "name": "Printing press",
+     "value": 586,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Gutenberg_press.png/960px-Gutenberg_press.png"
+    },
+    {
+     "name": "Telescope",
+     "value": 418,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/100inchHooker.jpg"
+    },
+    {
+     "name": "Steam engine",
+     "value": 314,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Newcomen_atmospheric_engine_animation.gif"
+    },
+    {
+     "name": "Battery",
+     "value": 226,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Voltaic_pile.svg/960px-Voltaic_pile.svg.png"
+    },
+    {
+     "name": "Photograph",
+     "value": 200,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Untitled_%28point_de_vue%29%2C_Ni%C3%A9pce_1827_%E2%80%94_HRC_2020_%28cropped%29.jpg/960px-Untitled_%28point_de_vue%29%2C_Ni%C3%A9pce_1827_%E2%80%94_HRC_2020_%28cropped%29.jpg"
+    },
+    {
+     "name": "Telephone",
+     "value": 150,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Telefon_BW_2012-02-18_13-44-32.JPG/960px-Telefon_BW_2012-02-18_13-44-32.JPG"
+    },
+    {
+     "name": "Light bulb",
+     "value": 147,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Gluehlampe_01_KMJ.png"
+    },
+    {
+     "name": "Car",
+     "value": 140,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Benz_Patent-Motorwagen_Nr_2.jpg/960px-Benz_Patent-Motorwagen_Nr_2.jpg"
+    },
+    {
+     "name": "Airplane",
+     "value": 123,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/First_flight2.jpg/960px-First_flight2.jpg"
+    },
+    {
+     "name": "Penicillin",
+     "value": 98,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Penicillin_Core_v2.svg/960px-Penicillin_Core_v2.svg.png"
+    },
+    {
+     "name": "Microwave oven",
+     "value": 79,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Panasonic_NN-SD69LS_20220410.jpg/960px-Panasonic_NN-SD69LS_20220410.jpg"
+    },
+    {
+     "name": "Laser",
+     "value": 66,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Guiding_the_Milky_Way_%28potw2222a%29.jpg/960px-Guiding_the_Milky_Way_%28potw2222a%29.jpg"
+    },
+    {
+     "name": "Computer mouse",
+     "value": 62,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg"
+    },
+    {
+     "name": "Email",
+     "value": 55,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Evolution_36_mail.png"
+    },
+    {
+     "name": "Pong",
+     "value": 54,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Signed_Pong_Cabinet.jpg/960px-Signed_Pong_Cabinet.jpg"
+    },
+    {
+     "name": "Walkman",
+     "value": 47,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Walkman_logo_%282000%29.svg/960px-Walkman_logo_%282000%29.svg.png"
+    },
+    {
+     "name": "CD",
+     "value": 44,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Compact_Disc_wordmark.svg/960px-Compact_Disc_wordmark.svg.png"
+    },
+    {
+     "name": "Game Boy",
+     "value": 37,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Game-Boy-FL.png/960px-Game-Boy-FL.png"
+    },
+    {
+     "name": "World Wide Web",
+     "value": 35,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Chrome_on_Linux.png/960px-Chrome_on_Linux.png"
+    },
+    {
+     "name": "DVD",
+     "value": 30,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/DVD-R_bottom-side.jpg/960px-DVD-R_bottom-side.jpg"
+    },
+    {
+     "name": "Wikipedia",
+     "value": 25,
+     "image": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/960px-Wikipedia-logo-v2.svg.png"
+    },
+    {
+     "name": "YouTube",
+     "value": 21,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Youtube_interface%2C_showing_search_results_of_Burger_Recipe.png/960px-Youtube_interface%2C_showing_search_results_of_Burger_Recipe.png"
+    },
+    {
+     "name": "iPhone",
+     "value": 19,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/IPhone_1st_Gen.svg/960px-IPhone_1st_Gen.svg.png"
+    },
+    {
+     "name": "Bitcoin",
+     "value": 17,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/960px-Bitcoin.svg.png"
+    },
+    {
+     "name": "ChatGPT",
+     "value": 4,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/OpenAI_logo_2025_%28symbol%29.svg/960px-OpenAI_logo_2025_%28symbol%29.svg.png"
+    }
+   ]
+  },
+  {
+   "id": "golds",
+   "topic": "Sports",
+   "question": "More Olympic golds?",
+   "unit": "gold medals",
+   "format": "count",
+   "items": [
+    {
+     "name": "Michael Phelps",
+     "value": 23,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Michael_Phelps_Rio_Olympics_2016.jpg/960px-Michael_Phelps_Rio_Olympics_2016.jpg"
+    },
+    {
+     "name": "Larisa Latynina",
+     "value": 9,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Larisa_Latynina%2C_2010.jpg/960px-Larisa_Latynina%2C_2010.jpg"
+    },
+    {
+     "name": "Paavo Nurmi",
+     "value": 9,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Paavo_Nurmi_%28Antwerp_1920%29.jpg"
+    },
+    {
+     "name": "Mark Spitz",
+     "value": 9,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Mark_Spitz.jpg/960px-Mark_Spitz.jpg"
+    },
+    {
+     "name": "Carl Lewis",
+     "value": 9,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Carl_Lewis_%28cropped%29.jpg"
+    },
+    {
+     "name": "Katie Ledecky",
+     "value": 9,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Katie_Ledecky_at_the_2023_Golden_Goggle_Awards_%28cropped%29.jpg/960px-Katie_Ledecky_at_the_2023_Golden_Goggle_Awards_%28cropped%29.jpg"
+    },
+    {
+     "name": "Usain Bolt",
+     "value": 8,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Usain_Bolt_smiling_Berlin_2009.JPG"
+    },
+    {
+     "name": "Birgit Fischer",
+     "value": 8,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Birgit_Fischer_%282010%29.jpg"
+    },
+    {
+     "name": "Simone Biles",
+     "value": 7,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Simone_Biles_National_Team_2024.jpg/960px-Simone_Biles_National_Team_2024.jpg"
+    },
+    {
+     "name": "Allyson Felix",
+     "value": 7,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/AllysonFelixRio2016.jpg"
+    },
+    {
+     "name": "Jason Kenny",
+     "value": 7,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/2024_UEC_Track_Elite_European_Championships_069_%28cropped%29.jpg/960px-2024_UEC_Track_Elite_European_Championships_069_%28cropped%29.jpg"
+    },
+    {
+     "name": "Chris Hoy",
+     "value": 6,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Prostate_Cancer_Roundtable_with_Sir_Chris_Hoy_%28cropped%29.jpg/960px-Prostate_Cancer_Roundtable_with_Sir_Chris_Hoy_%28cropped%29.jpg"
+    },
+    {
+     "name": "Ian Thorpe",
+     "value": 5,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Ian_Thorpe_2012.jpg/960px-Ian_Thorpe_2012.jpg"
+    },
+    {
+     "name": "Nadia Comăneci",
+     "value": 5,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Nadia_Com%C4%83neci_at_Sports_Festival_2026.jpg/960px-Nadia_Com%C4%83neci_at_Sports_Festival_2026.jpg"
+    },
+    {
+     "name": "Kevin Durant",
+     "value": 4,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Kevin_Durant%2C_Paris_2024_%28cropped%29.jpg/960px-Kevin_Durant%2C_Paris_2024_%28cropped%29.jpg"
+    },
+    {
+     "name": "Serena Williams",
+     "value": 4,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Serena-Smiling-2020.png/960px-Serena-Smiling-2020.png"
+    },
+    {
+     "name": "Jesse Owens",
+     "value": 4,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Jesse_Owens_1936.jpg"
+    },
+    {
+     "name": "Mo Farah",
+     "value": 4,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/7/71/2023_London_Marathon_-_Sir_Mo_Farah_%282%29_%28cropped%29.jpg"
+    },
+    {
+     "name": "LeBron James",
+     "value": 3,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/LeBron_James_%2851959977144%29_%28cropped2%29.jpg/960px-LeBron_James_%2851959977144%29_%28cropped2%29.jpg"
+    },
+    {
+     "name": "Rafael Nadal",
+     "value": 2,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Rafael_Nadal_en_2024_%28cropped%29.jpg/960px-Rafael_Nadal_en_2024_%28cropped%29.jpg"
+    },
+    {
+     "name": "Andy Murray",
+     "value": 2,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/2015_Australian_Open_-_Andy_Murray_12_%28cropped%29.jpg"
+    },
+    {
+     "name": "Novak Djokovic",
+     "value": 1,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Novak_Djokovic_Paris_2024_Olympic_Games_%28cropped%29.jpg/960px-Novak_Djokovic_Paris_2024_Olympic_Games_%28cropped%29.jpg"
+    },
+    {
+     "name": "Muhammad Ali",
+     "value": 1,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Muhammad_Ali_NYWTS.jpg/960px-Muhammad_Ali_NYWTS.jpg"
+    },
+    {
+     "name": "Roger Federer",
+     "value": 1,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Roger_Federer_2015_%28cropped%29.jpg/960px-Roger_Federer_2015_%28cropped%29.jpg"
+    }
+   ]
+  },
+  {
+   "id": "water",
+   "topic": "Nature",
+   "question": "Bigger?",
+   "unit": "surface area",
+   "format": "km2",
+   "items": [
+    {
+     "name": "Pacific Ocean",
+     "value": 165250000,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Pacific_Ocean_-_en.png"
+    },
+    {
+     "name": "Atlantic Ocean",
+     "value": 106460000,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Atlantic_Ocean_-_en.png"
+    },
+    {
+     "name": "Indian Ocean",
+     "value": 70560000,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Indian_Ocean-CIA_WFB_Map.png"
+    },
+    {
+     "name": "Southern Ocean",
+     "value": 21960000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Location_Southern_Ocean.svg/960px-Location_Southern_Ocean.svg.png"
+    },
+    {
+     "name": "Arctic Ocean",
+     "value": 14060000,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/5/59/Arctic_Ocean_-_en.png"
+    },
+    {
+     "name": "Caribbean Sea",
+     "value": 2754000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Karibik_NASA_World_Wind_Globe.jpg/960px-Karibik_NASA_World_Wind_Globe.jpg"
+    },
+    {
+     "name": "Mediterranean Sea",
+     "value": 2500000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Mediterranean_Sea_16.61811E_38.99124N.jpg/960px-Mediterranean_Sea_16.61811E_38.99124N.jpg"
+    },
+    {
+     "name": "Black Sea",
+     "value": 436400,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Black_Sea_Nasa_May_25_2004.jpg/960px-Black_Sea_Nasa_May_25_2004.jpg"
+    },
+    {
+     "name": "Caspian Sea",
+     "value": 371000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Caspian_Sea_from_orbit.jpg/960px-Caspian_Sea_from_orbit.jpg"
+    },
+    {
+     "name": "Lake Superior",
+     "value": 82100,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Lake_Superior%2C_ISS.jpg/960px-Lake_Superior%2C_ISS.jpg"
+    },
+    {
+     "name": "Lake Victoria",
+     "value": 59947,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/ISS042-E-263206_-_View_of_Earth.jpg/960px-ISS042-E-263206_-_View_of_Earth.jpg"
+    },
+    {
+     "name": "Lake Michigan",
+     "value": 58000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Lake_Michigan_in_true_color.jpg/960px-Lake_Michigan_in_true_color.jpg"
+    },
+    {
+     "name": "Lake Tanganyika",
+     "value": 32600,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/STS51G-034-0012_Lake_Tanganyika_June1985.jpg/960px-STS51G-034-0012_Lake_Tanganyika_June1985.jpg"
+    },
+    {
+     "name": "Lake Baikal",
+     "value": 31500,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Baikal.A2001296.0420.250m-NASA.jpg/960px-Baikal.A2001296.0420.250m-NASA.jpg"
+    },
+    {
+     "name": "Lake Malawi",
+     "value": 29500,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Lake_Malawi_seen_from_orbit.jpg/960px-Lake_Malawi_seen_from_orbit.jpg"
+    },
+    {
+     "name": "Lake Erie",
+     "value": 25744,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/A1.23188.1851.LakeErie.143.250m.jpg/960px-A1.23188.1851.LakeErie.143.250m.jpg"
+    },
+    {
+     "name": "Lake Ontario",
+     "value": 18960,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/ISS-36_Lake_Ontario_%28horizontal%29.jpg/960px-ISS-36_Lake_Ontario_%28horizontal%29.jpg"
+    },
+    {
+     "name": "Lake Titicaca",
+     "value": 8372,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Lake_Titicaca_ESA22522896.jpeg/960px-Lake_Titicaca_ESA22522896.jpeg"
+    },
+    {
+     "name": "Dead Sea",
+     "value": 605,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Dead_Sea_beach_00.JPG/960px-Dead_Sea_beach_00.JPG"
+    },
+    {
+     "name": "Lake Geneva",
+     "value": 580,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Lake_Geneva_by_Sentinel-2.jpg/960px-Lake_Geneva_by_Sentinel-2.jpg"
+    },
+    {
+     "name": "Lake Como",
+     "value": 146,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Sentiero_del_Viandante_DSC_6340_%2814020554463%29.jpg/960px-Sentiero_del_Viandante_DSC_6340_%2814020554463%29.jpg"
+    },
+    {
+     "name": "Loch Ness",
+     "value": 56,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/LochNessUrquhart.jpg/960px-LochNessUrquhart.jpg"
+    }
+   ]
+  }
+ ]
+}

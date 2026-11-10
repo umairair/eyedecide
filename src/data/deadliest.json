@@ -1,0 +1,227 @@
+{
+ "source": "WHO, UNAIDS, Gates Notes and others",
+ "asOf": "",
+ "decks": [
+  {
+   "id": "deadliest",
+   "items": [
+    {
+     "name": "Mosquito",
+     "value": 725000,
+     "sub": "Gates Notes, 2014",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Aedes_aegypti.jpg/960px-Aedes_aegypti.jpg"
+    },
+    {
+     "name": "Humans",
+     "value": 475000,
+     "sub": "Gates Notes, 2014",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Cain_kills_Abel.png/960px-Cain_kills_Abel.png"
+    },
+    {
+     "name": "Snakes",
+     "value": 50000,
+     "sub": "Gates Notes, 2014",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Cobra_bite_in_Thailand_%28image%2C_2023%29.jpg/960px-Cobra_bite_in_Thailand_%28image%2C_2023%29.jpg"
+    },
+    {
+     "name": "Dogs (rabies)",
+     "value": 25000,
+     "sub": "Gates Notes, 2014",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Manwithrabies4.png/960px-Manwithrabies4.png"
+    },
+    {
+     "name": "Tsetse fly",
+     "value": 10000,
+     "sub": "Gates Notes, 2014",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Glossina-morsitans.jpg/960px-Glossina-morsitans.jpg"
+    },
+    {
+     "name": "Assassin bug",
+     "value": 10000,
+     "sub": "Gates Notes, 2014",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Assassin_bug_%28Rhynocoris_iracundus%29_with_bee_%28Apis_ssp%29_prey.jpg/960px-Assassin_bug_%28Rhynocoris_iracundus%29_with_bee_%28Apis_ssp%29_prey.jpg"
+    },
+    {
+     "name": "Freshwater snail",
+     "value": 10000,
+     "sub": "Gates Notes, 2014",
+     "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Schistosomiasis_in_a_child_2.jpg"
+    },
+    {
+     "name": "Roundworm",
+     "value": 2500,
+     "sub": "Gates Notes, 2014",
+     "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Ascaris_lumbricoides.jpeg"
+    },
+    {
+     "name": "Tapeworm",
+     "value": 2000,
+     "sub": "Gates Notes, 2014",
+     "image": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Taenia_saginata_adult_5260_lores.jpg"
+    },
+    {
+     "name": "Crocodile",
+     "value": 1000,
+     "sub": "Gates Notes, 2014",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Nile_crocodile_head.jpg/960px-Nile_crocodile_head.jpg"
+    },
+    {
+     "name": "Hippo",
+     "value": 500,
+     "sub": "Gates Notes, 2014",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Portrait_Hippopotamus_in_the_water.jpg/960px-Portrait_Hippopotamus_in_the_water.jpg"
+    },
+    {
+     "name": "Elephant",
+     "value": 100,
+     "sub": "Gates Notes, 2014",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/960px-African_Bush_Elephant.jpg"
+    },
+    {
+     "name": "Lion",
+     "value": 100,
+     "sub": "Gates Notes, 2014",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg/960px-020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg"
+    },
+    {
+     "name": "Wolf",
+     "value": 10,
+     "sub": "Gates Notes, 2014",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Eurasian_wolf_2.jpg/960px-Eurasian_wolf_2.jpg"
+    },
+    {
+     "name": "Shark",
+     "value": 10,
+     "sub": "Gates Notes, 2014",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Corl0207_%2828225976491%29.jpg/960px-Corl0207_%2828225976491%29.jpg"
+    },
+    {
+     "name": "Heart disease",
+     "value": 9100000,
+     "sub": "WHO, 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Blausen_0259_CoronaryArteryDisease_02.png/960px-Blausen_0259_CoronaryArteryDisease_02.png"
+    },
+    {
+     "name": "COVID-19",
+     "value": 8700000,
+     "sub": "WHO, 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Fphar-11-00937-g001.jpg/960px-Fphar-11-00937-g001.jpg"
+    },
+    {
+     "name": "Stroke",
+     "value": 7000000,
+     "sub": "WHO, 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/MCA_Territory_Infarct.svg/960px-MCA_Territory_Infarct.svg.png"
+    },
+    {
+     "name": "COPD",
+     "value": 3500000,
+     "sub": "WHO, 2021",
+     "image": "https://upload.wikimedia.org/wikipedia/commons/5/59/Copd_versus_healthy_lung.jpg"
+    },
+    {
+     "name": "Pneumonia",
+     "value": 2500000,
+     "sub": "WHO, 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Chest_radiograph_in_influensa_and_H_influenzae%2C_posteroanterior%2C_annotated.jpg/960px-Chest_radiograph_in_influensa_and_H_influenzae%2C_posteroanterior%2C_annotated.jpg"
+    },
+    {
+     "name": "Lung cancer",
+     "value": 1900000,
+     "sub": "WHO, 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/LungCACXR.PNG/960px-LungCACXR.PNG"
+    },
+    {
+     "name": "Dementia",
+     "value": 1800000,
+     "sub": "WHO, 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/An_old_man_diagnosed_as_suffering_from_senile_dementia._Colo_Wellcome_L0026689.jpg/960px-An_old_man_diagnosed_as_suffering_from_senile_dementia._Colo_Wellcome_L0026689.jpg"
+    },
+    {
+     "name": "Diabetes",
+     "value": 1600000,
+     "sub": "WHO, 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Blue_circle_for_diabetes.svg/960px-Blue_circle_for_diabetes.svg.png"
+    },
+    {
+     "name": "Tuberculosis",
+     "value": 1300000,
+     "sub": "WHO, 2021",
+     "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Tuberculosis-x-ray-1.jpg"
+    },
+    {
+     "name": "Road crashes",
+     "value": 1190000,
+     "sub": "WHO, 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Japanese_car_accident_blur.jpg/960px-Japanese_car_accident_blur.jpg"
+    },
+    {
+     "name": "Suicide",
+     "value": 727000,
+     "sub": "WHO, 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/%C3%89douard_Manet_-_Le_Suicid%C3%A9_%28ca._1877%29.jpg/960px-%C3%89douard_Manet_-_Le_Suicid%C3%A9_%28ca._1877%29.jpg"
+    },
+    {
+     "name": "Falls",
+     "value": 684000,
+     "sub": "WHO, 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Toddler_running_and_falling.jpg/960px-Toddler_running_and_falling.jpg"
+    },
+    {
+     "name": "HIV/AIDS",
+     "value": 630000,
+     "sub": "UNAIDS, 2023",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Red_Ribbon.svg/960px-Red_Ribbon.svg.png"
+    },
+    {
+     "name": "Malaria",
+     "value": 597000,
+     "sub": "WHO, 2023",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Malaria_Parasite_Connecting_to_Human_Red_Blood_Cell_%2834034143483%29.jpg/960px-Malaria_Parasite_Connecting_to_Human_Red_Blood_Cell_%2834034143483%29.jpg"
+    },
+    {
+     "name": "Drowning",
+     "value": 300000,
+     "sub": "WHO, 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Wassilij_Grigorjewitsch_Perow_002.jpg/960px-Wassilij_Grigorjewitsch_Perow_002.jpg"
+    },
+    {
+     "name": "Measles",
+     "value": 107500,
+     "sub": "WHO, 2023",
+     "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/RougeoleDP.jpg"
+    },
+    {
+     "name": "Smoking",
+     "value": 8000000,
+     "sub": "WHO",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Smoke_%2834942422652%29.jpg/960px-Smoke_%2834942422652%29.jpg"
+    },
+    {
+     "name": "Air pollution",
+     "value": 6700000,
+     "sub": "WHO, 2019",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Smoke_from_a_Bricks_Field.jpg/960px-Smoke_from_a_Bricks_Field.jpg"
+    },
+    {
+     "name": "Alcohol",
+     "value": 2600000,
+     "sub": "WHO, 2019",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Ethanol-3D-balls.png/960px-Ethanol-3D-balls.png"
+    },
+    {
+     "name": "Natural disasters",
+     "value": 45000,
+     "sub": "Our World in Data, avg",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Global_Multihazard_Proportional_Economic_Loss_Risk_Deciles_%285457317101%29.jpg/960px-Global_Multihazard_Proportional_Economic_Loss_Risk_Deciles_%285457317101%29.jpg"
+    },
+    {
+     "name": "Terrorism",
+     "value": 8352,
+     "sub": "Global Terrorism Index, 2023",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg"
+    }
+   ]
+  }
+ ]
+}

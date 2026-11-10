@@ -1,0 +1,392 @@
+{
+ "source": "Wikipedia",
+ "asOf": "",
+ "decks": [
+  {
+   "id": "weight",
+   "question": "Heavier?",
+   "unit": "typical adult",
+   "format": "kg",
+   "items": [
+    {
+     "name": "Blue whale",
+     "value": 140000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg/960px-Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg"
+    },
+    {
+     "name": "Humpback whale",
+     "value": 30000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Humpback_whale_breaching_off_Cabo_San_Lucas.jpg/960px-Humpback_whale_breaching_off_Cabo_San_Lucas.jpg"
+    },
+    {
+     "name": "African elephant",
+     "value": 6000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg/960px-178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg"
+    },
+    {
+     "name": "White rhino",
+     "value": 2300,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/109_Male_White_rhinoceros_walking_in_the_Kalahari_Desert_of_Namibia_Photo_by_Giles_Laurent.jpg/960px-109_Male_White_rhinoceros_walking_in_the_Kalahari_Desert_of_Namibia_Photo_by_Giles_Laurent.jpg"
+    },
+    {
+     "name": "Hippo",
+     "value": 1500,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Portrait_Hippopotamus_in_the_water.jpg/960px-Portrait_Hippopotamus_in_the_water.jpg"
+    },
+    {
+     "name": "Giraffe",
+     "value": 1200,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Giraffe_Mikumi_National_Park.jpg/960px-Giraffe_Mikumi_National_Park.jpg"
+    },
+    {
+     "name": "Great white shark",
+     "value": 1100,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/White_shark.jpg/960px-White_shark.jpg"
+    },
+    {
+     "name": "Bison",
+     "value": 900,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/American_bison_k5680-1.jpg/960px-American_bison_k5680-1.jpg"
+    },
+    {
+     "name": "Cow",
+     "value": 700,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg/960px-Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg"
+    },
+    {
+     "name": "Camel",
+     "value": 520,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Camelus_dromedarius_in_Nuweiba.jpg/960px-Camelus_dromedarius_in_Nuweiba.jpg"
+    },
+    {
+     "name": "Crocodile",
+     "value": 500,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/NileCrocodile.jpg/960px-NileCrocodile.jpg"
+    },
+    {
+     "name": "Horse",
+     "value": 470,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Nokota_Horses_cropped.jpg"
+    },
+    {
+     "name": "Polar bear",
+     "value": 450,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/Polar_Bear_-_Alaska_%28cropped%29.jpg"
+    },
+    {
+     "name": "Zebra",
+     "value": 350,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Equus_quagga_burchellii_-_Etosha%2C_2014.jpg/960px-Equus_quagga_burchellii_-_Etosha%2C_2014.jpg"
+    },
+    {
+     "name": "Grizzly bear",
+     "value": 270,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/GrizzlyBearJeanBeaufort.jpg/960px-GrizzlyBearJeanBeaufort.jpg"
+    },
+    {
+     "name": "Dolphin",
+     "value": 250,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Tursiops_truncatus_01-cropped.jpg/960px-Tursiops_truncatus_01-cropped.jpg"
+    },
+    {
+     "name": "Tiger",
+     "value": 200,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Bengal_tiger_%28Panthera_tigris_tigris%29_female_3_crop.jpg/960px-Bengal_tiger_%28Panthera_tigris_tigris%29_female_3_crop.jpg"
+    },
+    {
+     "name": "Lion",
+     "value": 190,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg/960px-020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg"
+    },
+    {
+     "name": "Sea turtle",
+     "value": 180,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg/960px-Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg"
+    },
+    {
+     "name": "Gorilla",
+     "value": 160,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Gorille_des_plaines_de_l%27ouest_%C3%A0_l%27Espace_Zoologique.jpg/960px-Gorille_des_plaines_de_l%27ouest_%C3%A0_l%27Espace_Zoologique.jpg"
+    },
+    {
+     "name": "Pig",
+     "value": 130,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Pig_farm_Vampula_1.jpg/960px-Pig_farm_Vampula_1.jpg"
+    },
+    {
+     "name": "Giant panda",
+     "value": 100,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Grosser_Panda.JPG/960px-Grosser_Panda.JPG"
+    },
+    {
+     "name": "Deer",
+     "value": 90,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Cervus_elaphus_Luc_Viatour_6.jpg/960px-Cervus_elaphus_Luc_Viatour_6.jpg"
+    },
+    {
+     "name": "Seal",
+     "value": 85,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Common_seal_%28Phoca_vitulina%29_2.jpg/960px-Common_seal_%28Phoca_vitulina%29_2.jpg"
+    },
+    {
+     "name": "Sheep",
+     "value": 70,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Flock_of_sheep.jpg/960px-Flock_of_sheep.jpg"
+    },
+    {
+     "name": "Leopard",
+     "value": 60,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/African_leopard_male_%28cropped%29.jpg/960px-African_leopard_male_%28cropped%29.jpg"
+    },
+    {
+     "name": "Kangaroo",
+     "value": 55,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Red_kangaroo_-_melbourne_zoo.jpg/960px-Red_kangaroo_-_melbourne_zoo.jpg"
+    },
+    {
+     "name": "Goat",
+     "value": 50,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/960px-Hausziege_04.jpg"
+    },
+    {
+     "name": "Wolf",
+     "value": 40,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Eurasian_wolf_2.jpg/960px-Eurasian_wolf_2.jpg"
+    },
+    {
+     "name": "Golden retriever",
+     "value": 30,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_Retriever_Dukedestiny01_drvd.jpg"
+    },
+    {
+     "name": "Emperor penguin",
+     "value": 25,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg"
+    },
+    {
+     "name": "Swan",
+     "value": 11,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/CygneVaires.jpg/960px-CygneVaires.jpg"
+    },
+    {
+     "name": "Koala",
+     "value": 9,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Koala_climbing_tree.jpg/960px-Koala_climbing_tree.jpg"
+    },
+    {
+     "name": "Sloth",
+     "value": 6,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Bradypus.jpg/960px-Bradypus.jpg"
+    },
+    {
+     "name": "House cat",
+     "value": 4.5,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Siam_lilacpoint.jpg/960px-Siam_lilacpoint.jpg"
+    },
+    {
+     "name": "Flamingo",
+     "value": 3,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/American_Flamingo_JG.jpg/960px-American_Flamingo_JG.jpg"
+    },
+    {
+     "name": "Chicken",
+     "value": 2.5,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Male_and_female_chicken_sitting_together.jpg"
+    },
+    {
+     "name": "Rabbit",
+     "value": 2,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Oryctolagus_cuniculus_-_euqirneto_-_419737670_%28cropped%29.jpeg/960px-Oryctolagus_cuniculus_-_euqirneto_-_419737670_%28cropped%29.jpeg"
+    },
+    {
+     "name": "Owl",
+     "value": 1.4,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg/960px-American_Barn_Owl_%28Tyto_furcata_guatemalae%29%2C_Orange_Walk.jpg"
+    },
+    {
+     "name": "Duck",
+     "value": 1.1,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/960px-Anas_platyrhynchos_male_female_quadrat.jpg"
+    },
+    {
+     "name": "Hedgehog",
+     "value": 0.8,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Erinaceus_europaeus_LC0119.jpg/960px-Erinaceus_europaeus_LC0119.jpg"
+    },
+    {
+     "name": "Squirrel",
+     "value": 0.5,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/EasternGraySquirrel_GAm.jpg/960px-EasternGraySquirrel_GAm.jpg"
+    },
+    {
+     "name": "Rat",
+     "value": 0.3,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Brown_Rat_%28Rattus_norvegicus%29.jpg/960px-Brown_Rat_%28Rattus_norvegicus%29.jpg"
+    },
+    {
+     "name": "Hamster",
+     "value": 0.13,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Golden_hamster_front_1.jpg/960px-Golden_hamster_front_1.jpg"
+    },
+    {
+     "name": "Mouse",
+     "value": 0.02,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Mouse_white_background.jpg"
+    },
+    {
+     "name": "Butterfly",
+     "value": 0.0005,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Monarch_Butterfly_Danaus_plexippus_Male_2664px.jpg/960px-Monarch_Butterfly_Danaus_plexippus_Male_2664px.jpg"
+    },
+    {
+     "name": "Honeybee",
+     "value": 0.0001,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Apis_mellifera_Western_honey_bee.jpg/960px-Apis_mellifera_Western_honey_bee.jpg"
+    },
+    {
+     "name": "Ant",
+     "value": 0.000003,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Red_Ant_-_March_2025.jpg/960px-Red_Ant_-_March_2025.jpg"
+    }
+   ]
+  },
+  {
+   "id": "speed",
+   "question": "Faster?",
+   "unit": "top speed",
+   "format": "kmh",
+   "items": [
+    {
+     "name": "Peregrine falcon (dive)",
+     "value": 389,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Falco_peregrinus_m_Humber_Bay_Park_Toronto.jpg/960px-Falco_peregrinus_m_Humber_Bay_Park_Toronto.jpg"
+    },
+    {
+     "name": "Cheetah",
+     "value": 110,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Male_cheetah_facing_left_in_South_Africa.jpg/960px-Male_cheetah_facing_left_in_South_Africa.jpg"
+    },
+    {
+     "name": "Racehorse",
+     "value": 88,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Applebite-Gentlemen.jpg"
+    },
+    {
+     "name": "Lion",
+     "value": 80,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg/960px-020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg"
+    },
+    {
+     "name": "Mako shark",
+     "value": 74,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Shortfin_mako_%28Isurus_oxyrinchus%29.jpg/960px-Shortfin_mako_%28Isurus_oxyrinchus%29.jpg"
+    },
+    {
+     "name": "Greyhound",
+     "value": 72,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/GraceTheGreyhound.jpg/960px-GraceTheGreyhound.jpg"
+    },
+    {
+     "name": "Kangaroo",
+     "value": 70,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Red_kangaroo_-_melbourne_zoo.jpg/960px-Red_kangaroo_-_melbourne_zoo.jpg"
+    },
+    {
+     "name": "Zebra",
+     "value": 65,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Equus_quagga_burchellii_-_Etosha%2C_2014.jpg/960px-Equus_quagga_burchellii_-_Etosha%2C_2014.jpg"
+    },
+    {
+     "name": "Giraffe",
+     "value": 60,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Giraffe_Mikumi_National_Park.jpg/960px-Giraffe_Mikumi_National_Park.jpg"
+    },
+    {
+     "name": "Grizzly bear",
+     "value": 56,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/GrizzlyBearJeanBeaufort.jpg/960px-GrizzlyBearJeanBeaufort.jpg"
+    },
+    {
+     "name": "Black rhino",
+     "value": 55,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Black_Rhino_at_Working_with_Wildlife.jpg/960px-Black_Rhino_at_Working_with_Wildlife.jpg"
+    },
+    {
+     "name": "House cat",
+     "value": 48,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Siam_lilacpoint.jpg/960px-Siam_lilacpoint.jpg"
+    },
+    {
+     "name": "Usain Bolt",
+     "value": 44.7,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Usain_Bolt_smiling_Berlin_2009.JPG"
+    },
+    {
+     "name": "Elephant",
+     "value": 40,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg/960px-178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg"
+    },
+    {
+     "name": "Gentoo penguin (swimming)",
+     "value": 36,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Gentoo_Penguin.png/960px-Gentoo_Penguin.png"
+    },
+    {
+     "name": "Dolphin",
+     "value": 34,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Tursiops_truncatus_01-cropped.jpg/960px-Tursiops_truncatus_01-cropped.jpg"
+    },
+    {
+     "name": "Squirrel",
+     "value": 32,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/EasternGraySquirrel_GAm.jpg/960px-EasternGraySquirrel_GAm.jpg"
+    },
+    {
+     "name": "Hippo",
+     "value": 30,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Portrait_Hippopotamus_in_the_water.jpg/960px-Portrait_Hippopotamus_in_the_water.jpg"
+    },
+    {
+     "name": "Honeybee",
+     "value": 25,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Apis_mellifera_Western_honey_bee.jpg/960px-Apis_mellifera_Western_honey_bee.jpg"
+    },
+    {
+     "name": "Pig",
+     "value": 18,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Pig_farm_Vampula_1.jpg/960px-Pig_farm_Vampula_1.jpg"
+    },
+    {
+     "name": "Crocodile (on land)",
+     "value": 17,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/NileCrocodile.jpg/960px-NileCrocodile.jpg"
+    },
+    {
+     "name": "Chicken",
+     "value": 14,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Male_and_female_chicken_sitting_together.jpg"
+    },
+    {
+     "name": "Mouse",
+     "value": 13,
+     "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Mouse_white_background.jpg"
+    },
+    {
+     "name": "Giant tortoise",
+     "value": 0.3,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Giant_Tortoise.JPG/960px-Giant_Tortoise.JPG"
+    },
+    {
+     "name": "Sloth",
+     "value": 0.25,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Bradypus.jpg/960px-Bradypus.jpg"
+    },
+    {
+     "name": "Garden snail",
+     "value": 0.05,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Snail1web.jpg/960px-Snail1web.jpg"
+    }
+   ]
+  }
+ ]
+}

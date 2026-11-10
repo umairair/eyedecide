@@ -1,0 +1,261 @@
+{
+ "source": "Spotify via Wikipedia",
+ "asOf": "Nov 2026",
+ "decks": [
+  {
+   "id": "spotify",
+   "items": [
+    {
+     "name": "Bruno Mars",
+     "value": 124900000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/BrunoMars24KMagicWorldTourLive%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "The Weeknd",
+     "value": 117200000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Weeknd%20Portrait%20by%20Brian%20Ziff.jpg?width=640"
+    },
+    {
+     "name": "Rihanna",
+     "value": 116900000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rihanna%20visits%20U.S.%20Embassy%20in%20Barbados%202024%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Justin Bieber",
+     "value": 111000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Justin%20Bieber%20in%202015.jpg?width=640"
+    },
+    {
+     "name": "Lady Gaga",
+     "value": 103500000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lady%20Gaga%20at%20Oscars%202016.jpg?width=640"
+    },
+    {
+     "name": "Taylor Swift",
+     "value": 97600000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Taylor%20Swift%20at%20the%202023%20MTV%20Video%20Music%20Awards%20(3).png?width=640"
+    },
+    {
+     "name": "Drake",
+     "value": 93900000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Drake%20July%202016.jpg?width=640"
+    },
+    {
+     "name": "Ariana Grande",
+     "value": 93200000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ariana%20Grande%20promoting%20Wicked%20(2024).jpg?width=640"
+    },
+    {
+     "name": "Michael Jackson",
+     "value": 91400000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Michael%20Jackson%201983%20(3x4%20cropped)%20(contrast).jpg?width=640"
+    },
+    {
+     "name": "Coldplay",
+     "value": 90100000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/ColdplayWembley120925_%28cropped%29.jpg/960px-ColdplayWembley120925_%28cropped%29.jpg"
+    },
+    {
+     "name": "Bad Bunny",
+     "value": 89400000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bad%20Bunny%202019%20by%20Glenn%20Francis%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Katy Perry",
+     "value": 86200000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Katy%20Perry%202026%20Tribeca%20Film%20Festival%20(cropped%201).jpg?width=640"
+    },
+    {
+     "name": "Shakira",
+     "value": 85700000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2023-11-16%20Gala%20de%20los%20Latin%20Grammy%2C%2003%20(cropped)01.jpg?width=640"
+    },
+    {
+     "name": "David Guetta",
+     "value": 80900000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2023-11-16%20Gala%20de%20los%20Latin%20Grammy%2C%2022%20(David%20Guetta).jpg?width=640"
+    },
+    {
+     "name": "Billie Eilish",
+     "value": 80300000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/BillieEilishO2140725-39%20-%2054665577407%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Ed Sheeran",
+     "value": 78800000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ed%20Sheeran-6886%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Maroon 5",
+     "value": 76600000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Maroon_5_Current_Lineup_Collage.jpg/960px-Maroon_5_Current_Lineup_Collage.jpg"
+    },
+    {
+     "name": "Lana Del Rey",
+     "value": 75800000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lana%20Del%20Rey%20Seattle.jpg?width=640"
+    },
+    {
+     "name": "Olivia Rodrigo",
+     "value": 74900000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasto2025-546%20(cropped%202).jpg?width=640"
+    },
+    {
+     "name": "Pitbull",
+     "value": 74500000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pitbull%2C%202012%20(2).jpg?width=640"
+    },
+    {
+     "name": "Eminem",
+     "value": 72700000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eminem%202021%20Color%20Corrected.jpg?width=640"
+    },
+    {
+     "name": "Calvin Harris",
+     "value": 72100000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calvin%20Harris%20-%20Press%20Image%201.tif?width=640"
+    },
+    {
+     "name": "SZA",
+     "value": 71400000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/KendrickSZASPurs230725-19%20-%2054683179509%20(cropped)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Dua Lipa",
+     "value": 71100000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dua%20Lipa-69798%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Kanye West",
+     "value": 70700000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kanye%20West%20at%20the%202009%20Tribeca%20Film%20Festival%20(crop%202).jpg?width=640"
+    },
+    {
+     "name": "Karol G",
+     "value": 70000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2023-11-16%20Gala%20de%20los%20Latin%20Grammy%2C%2015%20(cropped%202).jpg?width=640"
+    },
+    {
+     "name": "J Balvin",
+     "value": 69700000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/J%20Balvin%2C%20Noisey%20Meets%3B%20Oct%202018.jpg?width=640"
+    },
+    {
+     "name": "Sia",
+     "value": 69700000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sia%20performing%20photograph%20by%20Kris%20Krug.jpg?width=640"
+    },
+    {
+     "name": "Kendrick Lamar",
+     "value": 68100000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pulitzer2018-portraits-kendrick-lamar.jpg?width=640"
+    },
+    {
+     "name": "Daddy Yankee",
+     "value": 65600000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Daddy%20Yankee%20-%20The%20Kingdom%20(Official%20Q%20%26%20A).png?width=640"
+    },
+    {
+     "name": "Tame Impala",
+     "value": 65100000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Tame_Impala_at_Flow_Festival_Helsinki_Aug_10_2019_-24.jpg/960px-Tame_Impala_at_Flow_Festival_Helsinki_Aug_10_2019_-24.jpg"
+    },
+    {
+     "name": "Harry Styles",
+     "value": 64500000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/HarryStylesWembley170623%20(14%20of%2093)%20(52982076132)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Black Eyed Peas",
+     "value": 62600000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Les_Black_Eyed_Peas_en_concert_au_VIP_Room_Paris_3_%28cropped%29.jpg/960px-Les_Black_Eyed_Peas_en_concert_au_VIP_Room_Paris_3_%28cropped%29.jpg"
+    },
+    {
+     "name": "Beyoncé",
+     "value": 61900000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Beyonc%C3%A9%20-%20Tottenham%20Hotspur%20Stadium%20-%201st%20June%202023%20(10%20of%20118)%20(52946364598)%20(best%20crop).jpg?width=640"
+    },
+    {
+     "name": "Post Malone",
+     "value": 61500000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Post%20Malone%20July%202021%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Travis Scott",
+     "value": 60100000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/TravisScott-byPhilipRomano.jpg?width=640"
+    },
+    {
+     "name": "Adele",
+     "value": 58700000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Adele%202016.jpg?width=640"
+    },
+    {
+     "name": "Miley Cyrus",
+     "value": 58200000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Miley%20Cyrus%20Primavera19%20-226%20(48986293772)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Justin Timberlake",
+     "value": 57600000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Justin%20Timberlake%20by%20Gage%20Skidmore%202.jpg?width=640"
+    },
+    {
+     "name": "Arctic Monkeys",
+     "value": 56500000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Arctic_Monkeys_-_Orange_Stage_-_Roskilde_Festival_2014.jpg/960px-Arctic_Monkeys_-_Orange_Stage_-_Roskilde_Festival_2014.jpg"
+    },
+    {
+     "name": "Shreya Ghoshal",
+     "value": 56500000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shreya%20Ghoshal%20Behindwoods%20Gold%20Icons%20Awards%202023%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Doja Cat",
+     "value": 56500000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/DojaCatO2140624%20(87%20of%20105)%20(53792876988)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Linkin Park",
+     "value": 56400000,
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Linkin_Park_-_From_Zero_Lead_Press_Photo_-_James_Minchin_III.jpg/960px-Linkin_Park_-_From_Zero_Lead_Press_Photo_-_James_Minchin_III.jpg"
+    },
+    {
+     "name": "Sean Paul",
+     "value": 55800000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sean%20Paul%202024%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Sombr",
+     "value": 55500000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Guests%20at%20the%202026%20Met%20Gala%20182.jpg?width=640"
+    },
+    {
+     "name": "Tate McRae",
+     "value": 55400000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/TMRKiaForum%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Chris Brown",
+     "value": 55100000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Brown%20in%20Tampa%2C%202015.jpg?width=640"
+    },
+    {
+     "name": "Shawn Mendes",
+     "value": 54400000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/191125%20Shawn%20Mendes%20at%20the%202019%20American%20Music%20Awards.png?width=640"
+    },
+    {
+     "name": "Halsey",
+     "value": 54400000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Halsey%20%40%20Hollywood%20Forever%2010%2014%202025%20(54925500921).jpg?width=640"
+    },
+    {
+     "name": "Britney Spears",
+     "value": 54000000,
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Britney%20Spears-FFT-Toronto%20(cropped).jpg?width=640"
+    }
+   ]
+  }
+ ]
+}

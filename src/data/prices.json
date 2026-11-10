@@ -1,0 +1,263 @@
+{
+ "source": "Auction and press records",
+ "asOf": "",
+ "decks": [
+  {
+   "id": "prices",
+   "items": [
+    {
+     "name": "Salvator Mundi",
+     "value": 450300000,
+     "sub": "Sold 2017",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg/960px-Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg"
+    },
+    {
+     "name": "Interchange",
+     "value": 300000000,
+     "sub": "Sold 2015",
+     "image": "https://upload.wikimedia.org/wikipedia/en/5/5f/Photo_of_Interchanged_by_Willem_de_Kooning.jpg"
+    },
+    {
+     "name": "The Card Players",
+     "value": 250000000,
+     "sub": "Sold 2011",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Les_Joueurs_de_cartes%2C_par_Paul_C%C3%A9zanne.jpg/960px-Les_Joueurs_de_cartes%2C_par_Paul_C%C3%A9zanne.jpg"
+    },
+    {
+     "name": "Shot Sage Blue Marilyn",
+     "value": 195000000,
+     "sub": "Sold 2022",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Andy_Warhol_by_Bernard_Gotfryd_1980.png/960px-Andy_Warhol_by_Bernard_Gotfryd_1980.png"
+    },
+    {
+     "name": "Les Femmes d'Alger",
+     "value": 179400000,
+     "sub": "Sold 2015",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Pablo_picasso_1.jpg/960px-Pablo_picasso_1.jpg"
+    },
+    {
+     "name": "The Scream",
+     "value": 119900000,
+     "sub": "Sold 2012",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/960px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg"
+    },
+    {
+     "name": "Mercedes 300 SLR Coupé",
+     "value": 143000000,
+     "sub": "Sold 2022",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Mercedes-Benz_300_SLR_1955.jpg/960px-Mercedes-Benz_300_SLR_1955.jpg"
+    },
+    {
+     "name": "Ferrari 250 GTO",
+     "value": 51700000,
+     "sub": "Sold 2023",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/1962_Ferrari_250_GTO_SP25.jpg/960px-1962_Ferrari_250_GTO_SP25.jpg"
+    },
+    {
+     "name": "Rolls-Royce Boat Tail",
+     "value": 28000000,
+     "sub": "Reported, 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Rolls-Royce_Boat_Tail_side.png/960px-Rolls-Royce_Boat_Tail_side.png"
+    },
+    {
+     "name": "McLaren F1",
+     "value": 20465000,
+     "sub": "Sold 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/1996_McLaren_F1_Chassis_No_63_6.1_Front.jpg/960px-1996_McLaren_F1_Chassis_No_63_6.1_Front.jpg"
+    },
+    {
+     "name": "Bugatti La Voiture Noire",
+     "value": 18700000,
+     "sub": "2019",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Bugatti_Chiron_1.jpg/960px-Bugatti_Chiron_1.jpg"
+    },
+    {
+     "name": "Bugatti Chiron",
+     "value": 3000000,
+     "sub": "Base price",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Bugatti_Chiron_1.jpg/960px-Bugatti_Chiron_1.jpg"
+    },
+    {
+     "name": "Azzam superyacht",
+     "value": 600000000,
+     "sub": "Est.",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/AzzamCadiz.jpg/960px-AzzamCadiz.jpg"
+    },
+    {
+     "name": "Gulfstream G700",
+     "value": 78000000,
+     "sub": "List price",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/G-ULFS_Gulfstream_G650_CVT_05-05-16_%2827046023031%29_%28cropped%29.jpg/960px-G-ULFS_Gulfstream_G650_CVT_05-05-16_%2827046023031%29_%28cropped%29.jpg"
+    },
+    {
+     "name": "Airbus A380",
+     "value": 445600000,
+     "sub": "List price, 2018",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/A6-EDY_A380_Emirates_31_jan_2013_jfk_%288442269364%29_%28cropped%29.jpg/960px-A6-EDY_A380_Emirates_31_jan_2013_jfk_%288442269364%29_%28cropped%29.jpg"
+    },
+    {
+     "name": "F-35 fighter jet",
+     "value": 82500000,
+     "sub": "Unit cost",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/F-35A_flight_%28cropped%29.jpg/960px-F-35A_flight_%28cropped%29.jpg"
+    },
+    {
+     "name": "USS Gerald R. Ford",
+     "value": 13300000000,
+     "sub": "Build cost",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/USS_Gerald_R._Ford_%28CVN-78%29_underway_in_the_Atlantic_Ocean_on_9_October_2022_%28221009-N-TL968-1248%29.JPG/960px-USS_Gerald_R._Ford_%28CVN-78%29_underway_in_the_Atlantic_Ocean_on_9_October_2022_%28221009-N-TL968-1248%29.JPG"
+    },
+    {
+     "name": "Burj Khalifa",
+     "value": 1500000000,
+     "sub": "Build cost",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Burj_Khalifa_%28worlds_tallest_building%29_and_the_Dubai_skyline_%2825781049892%29.jpg/960px-Burj_Khalifa_%28worlds_tallest_building%29_and_the_Dubai_skyline_%2825781049892%29.jpg"
+    },
+    {
+     "name": "Space station",
+     "value": 150000000000,
+     "sub": "Est. total",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/The_station_pictured_from_the_SpaceX_Crew_Dragon_5.jpg/960px-The_station_pictured_from_the_SpaceX_Crew_Dragon_5.jpg"
+    },
+    {
+     "name": "James Webb telescope",
+     "value": 10000000000,
+     "sub": "Total cost",
+     "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/JWST_spacecraft_model_3.png"
+    },
+    {
+     "name": "Large Hadron Collider",
+     "value": 4750000000,
+     "sub": "Build cost",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/LHC.svg/960px-LHC.svg.png"
+    },
+    {
+     "name": "Three Gorges Dam",
+     "value": 31765000000,
+     "sub": "Build cost",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/ThreeGorgesDam-China2009.jpg/960px-ThreeGorgesDam-China2009.jpg"
+    },
+    {
+     "name": "Apple Park",
+     "value": 5000000000,
+     "sub": "Build cost",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Aerial_view_of_Apple_Park_dllu.jpg/960px-Aerial_view_of_Apple_Park_dllu.jpg"
+    },
+    {
+     "name": "SoFi Stadium",
+     "value": 5500000000,
+     "sub": "Build cost",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/SoFi_Stadium_2023.jpg/960px-SoFi_Stadium_2023.jpg"
+    },
+    {
+     "name": "Golden Gate Bridge",
+     "value": 35000000,
+     "sub": "Build cost, 1937",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Golden_Gate_Bridge_as_seen_from_Battery_East.jpg/960px-Golden_Gate_Bridge_as_seen_from_Battery_East.jpg"
+    },
+    {
+     "name": "Buying Twitter",
+     "value": 44000000000,
+     "sub": "2022",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Elon_Musk_-_54820081119_%283x4_cropped%2C_Rule_of_thirds%29.jpg/960px-Elon_Musk_-_54820081119_%283x4_cropped%2C_Rule_of_thirds%29.jpg"
+    },
+    {
+     "name": "Buying WhatsApp",
+     "value": 19000000000,
+     "sub": "2014",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/WhatsApp_Logo_green.svg/960px-WhatsApp_Logo_green.svg.png"
+    },
+    {
+     "name": "Buying Instagram",
+     "value": 1000000000,
+     "sub": "2012",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Instagram_screenshot_for_Wikipedia_taken_27_October_2026.png/960px-Instagram_screenshot_for_Wikipedia_taken_27_October_2026.png"
+    },
+    {
+     "name": "Buying YouTube",
+     "value": 1650000000,
+     "sub": "2006",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Youtube_interface%2C_showing_search_results_of_Burger_Recipe.png/960px-Youtube_interface%2C_showing_search_results_of_Burger_Recipe.png"
+    },
+    {
+     "name": "Buying Minecraft",
+     "value": 2500000000,
+     "sub": "2014",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Mojang_Studios_Logo_%282020%2C_slim%29.svg/960px-Mojang_Studios_Logo_%282020%2C_slim%29.svg.png"
+    },
+    {
+     "name": "Buying Activision Blizzard",
+     "value": 68700000000,
+     "sub": "2023",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/2701_Olympic_Boulevard.jpg/960px-2701_Olympic_Boulevard.jpg"
+    },
+    {
+     "name": "Buying Star Wars",
+     "value": 4050000000,
+     "sub": "2012",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Letterman_Digital_Arts_Center%2C_Building_B_%28side_view%29.jpg/960px-Letterman_Digital_Arts_Center%2C_Building_B_%28side_view%29.jpg"
+    },
+    {
+     "name": "Apex the stegosaurus",
+     "value": 44600000,
+     "sub": "Sold 2024",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Apex_%28dinosaur%29.jpg/960px-Apex_%28dinosaur%29.jpg"
+    },
+    {
+     "name": "Sue the T. rex",
+     "value": 8360000,
+     "sub": "Sold 1997",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/FMNH_SUE_Trex.jpg/960px-FMNH_SUE_Trex.jpg"
+    },
+    {
+     "name": "Beeple's NFT",
+     "value": 69300000,
+     "sub": "Sold 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Mike_Winkelmann.png/960px-Mike_Winkelmann.png"
+    },
+    {
+     "name": "Leonardo's notebook",
+     "value": 30800000,
+     "sub": "Sold 1994",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Vinci_-_Hammer_2A.jpg/960px-Vinci_-_Hammer_2A.jpg"
+    },
+    {
+     "name": "Lady Blunt Stradivarius",
+     "value": 15900000,
+     "sub": "Sold 2011",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Lady_Blunt_top.jpg/960px-Lady_Blunt_top.jpg"
+    },
+    {
+     "name": "Rarest stamp",
+     "value": 8307000,
+     "sub": "Sold 2021",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/British_Guiana_1856_1c_magenta_stamp.jpg/960px-British_Guiana_1856_1c_magenta_stamp.jpg"
+    },
+    {
+     "name": "Honus Wagner card",
+     "value": 7250000,
+     "sub": "Sold 2022",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Honus_wagner_t206_baseball_card.jpg/960px-Honus_wagner_t206_baseball_card.jpg"
+    },
+    {
+     "name": "Big Mac",
+     "value": 5.69,
+     "sub": "US, 2024",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Big_Mac.png/960px-Big_Mac.png"
+    },
+    {
+     "name": "PlayStation 5",
+     "value": 499,
+     "sub": "Launch, 2020",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Black_and_white_Playstation_5_base_edition_with_controller.png/960px-Black_and_white_Playstation_5_base_edition_with_controller.png"
+    },
+    {
+     "name": "iPhone 16 Pro Max",
+     "value": 1199,
+     "sub": "Launch, 2024",
+     "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/IPhone_16_Pro_Vector.svg/960px-IPhone_16_Pro_Vector.svg.png"
+    }
+   ]
+  }
+ ]
+}

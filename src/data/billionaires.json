@@ -1,0 +1,503 @@
+{
+ "source": "Forbes Real-Time Billionaires",
+ "asOf": "Nov 2026",
+ "decks": [
+  {
+   "id": "billionaires",
+   "items": [
+    {
+     "name": "Elon Musk",
+     "value": 897487872000,
+     "sub": "Tesla",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Elon%20Musk%20(54816836217)%20(cropped%202)%20(b).jpg?width=640"
+    },
+    {
+     "name": "Jeff Bezos",
+     "value": 384819745000,
+     "sub": "Amazon",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jeff%20Bezos%20at%20Amazon%20Spheres%20Grand%20Opening%20in%20Seattle%20-%202018%20(39074799225)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Larry Page",
+     "value": 239017313000,
+     "sub": "Google",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Larry%20Page%20in%20the%20European%20Parliament%2C%2017.06.2009.jpg?width=640"
+    },
+    {
+     "name": "Mark Zuckerberg",
+     "value": 220307753000,
+     "sub": "Facebook",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mark%20Zuckerberg%20F8%202019%20Keynote%20(32830578717)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Sergey Brin",
+     "value": 220043677000,
+     "sub": "Google",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sergey%20Brin%20Ted%202010%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Michael Dell",
+     "value": 204407364000,
+     "sub": "Dell Technologies",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Michael%20Dell%202010.jpg?width=640"
+    },
+    {
+     "name": "Steve Ballmer",
+     "value": 167575713000,
+     "sub": "Microsoft",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Steve%20Ballmer%202014.jpg?width=640"
+    },
+    {
+     "name": "Warren Buffett",
+     "value": 161561683000,
+     "sub": "Berkshire Hathaway",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Warren%20Buffett%20KU%20Visit.jpg?width=640"
+    },
+    {
+     "name": "Larry Ellison",
+     "value": 159938251000,
+     "sub": "Oracle",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Larry%20Ellison%20picture.png?width=640"
+    },
+    {
+     "name": "Jensen Huang",
+     "value": 155373088000,
+     "sub": "Nvidia",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jen-Hsun%20Huang%202025.jpg?width=640"
+    },
+    {
+     "name": "Rob Walton",
+     "value": 148314381000,
+     "sub": "Walmart",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/S.%20Robson%20Walton.jpg?width=640"
+    },
+    {
+     "name": "Jim Walton",
+     "value": 145086373000,
+     "sub": "Walmart",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jim%20Walton%20attends%20shareholders%20meeting.jpg?width=640"
+    },
+    {
+     "name": "Alice Walton",
+     "value": 134517240000,
+     "sub": "Walmart",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alice%20Walton%20portrait%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Carlos Slim Helu",
+     "value": 125832660000,
+     "sub": "Telecom",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carlos%20Slim%20(45680472234)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Bill Gates",
+     "value": 122297081000,
+     "sub": "Microsoft",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bill%20Gates%20at%20the%20European%20Commission%20-%202025%20-%20P067383-987995%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Bernard Arnault",
+     "value": 121581324000,
+     "sub": "LVMH",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bernard%20Arnault%20(3)%20-%202017%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Changpeng Zhao",
+     "value": 114611309000,
+     "sub": "Cryptocurrency exchange",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Changpeng%20Zhao%20in%202022.jpg?width=640"
+    },
+    {
+     "name": "Michael Bloomberg",
+     "value": 94920000000,
+     "sub": "Bloomberg LP",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mike%20Bloomberg%20Headshot.jpg?width=640"
+    },
+    {
+     "name": "Mukesh Ambani",
+     "value": 91854547000,
+     "sub": "Diversified",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mukesh%20Ambani.jpg?width=640"
+    },
+    {
+     "name": "Thomas Peterffy",
+     "value": 90704196000,
+     "sub": "Discount brokerage",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thomas%20Peterffy%20Painting%20Portrait%20By%20Artist%20Danor%20Shtruzman%20-%20Art%20Drawings%20(100%20Richest%20By%20Forbes%202017%20List).jpg?width=640"
+    },
+    {
+     "name": "Julia Koch",
+     "value": 84627000000,
+     "sub": "Koch",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Julia%20Koch.jpg?width=640"
+    },
+    {
+     "name": "Gautam Adani",
+     "value": 84306618000,
+     "sub": "Infrastructure",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gautam%20Adani.jpg?width=640"
+    },
+    {
+     "name": "Zhang Yiming",
+     "value": 84000000000,
+     "sub": "TikTok",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20CEO%20Magazine%20Cover.jpg?width=640"
+    },
+    {
+     "name": "Charles Koch",
+     "value": 76942000000,
+     "sub": "Koch",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charles%20Koch%20portrait%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Tadashi Yanai",
+     "value": 69269473000,
+     "sub": "Fashion retail",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tadashi%20Yanai%2C%20in%20Japan%20on%20May%2023%2C%202022%20(1)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Ken Griffin",
+     "value": 56653080000,
+     "sub": "Hedge funds",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kenneth%20C.%20Griffin%20photo.jpg?width=640"
+    },
+    {
+     "name": "Aliko Dangote",
+     "value": 55887234000,
+     "sub": "Cement",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Al%20Shabani%20at%20the%20acquisition%20of%20Dangote%20Cement%20by%20ICD%20in%202014%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Li Ka-shing",
+     "value": 48992150000,
+     "sub": "Diversified",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Li%20Ka%20Shing.jpg?width=640"
+    },
+    {
+     "name": "Ma Huateng",
+     "value": 45433746000,
+     "sub": "Online games",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%E9%A9%AC%E5%8C%96%E8%85%BE%20Pony%20Ma%202019.jpg?width=640"
+    },
+    {
+     "name": "Gianluigi Aponte",
+     "value": 44610976000,
+     "sub": "Shipping",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Diego%20Aponte%2C%20Louis%20Sola%20and%20Capt%20Gianluigi%20Aponte%20cropped.png?width=640"
+    },
+    {
+     "name": "Stephen Schwarzman",
+     "value": 43422459000,
+     "sub": "Investments",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stephen%20Schwarzman%2C%2019%20March%202024.jpg?width=640"
+    },
+    {
+     "name": "Masayoshi Son",
+     "value": 43159109000,
+     "sub": "Telecom",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Masayoshi%20Son%20(P066533-522034%2C%20cropped).jpg?width=640"
+    },
+    {
+     "name": "Abigail Johnson",
+     "value": 41635256000,
+     "sub": "Fidelity",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Abigail%20Johnson%20at%20Village%20Global%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Robin Zeng",
+     "value": 41579521000,
+     "sub": "Batteries",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Robin%20Zeng%202023.jpg?width=640"
+    },
+    {
+     "name": "Savitri Jindal",
+     "value": 40827734000,
+     "sub": "Steel",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Savitri%20Jindal%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Paolo Ardoino",
+     "value": 38000000000,
+     "sub": "Cryptocurrency",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Paolo%20Ardoino%20by%20Gage%20Skidmore.jpg?width=640"
+    },
+    {
+     "name": "Eduardo Saverin",
+     "value": 35617221000,
+     "sub": "Facebook",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eduardo%20Saverin%20CHINICT.JPG?width=640"
+    },
+    {
+     "name": "Len Blavatnik",
+     "value": 35102303000,
+     "sub": "Music",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Leonard%20Blavatnik%2C%20February%202018%20(4568)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Melinda French Gates",
+     "value": 34641277000,
+     "sub": "Microsoft",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Melinda%20Gates%20-%20World%20Economic%20Forum%20Annual%20Meeting%202011.jpg?width=640"
+    },
+    {
+     "name": "Peter Thiel",
+     "value": 34487533000,
+     "sub": "Facebook",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Peter%20Thiel%20by%20Gage%20Skidmore.jpg?width=640"
+    },
+    {
+     "name": "Idan Ofer",
+     "value": 34401651000,
+     "sub": "Shipping",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Idan%20offer.webp?width=640"
+    },
+    {
+     "name": "Eyal Ofer",
+     "value": 33661721000,
+     "sub": "Real estate",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eyal%20Ofer%202020.jpg?width=640"
+    },
+    {
+     "name": "Eric Schmidt",
+     "value": 33596610000,
+     "sub": "Google",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eric%20Schmidt%20at%20the%2037th%20G8%20Summit%20in%20Deauville%20037.jpg?width=640"
+    },
+    {
+     "name": "Elaine Marshall",
+     "value": 32239000000,
+     "sub": "Koch",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Elaine%20Marshall%20IACA%202018.jpg?width=640"
+    },
+    {
+     "name": "Miriam Adelson",
+     "value": 31874293000,
+     "sub": "Casinos",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Miriam%20Adelson%20June%202019.jpg?width=640"
+    },
+    {
+     "name": "Shiv Nadar",
+     "value": 31296003000,
+     "sub": "Software services",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shiv%20Nadar%2C%20Founder%2C%20HCL%20and%20Chairman%2C%20HCL%20Technologies%2C%20with%20Sir%20Richard%20Stagg%2C%20British%20High%20Commissioner%20to%20India%2012%20October%202009.jpg?width=640"
+    },
+    {
+     "name": "Henry Samueli",
+     "value": 30612979000,
+     "sub": "Semiconductors",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Henry%20Samueli%2C%20Bush%20and%20Anaheim%20Ducks%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Lakshmi Mittal",
+     "value": 30405504000,
+     "sub": "Steel",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lakshmi%20Mittal%20LM.jpg?width=640"
+    },
+    {
+     "name": "Vladimir Potanin",
+     "value": 29740299000,
+     "sub": "Metals",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2021%20Vladimir%20Potanin.jpg?width=640"
+    },
+    {
+     "name": "Vagit Alekperov",
+     "value": 29475064000,
+     "sub": "Oil",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vagit%20Alekperov2011.jpg?width=640"
+    },
+    {
+     "name": "Cyrus Poonawalla",
+     "value": 29423506000,
+     "sub": "Vaccines",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cyrus%20Poonawalla.jpg?width=640"
+    },
+    {
+     "name": "Reinhold Wuerth",
+     "value": 28995911000,
+     "sub": "Fasteners",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Reinhold%20W%C3%BCrth.jpg?width=640"
+    },
+    {
+     "name": "David Tepper",
+     "value": 28504000000,
+     "sub": "Hedge funds",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/David%20Tepper%2001.jpg?width=640"
+    },
+    {
+     "name": "MacKenzie Scott",
+     "value": 28486784000,
+     "sub": "Amazon",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/MacKenzie%20Scott.jpg?width=640"
+    },
+    {
+     "name": "Leonid Mikhelson",
+     "value": 28301370000,
+     "sub": "Gas",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/11-03-2020%20Leonid%20Mikhelson.png?width=640"
+    },
+    {
+     "name": "Phil Knight",
+     "value": 26267304000,
+     "sub": "Nike",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Philknightfootball.jpg?width=640"
+    },
+    {
+     "name": "Jack Ma",
+     "value": 25737166000,
+     "sub": "E-commerce",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Enabling%20eCommerce-%20Small%20Enterprises%2C%20Global%20Players%20(39008130265)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Rupert Murdoch",
+     "value": 25554916000,
+     "sub": "Newspapers",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rupert%20Murdoch%20-%20Flickr%20-%20Eva%20Rinaldi%20Celebrity%20and%20Live%20Music%20Photographer.jpg?width=640"
+    },
+    {
+     "name": "Vladimir Lisin",
+     "value": 25532466000,
+     "sub": "Steel",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vladimir%20Lisin.jpg?width=640"
+    },
+    {
+     "name": "Greg Brockman",
+     "value": 25486000000,
+     "sub": "OpenAI",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Disrupt%20SF%20TechCrunch%20Disrupt%20San%20Francisco%202019%20-%20Day%202%20(48838200316)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Gina Rinehart",
+     "value": 24565732000,
+     "sub": "Mining",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gina%20Rinehart%20June%202015.jpg?width=640"
+    },
+    {
+     "name": "Lei Jun",
+     "value": 24175034000,
+     "sub": "Smartphones",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%E9%9B%B7%E5%86%9B%20Lei%20Jun%2020240425%201.jpg?width=640"
+    },
+    {
+     "name": "Gennady Timchenko",
+     "value": 24165649000,
+     "sub": "Oil",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gennady%20Timchenko%2C%202018.jpg?width=640"
+    },
+    {
+     "name": "Susanne Klatten",
+     "value": 24064001000,
+     "sub": "BMW",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Susanne%20Klatten%202017.jpg?width=640"
+    },
+    {
+     "name": "Brett Adcock",
+     "value": 23392844000,
+     "sub": "Robots",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brett%20Adcock%2001.jpg?width=640"
+    },
+    {
+     "name": "Jerry Jones",
+     "value": 23181682000,
+     "sub": "Dallas Cowboys",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerry%20Jones%20owner%20dallas%20cowboys%202008.jpg?width=640"
+    },
+    {
+     "name": "Stefan Quandt",
+     "value": 23173914000,
+     "sub": "BMW",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Blickachsen-10-Eroeffnung-Stefan-Quandt-2015-HG-789%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Kumar Birla",
+     "value": 22845131000,
+     "sub": "Diversified",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lalu%20Prasad%20presenting%20the%20JRD%20Tata%20Corporate%20Leadership%20Award%20to%20Shri%20Kumar%20Mangalam%20Birla%2C%20Chairman%2C%20Aditya%20Birla%20Group%2C%20Mumbai%2C%20at%20the%20Foundation%20Day%20of%20All%20India%20Management%20Association%20(AIMA)%2C%20in%20New%20Delhi.jpg?width=640"
+    },
+    {
+     "name": "François Pinault",
+     "value": 22836519000,
+     "sub": "Luxury goods",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fran%C3%A7ois%20Pinault%20Stade%20rennais%20-%20Le%20Havre%20AC%2020150708%2044.jpg?width=640"
+    },
+    {
+     "name": "Harry Triguboff",
+     "value": 22547629000,
+     "sub": "Real estate",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/HarryTriguboff.jpg?width=640"
+    },
+    {
+     "name": "Chen Jianhua",
+     "value": 22255322000,
+     "sub": "Chemicals",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chen%20Jianhua.jpg?width=640"
+    },
+    {
+     "name": "John Fredriksen",
+     "value": 21865656000,
+     "sub": "Shipping",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stelios%20meeting1989.jpg?width=640"
+    },
+    {
+     "name": "Wang Chuanfu",
+     "value": 21276127000,
+     "sub": "Batteries",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wang%20Chuanfu%20IAA%202023%201X7A0154.jpg?width=640"
+    },
+    {
+     "name": "John Doerr",
+     "value": 20744786000,
+     "sub": "Venture capital",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/John%20Doerr.jpg?width=640"
+    },
+    {
+     "name": "Torstein Hagen",
+     "value": 20592866000,
+     "sub": "Cruises",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Torstein%20Hagen%20(1988).jpg?width=640"
+    },
+    {
+     "name": "Henry Nicholas III",
+     "value": 20511205000,
+     "sub": "Semiconductors",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Henry%20Nicholas%20NAC.jpeg?width=640"
+    },
+    {
+     "name": "Jorge Paulo Lemann",
+     "value": 20431214000,
+     "sub": "Beer",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jorge%20Paulo%20Lemann%20em%20fevereiro%20de%202012.png?width=640"
+    },
+    {
+     "name": "Harold Hamm",
+     "value": 19000000000,
+     "sub": "Oil & gas",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Harold%20Hamm%202012%20Shankbone.JPG?width=640"
+    },
+    {
+     "name": "Ray Dalio",
+     "value": 18894528000,
+     "sub": "Hedge funds",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Web%20Summit%202018%20-%20Forum%20-%20Day%202%2C%20November%207%20HM1%207481%20(44858045925).jpg?width=640"
+    },
+    {
+     "name": "Nik Storonsky",
+     "value": 18750000000,
+     "sub": "Fintech",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2022%20-%20Centre%20Stage%20HM3%203918%20(52472532046)%20(cropped).jpg?width=640"
+    },
+    {
+     "name": "Jan Koum",
+     "value": 18568522000,
+     "sub": "WhatsApp",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Koum%20-%20Whatsapp%20-%204%20Years%20from%20Now%20(12791847664).jpg?width=640"
+    },
+    {
+     "name": "Marc Andreessen",
+     "value": 18539053000,
+     "sub": "Venture capital investing",
+     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Marc%20Andreessen-9%20(cropped).jpg?width=640"
+    }
+   ]
+  }
+ ]
+}

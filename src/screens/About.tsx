@@ -7,11 +7,11 @@ export function About({ onBack }: { onBack: () => void }) {
       </button>
       <article>
         <h1>eyedecide</h1>
-        <p className="about__lead">i built an eye tracking pipeline that runs entirely in the browser, then made this game to showcase it</p>
-        <p>it started as a 36 hour solo build at cuhacking 6, where it took third place overall and the wolfram award among 350+ people, mostly in teams of four</p>
-        <p>look at an answer and hold to pick it, close your eyes to pause</p>
-        <p>your data is safe as there is no backend server, the face detection model is loaded locally into your browser</p>
-        <p className="about__sign">- umair</p>
+        <p className="about__lead">I built an eye tracking pipeline that runs entirely in the browser, then made this game to showcase it.</p>
+        <p>It started as a 36 hour solo build at cuHacking 6, where it took third place overall and the Wolfram Award among 350+ people, mostly in teams of four.</p>
+        <p>Look at an answer and hold to pick it. Close your eyes to pause.</p>
+        <p>Your data is safe as there is no backend server. The face detection model is loaded locally into your browser.</p>
+        <p className="about__sign">- Umair</p>
         <nav>
           <a href="https://devpost.com/software/eyedecide-4dwxhn" target="_blank" rel="noreferrer">
             devpost

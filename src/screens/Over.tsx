@@ -1,4 +1,4 @@
-import { Half, Plate, Stage } from "../ui";
+import { CountUp, Half, Plate, Stage } from "../ui";
 import { useBinaryChoice } from "../hooks";
 
 export function Over(props: { score: number; best: number; newBest: boolean; onMenu: () => void; onAgain: () => void }) {
@@ -9,10 +9,12 @@ export function Over(props: { score: number; best: number; newBest: boolean; onM
   return (
     <Stage className="over">
       <Plate>
-        <div className="score score--big">
-          <b>{props.score}</b>
+        <div className={`score score--big ${props.newBest ? "is-new" : ""}`}>
+          <b>
+            <CountUp value={props.score} format={(n) => String(Math.round(n))} ms={700} />
+          </b>
         </div>
-        <span className={`label ${props.newBest ? "is-new" : ""}`}>{props.newBest ? "new best" : `best ${props.best}`}</span>
+        <span className="label">{props.newBest ? "new best" : `best ${props.best}`}</span>
       </Plate>
       <Half side="left" panelRef={choice.leftRef} focused={choice.zone === "left"} label="menu" onClick={() => choice.choose("left")}>
         <span className="word">menu</span>

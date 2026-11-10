@@ -7,6 +7,7 @@ import { difficulty, pickChallenger, pickPair, ranking, type Item } from "./ques
 import { ALL_MODES, coverItems } from "../data/modes";
 import { flagUrl } from "../flags";
 import { firstRound, MAX_REIGN, nextRound, pointsFor, Recent, type Round } from "./rounds";
+import { clockFor, heatFor, MAX_MULT, multiplier, TIERS } from "./pace";
 
 /** deterministic noise */
 function rng(seed = 1) {
@@ -442,5 +443,39 @@ describe("rounds", () => {
     const bad = { getItem: () => "{not json", setItem: () => { throw new Error("full"); } };
     const r = new Recent(bad, "z");
     expect(() => r.add(steam.decks[0], steam.decks[0].items[0])).not.toThrow();
+  });
+});
+
+describe("pace", () => {
+  it("starts at ×1 and climbs one tier at a time", () => {
+    expect(multiplier(0)).toBe(1);
+    TIERS.forEach((t, i) => {
+      expect(multiplier(t)).toBe(i + 1);
+      if (t > 0) expect(multiplier(t - 1)).toBe(i);
+    });
+    expect(multiplier(1000)).toBe(MAX_MULT);
+  });
+
+  it("quick answers heat up twice as fast", () => {
+    expect(heatFor(0.9)).toBe(2);
+    expect(heatFor(0.5)).toBe(2);
+    expect(heatFor(0.49)).toBe(1);
+    expect(heatFor(0)).toBe(1);
+  });
+
+  it("the clock tightens to a floor and never goes below it", () => {
+    for (const mixed of [false, true]) {
+      let prev = Infinity;
+      for (let n = 0; n < 60; n++) {
+        const ms = clockFor(n, mixed);
+        expect(ms).toBeLessThanOrEqual(prev);
+        expect(ms).toBeGreaterThanOrEqual(3500);
+        prev = ms;
+      }
+      expect(clockFor(59, mixed)).toBe(clockFor(200, mixed));
+    }
+    // a new question every round needs longer to read
+    expect(clockFor(0, true)).toBeGreaterThan(clockFor(0, false));
+    expect(clockFor(99, true)).toBeGreaterThan(clockFor(99, false));
   });
 });

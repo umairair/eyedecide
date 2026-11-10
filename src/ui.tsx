@@ -11,8 +11,12 @@ import { hub } from "./tracking/InputHub";
  * tested with the choices a quarter of the way in from each edge; moving them
  * (say, by giving the middle its own column) makes it learn worse.
  */
-export function Stage(props: { children: ReactNode; className?: string }) {
-  return <main className={`stage ${props.className ?? ""}`}>{props.children}</main>;
+export function Stage({ children, className, ...rest }: { children: ReactNode; className?: string } & React.HTMLAttributes<HTMLElement>) {
+  return (
+    <main {...rest} className={`stage ${className ?? ""}`}>
+      {children}
+    </main>
+  );
 }
 
 /**
@@ -49,15 +53,19 @@ export function Half(props: {
   label: string;
   onClick: () => void;
   result?: "correct" | "wrong" | null;
+  /** this side was picked and it was right */
+  hit?: boolean;
   /** this side was picked and it was wrong */
   miss?: boolean;
+  /** draw the look line in the game's heat colour instead of white */
+  heat?: boolean;
   dim?: boolean;
   /** picture above the words; without one the half is just a word */
   media?: ReactNode;
   children: ReactNode;
 }) {
-  const { side, panelRef, focused, label, onClick, result, miss, dim, media, children } = props;
-  const cls = ["half", `half--${side}`, !media && "half--flat", focused && "is-focused", result && `is-${result}`, miss && "is-miss", dim && "is-dim"];
+  const { side, panelRef, focused, label, onClick, result, hit, miss, heat, dim, media, children } = props;
+  const cls = ["half", `half--${side}`, !media && "half--flat", focused && "is-focused", result && `is-${result}`, hit && "is-hit", miss && "is-miss", dim && "is-dim"];
   return (
     <button ref={panelRef} type="button" aria-label={label} onClick={onClick} className={cls.filter(Boolean).join(" ")}>
       {media ? (
@@ -69,7 +77,8 @@ export function Half(props: {
         children
       )}
       <svg className="frame" aria-hidden>
-        <rect pathLength={1} />
+        {/* set inline: a url() in the stylesheet would point at the stylesheet, not this page */}
+        <rect pathLength={1} style={heat ? { stroke: "url(#heat)" } : undefined} />
       </svg>
     </button>
   );
@@ -92,7 +101,7 @@ export function Icon({ name, className }: { name: "check" | "cross" | "left" | "
 /** Lives left: lit dots. */
 export function Lives({ lives, max = 3 }: { lives: number; max?: number }) {
   return (
-    <div className="lives" role="img" aria-label={`${lives} lives`}>
+    <div className={`lives ${lives === 1 ? "is-last" : ""}`} role="img" aria-label={`${lives} lives`}>
       {Array.from({ length: max }, (_, i) => (
         <span key={i} className={i < lives ? "" : "is-lost"} />
       ))}
@@ -124,20 +133,20 @@ export function Camera({ ok, oval, progress = 0 }: { ok: boolean; oval?: boolean
   );
 }
 
-export function CountUp({ value, format }: { value: number; format: (n: number) => string }) {
+export function CountUp({ value, format, ms = 350 }: { value: number; format: (n: number) => string; ms?: number }) {
   const [shown, setShown] = useState(0);
   useEffect(() => {
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return setShown(value);
     const start = performance.now();
     let raf = 0;
     const tick = (t: number) => {
-      const k = Math.max(0, Math.min(1, (t - start) / 500));
+      const k = Math.max(0, Math.min(1, (t - start) / ms));
       setShown(value * (1 - (1 - k) ** 3));
       if (k < 1) raf = requestAnimationFrame(tick);
       else setShown(value);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [value]);
+  }, [value, ms]);
   return <>{format(shown)}</>;
 }

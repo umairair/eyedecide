@@ -28,6 +28,7 @@ Vercel builds from GitHub. There is no other way to ship.
 
 ## Rules that are easy to break
 
+- A look takes 1.1 s to pick (`DWELL_MS` in `src/hooks.tsx`) and the tracking tests are tuned to it: they failed at 850 and 750 ms. Make the game faster with the clock and the reveal (`src/core/pace.ts`), not the dwell.
 - The two choices must each fill exactly half the screen. The tracker is tuned and tested for choices a quarter in from each edge (`CARD` in `src/core/adapt.ts`). Moving them makes the tracking tests fail.
 - Everything you look at or read is centred on the eye line (`--eye` in `src/styles.css`, the height of the setup dots): words at 25% and 75% across, the plate at 50%. Keep readable things off the bottom edge.
 
@@ -37,7 +38,8 @@ Umair's taste. Get this right the first time.
 
 **Look**
 - Pitch black, white text, grey for anything secondary. System font. Rounded, soft, frosted. Think ChatGPT on an iPhone.
-- No colour except green and red for right and wrong. No emoji. No icons where a word will do. No sharp rectangles.
+- No colour except green and red for right and wrong, and heat (below). No emoji. No icons where a word will do. No sharp rectangles.
+- Heat is the one splash of colour, and only inside a game: a single gradient whose hue is the streak multiplier (blue, violet, pink, gold). It is drawn on the clock line round the plate, the line a look draws, a glow behind the plate and the points as they land, and nowhere else. It never uses green or plain red. See "heat" in `src/styles.css`.
 - Nothing decorative. If it doesn't help someone play, it goes.
 
 **Words in the game**

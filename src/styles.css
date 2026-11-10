@@ -1,5 +1,13 @@
 /* eyedecide. Black, white, round. Nothing shouts.
-   What you read sits in the middle. What you pick sits at the sides. */
+   What you read sits in the middle. What you pick sits at the sides.
+   One colour, and only in a game: heat (see "heat" below). */
+
+/* the hue heat is drawn in; registered so it can glide from one streak tier to the next */
+@property --h {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 215;
+}
 
 :root {
   --bg: #000;
@@ -357,6 +365,179 @@ svg {
 .half.is-miss {
   animation: shake 0.4s var(--ease);
 }
+
+/* ---------- heat: the one colour, and only in a game ----------
+   It is a single gradient whose hue is the streak: cool blue at ×1, through
+   violet and pink to gold, and at the top it drifts through all of them. It
+   never passes through green or plain red, which mean right and wrong. It shows in four
+   places and nowhere else: the clock's line round the plate, the line a look
+   draws round a side, a glow behind the plate, and the points as they land.
+   A miss puts it out. */
+.game {
+  --h: 215;
+  --heat-a: oklch(0.84 0.14 var(--h));
+  --heat-b: oklch(0.7 0.25 calc(var(--h) + 60));
+  transition: --h 0.9s var(--ease);
+}
+.game[data-mult="2"] {
+  --h: 270;
+}
+.game[data-mult="3"] {
+  --h: 320;
+}
+.game[data-mult="4"] {
+  --h: 380;
+}
+.game[data-fever] {
+  animation: fever 5s ease-in-out infinite alternate;
+}
+.defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.heat-a {
+  stop-color: var(--heat-a);
+}
+.heat-b {
+  stop-color: var(--heat-b);
+}
+
+/* light behind the plate, which frosts it: brighter and wider with every tier */
+.aura {
+  grid-area: 1 / 1 / -1 / -1;
+  place-self: start center;
+  position: relative;
+  top: var(--eye);
+  translate: 0 -50%;
+  z-index: 3;
+  width: clamp(260px, 30vw, 460px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, var(--heat-b), var(--heat-a) 50%, #0000);
+  filter: blur(36px);
+  opacity: 0.38;
+  pointer-events: none;
+  transition: opacity 0.9s var(--ease), scale 0.9s var(--ease);
+}
+.game[data-mult="2"] .aura {
+  opacity: 0.48;
+  scale: 1.12;
+}
+.game[data-mult="3"] .aura {
+  opacity: 0.58;
+  scale: 1.24;
+}
+.game[data-mult="4"] .aura {
+  opacity: 0.66;
+  scale: 1.36;
+}
+.game[data-fever] .aura {
+  opacity: 0.74;
+  scale: 1.48;
+  animation: breathe 1.6s ease-in-out infinite alternate;
+}
+/* a miss: lights out for the length of the reveal */
+.game.is-cold .aura {
+  opacity: 0;
+  transition-duration: 0.25s;
+}
+
+/* the clock: a line round the plate, as long as the time left (--t, 1 = all of it) */
+.clock {
+  --t: 1;
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.clock b,
+.clock i {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.clock i {
+  padding: 3px;
+  background: conic-gradient(var(--heat-a), var(--heat-b) calc(var(--t) * 1turn), #0000 0);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+/* the same line again, out of focus: its glow */
+.clock b {
+  filter: blur(14px);
+  opacity: 0.7;
+}
+.clock.is-low {
+  animation: pulse 0.42s ease-in-out infinite alternate;
+}
+.game.is-revealed .clock {
+  opacity: 0;
+}
+.game.is-timeout .plate {
+  animation: shake 0.4s var(--ease);
+}
+
+/* the points, landing where the question was */
+.gain,
+.mult,
+.score.is-new b {
+  background: linear-gradient(120deg, var(--heat-a), var(--heat-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.gain {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  padding: 0 0.08em;
+  font-weight: 700;
+  font-size: clamp(40px, 36cqi, 104px);
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  animation: land 0.4s var(--ease);
+}
+.mult {
+  font-weight: 600;
+  font-size: clamp(15px, 8cqi, 22px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  animation: land 0.5s var(--ease);
+}
+
+/* a right pick: the line you drew stays a moment, and the side lights up under it */
+.half.is-hit .frame {
+  display: block;
+  opacity: 1;
+  animation: fade 0.7s 0.1s var(--ease) both;
+}
+.half.is-hit .frame rect {
+  stroke-dashoffset: 0;
+}
+.half.is-hit::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% var(--eye), var(--heat-b), #0000 62%);
+  opacity: 0;
+  pointer-events: none;
+  animation: flash 0.75s var(--ease);
+}
+
+/* a new best keeps the colour it was won in */
+.over {
+  --heat-a: oklch(0.84 0.14 320);
+  --heat-b: oklch(0.8 0.17 75);
+}
 .half--flat.is-correct {
   color: var(--good);
 }
@@ -457,6 +638,10 @@ svg {
 .lives .is-lost {
   background: rgb(255 255 255 / 0.16);
 }
+/* down to the last one */
+.lives.is-last span:not(.is-lost) {
+  background: var(--bad);
+}
 .tag {
   padding: 2px 10px;
   border-radius: 999px;
@@ -480,9 +665,6 @@ svg {
   font-size: 13px;
   color: var(--mute);
   text-transform: lowercase;
-}
-.label.is-new {
-  color: var(--good);
 }
 .help {
   display: grid;
@@ -775,6 +957,43 @@ svg {
     translate: 0 -8px;
   }
 }
+@keyframes fever {
+  from {
+    --h: 380;
+  }
+  12% {
+    --h: 430;
+  }
+  to {
+    --h: 215;
+  }
+}
+@keyframes breathe {
+  to {
+    scale: 1.58;
+  }
+}
+@keyframes pulse {
+  to {
+    opacity: 0.3;
+  }
+}
+@keyframes land {
+  from {
+    opacity: 0;
+    scale: 1.5;
+  }
+}
+@keyframes fade {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes flash {
+  from {
+    opacity: 0.55;
+  }
+}
 
 /* ---------- narrow screens: the plate becomes a strip on top ---------- */
 @media (max-width: 700px) {
@@ -798,6 +1017,18 @@ svg {
   }
   .plate .head {
     font-size: clamp(20px, 6.4vw, 32px);
+  }
+  .aura {
+    grid-area: plate;
+    place-self: center;
+    top: 0;
+    translate: none;
+    width: 70%;
+    height: 150%;
+    aspect-ratio: auto;
+  }
+  .gain {
+    font-size: 40px;
   }
   .ask {
     min-height: 0;

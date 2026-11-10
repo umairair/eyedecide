@@ -880,24 +880,8 @@ svg {
   overflow-y: auto;
   display: grid;
   place-items: center;
-  padding: 88px 28px 64px;
+  padding: 64px 28px 120px;
   animation: enter 0.4s var(--ease);
-}
-.about__back {
-  position: fixed;
-  top: 18px;
-  left: 22px;
-  padding: 6px;
-  border: 0;
-  background: none;
-  color: var(--mute);
-  font-size: 15px;
-  text-transform: lowercase;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-.about__back:hover {
-  color: var(--text);
 }
 .about article {
   display: grid;

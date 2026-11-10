@@ -2,9 +2,6 @@
 export function About({ onBack }: { onBack: () => void }) {
   return (
     <div className="overlay about" role="dialog" aria-modal="true" aria-label="info">
-      <button className="about__back" onClick={onBack} autoFocus>
-        back
-      </button>
       <article>
         <h1>eyedecide</h1>
         <p className="about__lead">I built an eye tracking pipeline that runs entirely in the browser, then made this game to showcase it.</p>
@@ -21,6 +18,12 @@ export function About({ onBack }: { onBack: () => void }) {
           </a>
         </nav>
       </article>
+      {/* back sits where info was: the bottom middle, same bar as every other control */}
+      <nav className="bar">
+        <button onClick={onBack} autoFocus>
+          back
+        </button>
+      </nav>
     </div>
   );
 }

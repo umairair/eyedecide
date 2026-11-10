@@ -8,3 +8,4 @@ public/models
 coverage
 .vite
 .vercel
+.env*

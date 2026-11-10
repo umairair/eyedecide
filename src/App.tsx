@@ -33,7 +33,7 @@ export function App() {
   const [camera, setCamera] = useState(false);
   const [best, setBest] = useState<Record<string, number>>(() => load("best", {}));
   const [menuIndex, setMenuIndex] = useState(0);
-  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState<false | "settings" | "info">(false);
   /** setup is showing again over the current screen: the calibration stopped fitting, or the player asked */
   const [recal, setRecal] = useState<SetupReason | null>(null);
 
@@ -85,13 +85,13 @@ export function App() {
 
   // nothing gets picked while settings or a re-setup is open
   useEffect(() => {
-    hub.paused = settingsOpen || recal !== null;
+    hub.paused = settingsOpen !== false || recal !== null;
   }, [settingsOpen, recal]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (settingsOpen || (e.target as HTMLElement)?.closest?.("input")) return;
-      if (e.key.toLowerCase() === "s" && screen.name !== "start") setSettingsOpen(true);
+      if (e.key.toLowerCase() === "s" && screen.name !== "start") setSettingsOpen("settings");
       if (e.key === "Escape" && (screen.name === "game" || screen.name === "over" || screen.name === "practice")) setScreen({ name: "menu" });
     };
     window.addEventListener("keydown", onKey);
@@ -123,7 +123,7 @@ export function App() {
 
   return (
     <>
-      {screen.name === "start" && <Start onCamera={startCam} onKeys={startKeys} />}
+      {screen.name === "start" && <Start onCamera={startCam} onKeys={startKeys} onAbout={() => setSettingsOpen("info")} />}
       {screen.name === "calibrate" && <Calibrate onDone={calibrated} onKeys={startKeys} />}
       {screen.name === "practice" && <Practice onDone={practiced} onRecalibrate={resetup} />}
       {screen.name === "menu" && (
@@ -175,7 +175,7 @@ export function App() {
         </span>
       )}
       {screen.name !== "start" && (
-        <button className="gear" onClick={() => setSettingsOpen(true)} aria-label="settings" title="Settings (S)">
+        <button className="gear" onClick={() => setSettingsOpen("settings")} aria-label="settings" title="Settings (S)">
           <Icon name="gear" />
         </button>
       )}
@@ -191,14 +191,11 @@ export function App() {
       <SettingsDialog
         open={settingsOpen}
         camera={camera}
+        infoOnly={screen.name === "start"}
         onClose={() => setSettingsOpen(false)}
         onRecalibrate={() => {
           setSettingsOpen(false);
           resetup();
-        }}
-        onPractice={() => {
-          setSettingsOpen(false);
-          setScreen({ name: "practice" });
         }}
         onSwitchInput={() => {
           setSettingsOpen(false);

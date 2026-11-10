@@ -1,4 +1,4 @@
-export function Start({ onCamera, onKeys }: { onCamera: () => void; onKeys: () => void }) {
+export function Start({ onCamera, onKeys, onAbout }: { onCamera: () => void; onKeys: () => void; onAbout: () => void }) {
   return (
     <main className="page">
       <h1 className="wordmark">eyedecide</h1>
@@ -7,6 +7,9 @@ export function Start({ onCamera, onKeys }: { onCamera: () => void; onKeys: () =
       </button>
       <button className="link" onClick={onKeys}>
         use mouse
+      </button>
+      <button className="link about-link" onClick={onAbout}>
+        about
       </button>
     </main>
   );

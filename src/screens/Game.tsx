@@ -117,17 +117,10 @@ export function Game(props: {
 
   return (
     <Stage className="game">
-      <Plate
-        foot={
-          <>
-            <Lives lives={lives} max={LIVES} />
-            <div className="score">
-              <b key={score}>{score}</b>
-            </div>
-            {streak >= 3 ? <span className="label">{streak} streak</span> : props.best > score && <span className="label">best {props.best}</span>}
-          </>
-        }
-      >
+      {/* lives, question and score all sit on the plate: nothing to read anywhere else */}
+      <Plate>
+        <Lives lives={lives} max={LIVES} />
+        <div className="qa">
         <div className={`ask ${revealed ? "is-answered" : ""}`}>
           <Headline text={deck.question} />
           {round.kind === "close" && <span className="tag">2×</span>}
@@ -145,6 +138,11 @@ export function Game(props: {
             <Icon name={correct ? "check" : "cross"} />
           </div>
         )}
+        </div>
+        <div className="score">
+          <b key={score}>{score}</b>
+        </div>
+        {streak >= 3 ? <span className="label">{streak} streak</span> : props.best > score && <span className="label">best {props.best}</span>}
         <p className="sr" role="status">
           {revealed ? (correct ? "Correct" : "Wrong") : ""}
         </p>

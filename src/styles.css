@@ -12,8 +12,11 @@
   --bad: #ff453a;
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
   --r: clamp(22px, 2.6vw, 36px);
-  /* height of the strip of words under a picture */
-  --band: clamp(128px, 23vh, 210px);
+  /* The eye line: how far down the screen the setup dots sit. The tracker
+     learns left from right at this height, so everything you look at or
+     read is centred on it. Nothing to read lives at the bottom edge, where
+     lowered lids hide the eyes from the camera. */
+  --eye: 58%;
   color-scheme: dark;
 }
 
@@ -135,7 +138,6 @@ svg {
 
 /* ---------- the stage: left half, right half, a plate across the seam ---------- */
 .stage {
-  --mid: 50%;
   position: fixed;
   inset: 0;
   display: grid;
@@ -144,11 +146,6 @@ svg {
   gap: 10px;
   padding: 10px;
   background: var(--bg);
-}
-/* with pictures, the plate sits level with them, above the words */
-.game,
-.menu {
-  --mid: calc((100% - var(--band)) / 2);
 }
 .plate,
 .foot {
@@ -166,7 +163,7 @@ svg {
 .plate {
   place-self: start center;
   position: relative;
-  top: var(--mid);
+  top: var(--eye);
   translate: 0 -50%;
   width: clamp(200px, 22vw, 340px);
   gap: 8px;
@@ -180,6 +177,11 @@ svg {
 }
 .plate .note {
   font-size: clamp(13px, 6cqi, 17px);
+}
+.qa {
+  position: relative;
+  display: grid;
+  justify-items: center;
 }
 /* the question, and whatever goes with it */
 .ask {
@@ -206,7 +208,6 @@ svg {
   --p: 0;
   position: relative;
   display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
   min-width: 0;
   min-height: 0;
   padding: 0;
@@ -242,19 +243,27 @@ svg {
 .half.is-focused .pic {
   transform: scale(1.03);
 }
+/* the words sit on the picture, on the eye line, a quarter in from the edge:
+   the exact spot the tracker expects a look at this side to land */
+.half__band,
+.half--flat > :not(.frame) {
+  position: absolute;
+  left: 50%;
+  top: var(--eye);
+  translate: -50% -50%;
+}
 .half__band {
   display: grid;
   justify-items: center;
-  align-content: center;
   gap: 3px;
-  min-height: var(--band);
-  padding: 12px 16px 16px;
-}
-/* a half with no picture: just a word */
-.half--flat {
-  grid-template-rows: 1fr;
-  place-items: center;
-  padding: 16px;
+  width: max-content;
+  max-width: min(78%, 340px);
+  padding: 14px 22px 16px;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--r) - 6px);
+  background: var(--raised);
+  -webkit-backdrop-filter: blur(28px) saturate(1.4);
+  backdrop-filter: blur(28px) saturate(1.4);
 }
 
 /* Look at a side and a line runs round its edge. All the way round = picked.
@@ -309,7 +318,7 @@ svg {
 }
 .value {
   font-weight: 600;
-  font-size: clamp(36px, 5vw, 76px);
+  font-size: clamp(30px, 3.8vw, 58px);
   line-height: 1;
   letter-spacing: -0.04em;
   font-variant-numeric: tabular-nums;
@@ -804,9 +813,6 @@ svg {
 
 /* ---------- narrow screens: the plate becomes a strip on top ---------- */
 @media (max-width: 700px) {
-  :root {
-    --band: 120px;
-  }
   .stage {
     grid-template-rows: auto minmax(0, 1fr);
     grid-template-areas: "plate plate" "left right";
@@ -859,7 +865,8 @@ svg {
     width: 48px;
   }
   .half__band {
-    padding: 10px 8px 56px;
+    max-width: 92%;
+    padding: 10px 12px;
   }
 }
 

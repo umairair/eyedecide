@@ -33,11 +33,17 @@ export function SettingsDialog(props: {
     <dialog ref={ref} className="settings" onClose={props.onClose} aria-label={info ? "about" : "settings"}>
       {info ? (
         <div className="about">
-          <p>two things. one question.</p>
-          <p>look at your answer. hold.</p>
-          <p>three lives.</p>
-          <p>close your eyes to pause.</p>
-          <p>the camera never leaves this device.</p>
+          <p>a higher or lower game you play with your eyes.</p>
+          <p>built solo in 36 hours at cuhacking 6. third place overall and the wolfram award.</p>
+          <p>look to pick. close your eyes to pause.</p>
+          <nav>
+            <a href="https://devpost.com/software/eyedecide-4dwxhn" target="_blank" rel="noreferrer">
+              devpost
+            </a>
+            <a href="https://github.com/umairair/cuhacking2025" target="_blank" rel="noreferrer">
+              github
+            </a>
+          </nav>
           <small>built by umair</small>
         </div>
       ) : (

@@ -771,6 +771,19 @@ svg {
 .about p:first-child {
   color: var(--text);
 }
+.about nav {
+  display: flex;
+  gap: 16px;
+  margin-top: 6px;
+}
+.about a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgb(255 255 255 / 0.25);
+}
+.about a:hover {
+  border-color: var(--text);
+}
 .about small {
   margin-top: 18px;
   font-size: 12px;

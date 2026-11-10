@@ -31,6 +31,8 @@ export interface GazeOutput {
   health: Health;
   /** the calibration no longer fits (the player moved, or the signal drifted): set up again */
   recal: RecalReason | null;
+  /** eyes just held shut on purpose: the hands-free "pause". True for one frame per closure. */
+  hold: boolean;
 }
 
 /** nuisance readings cancel wobble around their recent average (breathing ≈ 0.2–0.5 Hz passes) */
@@ -118,6 +120,7 @@ export class GazeProcessor {
   /** face lost: forget short-term state, keep what was learned about posture */
   reset() {
     this.filter.reset();
+    this.eyes.reset();
     this.last3 = [];
     this.held = null;
     this.lastT = null;
@@ -139,6 +142,7 @@ export class GazeProcessor {
       away: this.away,
       health: this.health,
       recal: this.watch.reason,
+      hold: false,
     });
 
     // Lids that sit low (looking down at a laptop in your lap) read as half
@@ -150,11 +154,12 @@ export class GazeProcessor {
       if (closed) this.closedAt = t;
       // hold through a normal blink, go quiet if they stay shut
       const hold = !lids.suppress && !this.away;
-      return { ...quiet(true), s: hold ? this.held : null };
+      // only real lids count as the gesture, not a face sliding out of frame
+      return { ...quiet(true), s: hold ? this.held : null, hold: lids.fired && blink > this.blinkThreshold };
     }
 
     const m = this.model;
-    if (!m) return { s: null, sigma: 0, closed: false, away: false, health: "ok", recal: null };
+    if (!m) return { s: null, sigma: 0, closed: false, away: false, health: "ok", recal: null, hold: false };
 
     // 1. redundant sensors → head and eye estimates, with faulty sensors voted out
     const fu = this.fusion.update(m.fusion, f, t);
@@ -214,6 +219,7 @@ export class GazeProcessor {
       away: this.away,
       health: this.health,
       recal: this.watch.reason,
+      hold: false,
     };
   }
 

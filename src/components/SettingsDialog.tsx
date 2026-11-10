@@ -12,6 +12,8 @@ export function SettingsDialog(props: {
   /** hide the controls: on the start screen there is nothing to set yet */
   infoOnly?: boolean;
   onClose: () => void;
+  /** leave the game; absent when there is nothing to leave */
+  onMenu?: () => void;
   onRecalibrate: () => void;
   onSwitchInput: () => void;
 }) {
@@ -34,11 +36,13 @@ export function SettingsDialog(props: {
           <p>two things. one question.</p>
           <p>look at your answer. hold.</p>
           <p>three lives.</p>
+          <p>close your eyes to pause.</p>
           <p>the camera never leaves this device.</p>
           <small>built by umair</small>
         </div>
       ) : (
         <div className="rows">
+          {props.onMenu && <button onClick={props.onMenu}>menu</button>}
           <label>
             sound
             <input type="checkbox" checked={settings.sound} onChange={(e) => update({ sound: e.target.checked })} />

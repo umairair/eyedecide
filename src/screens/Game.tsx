@@ -27,6 +27,8 @@ const storage = () => {
 export function Game(props: {
   mode: Mode;
   camera: boolean;
+  /** something is showing over the game: don't take answers */
+  paused: boolean;
   best: number;
   /** every point as it's scored, so a run that gets abandoned still counts toward the best */
   onScore: (score: number) => void;
@@ -59,7 +61,7 @@ export function Game(props: {
     return () => clearTimeout(t);
   }, [round, revealed, props.camera]);
 
-  const choice = useBinaryChoice(!revealed, (side) => {
+  const choice = useBinaryChoice(!revealed && !props.paused, (side) => {
     const right = side === winner;
     save("prefs", { ...load("prefs", {}), rounds: played + round.n + 1 });
     const nextStreak = right ? streak + 1 : 0;

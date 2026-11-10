@@ -22,9 +22,11 @@ export interface InputFrame {
   health: Health;
   /** set when the calibration no longer fits and a new one is needed */
   recal: RecalReason | null;
+  /** eyes held shut on purpose (one frame per closure): pause */
+  hold: boolean;
 }
 
-const EMPTY = { face: false, features: null, s: null, blink: false, away: false, sigma: 0, health: "ok", recal: null } as const;
+const EMPTY = { face: false, features: null, s: null, blink: false, away: false, sigma: 0, health: "ok", recal: null, hold: false } as const;
 
 /** starting: asking for the camera · camera: stream live, model still loading · ready: tracking */
 export type CameraStatus = "off" | "starting" | "camera" | "ready" | "error";
@@ -183,7 +185,7 @@ export class InputHub {
     if (!sample) {
       // Ride through a few dropped detections instead of flickering to "lost".
       if (t - this.lastFaceT < DROPOUT_HOLD_MS) {
-        this.emit({ ...this.latest, t, blink: true });
+        this.emit({ ...this.latest, t, blink: true, hold: false });
       } else {
         this.gaze.reset();
         this.emit({ t, ...EMPTY });
@@ -202,6 +204,7 @@ export class InputHub {
       sigma: g.sigma,
       health: g.health,
       recal: g.recal,
+      hold: g.hold,
     });
   };
 

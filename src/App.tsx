@@ -11,6 +11,7 @@ import { Menu } from "./screens/Menu";
 import { Game } from "./screens/Game";
 import { Over } from "./screens/Over";
 import { Practice } from "./screens/Practice";
+import { Pause } from "./screens/Pause";
 import { Camera, Icon } from "./ui";
 
 type Pick = Mode;
@@ -36,6 +37,9 @@ export function App() {
   const [settingsOpen, setSettingsOpen] = useState<false | "settings" | "info">(false);
   /** setup is showing again over the current screen: the calibration stopped fitting, or the player asked */
   const [recal, setRecal] = useState<SetupReason | null>(null);
+
+  /** eyes held shut mid-game: the hands-free way out */
+  const [paused, setPaused] = useState(false);
 
   const playing = screen.name === "menu" || screen.name === "game" || screen.name === "over" || screen.name === "practice";
 
@@ -83,6 +87,16 @@ export function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // hold your eyes shut for a moment in a game: pause, then look at menu or resume
+  const inGame = screen.name === "game";
+  useEffect(() => {
+    if (!inGame) return setPaused(false);
+    if (!camera || paused || recal || settingsOpen) return;
+    return hub.subscribe((f) => {
+      if (f.hold) setPaused(true);
+    });
+  }, [inGame, camera, paused, recal, settingsOpen]);
+
   // nothing gets picked while settings or a re-setup is open
   useEffect(() => {
     hub.paused = settingsOpen !== false || recal !== null;
@@ -92,11 +106,12 @@ export function App() {
     const onKey = (e: KeyboardEvent) => {
       if (settingsOpen || (e.target as HTMLElement)?.closest?.("input")) return;
       if (e.key.toLowerCase() === "s" && screen.name !== "start") setSettingsOpen("settings");
+      if (e.key === "Escape" && paused) return setPaused(false);
       if (e.key === "Escape" && (screen.name === "game" || screen.name === "over" || screen.name === "practice")) setScreen({ name: "menu" });
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [settingsOpen, screen.name]);
+  }, [settingsOpen, screen.name, paused]);
 
   const lost = useFaceLost(camera && status === "ready" && playing, 800);
   const health = useTrackingHealth(camera && status === "ready" && playing && !recal);
@@ -141,6 +156,7 @@ export function App() {
           key={screen.run}
           mode={screen.mode}
           camera={camera}
+          paused={paused}
           best={best[idOf(screen.mode)] ?? 0}
           onScore={(s) => record(screen.mode, s)}
           onOver={(s) => finish(screen.mode, s, screen.prevBest)}
@@ -156,6 +172,8 @@ export function App() {
           onAgain={() => play(screen.mode)}
         />
       )}
+
+      {paused && !recal && <Pause onMenu={() => setScreen({ name: "menu" })} onResume={() => setPaused(false)} />}
 
       {recal && (
         <Recalibrate
@@ -192,6 +210,14 @@ export function App() {
         open={settingsOpen}
         camera={camera}
         infoOnly={screen.name === "start"}
+        onMenu={
+          screen.name === "game" || screen.name === "over"
+            ? () => {
+                setSettingsOpen(false);
+                setScreen({ name: "menu" });
+              }
+            : undefined
+        }
         onClose={() => setSettingsOpen(false)}
         onRecalibrate={() => {
           setSettingsOpen(false);

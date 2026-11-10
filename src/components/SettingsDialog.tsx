@@ -34,7 +34,7 @@ export function SettingsDialog(props: {
       {info ? (
         <div className="about">
           <p>i built an eye tracking pipeline that runs entirely in the browser, then made this game to showcase it</p>
-          <p>it started as a 36 hour solo build at cuhacking 6, where it took third place overall and the wolfram award</p>
+          <p>it started as a 36 hour solo build at cuhacking 6, where it took third place overall and the wolfram award among 350+ people, mostly in teams of four</p>
           <p>look at an answer to pick it, close your eyes to pause</p>
           <nav>
             <a href="https://devpost.com/software/eyedecide-4dwxhn" target="_blank" rel="noreferrer">

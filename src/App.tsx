@@ -137,7 +137,7 @@ export function App() {
 
   return (
     <>
-      {screen.name === "start" && <Start onPlay={startCam} />}
+      {screen.name === "start" && <Start onPlay={startCam} onAbout={() => setAbout(true)} />}
       {screen.name === "calibrate" && <Calibrate onDone={calibrated} onKeys={startKeys} />}
       {screen.name === "practice" && <Practice onDone={practiced} onRecalibrate={resetup} />}
       {screen.name === "menu" && (
@@ -194,19 +194,19 @@ export function App() {
         </div>
       )}
 
-      {/* the only two controls: both in the middle, where a glance picks nothing */}
-      <button className="chip chip--top" onClick={() => setAbout(true)}>
-        about
-      </button>
-      {playing && (
-        <div className="chip chip--bottom">
+      {/* every control there is, in one quiet bar at the bottom middle, where a glance picks nothing */}
+      {screen.name !== "start" && (
+        <nav className="bar">
           {(screen.name === "game" || screen.name === "over") && <button onClick={() => setScreen({ name: "menu" })}>menu</button>}
-          {/* with the mouse, this is also how you switch to your eyes */}
-          <button onClick={() => (camera ? resetup() : startCam())}>
-            {health && <i className={`light is-${health}`} title={health === "ok" ? "tracking" : "hold still"} />}
-            recalibrate
-          </button>
-        </div>
+          {playing && (
+            // with the mouse, this is also how you switch to your eyes
+            <button onClick={() => (camera ? resetup() : startCam())}>
+              {health && <i className={`light is-${health}`} title={health === "ok" ? "tracking" : "hold still"} />}
+              recalibrate
+            </button>
+          )}
+          <button onClick={() => setAbout(true)}>about</button>
+        </nav>
       )}
 
       {about && <About onBack={() => setAbout(false)} />}

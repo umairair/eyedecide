@@ -2,7 +2,7 @@
 export function About({ onBack }: { onBack: () => void }) {
   return (
     <div className="overlay about" role="dialog" aria-modal="true" aria-label="about">
-      <button className="chip about__back" onClick={onBack} autoFocus>
+      <button className="about__back" onClick={onBack} autoFocus>
         back
       </button>
       <article>

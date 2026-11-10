@@ -671,48 +671,38 @@ svg {
   letter-spacing: -0.02em;
 }
 
-/* The only two controls, floating in the middle of the top and bottom edges:
+/* Every control there is, in one quiet bar at the bottom middle:
    out of the way, and where a glance picks nothing. */
-.chip {
+.bar {
   position: fixed;
   left: 50%;
+  bottom: 14px;
   z-index: 10;
   translate: -50% 0;
   display: flex;
-  padding: 0;
+  padding: 3px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--raised);
   -webkit-backdrop-filter: blur(28px) saturate(1.4);
   backdrop-filter: blur(28px) saturate(1.4);
-  color: var(--mute);
-  font-size: 13px;
-  text-transform: lowercase;
-  transition: color 0.2s;
 }
-.chip--top {
-  top: 16px;
-  padding: 7px 14px;
-  cursor: pointer;
-}
-.chip--bottom {
-  bottom: 16px;
-}
-.chip button {
+.bar button {
   display: flex;
   align-items: center;
   gap: 7px;
-  padding: 8px 14px;
+  padding: 7px 14px;
   border: 0;
   border-radius: 999px;
   background: none;
-  color: inherit;
+  color: var(--mute);
+  font-size: 13px;
   text-transform: lowercase;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: color 0.2s, background 0.2s;
 }
-.chip button:hover,
-button.chip:hover {
+.bar button:hover {
+  background: rgb(255 255 255 / 0.08);
   color: var(--text);
 }
 /* tracking light */
@@ -736,11 +726,20 @@ button.chip:hover {
   animation: enter 0.4s var(--ease);
 }
 .about__back {
-  top: 16px;
-  left: 16px;
-  translate: none;
-  padding: 7px 14px;
+  position: fixed;
+  top: 18px;
+  left: 22px;
+  padding: 6px;
+  border: 0;
+  background: none;
+  color: var(--mute);
+  font-size: 15px;
+  text-transform: lowercase;
   cursor: pointer;
+  transition: color 0.2s;
+}
+.about__back:hover {
+  color: var(--text);
 }
 .about article {
   display: grid;
@@ -840,9 +839,6 @@ button.chip:hover {
   }
   .foot {
     grid-area: 1 / 1 / -1 / -1;
-  }
-  .plate {
-    margin-top: 44px;
   }
   .score b {
     font-size: 30px;

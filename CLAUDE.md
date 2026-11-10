@@ -54,5 +54,5 @@ Umair's taste. Get this right the first time.
 - Signed `- Umair`. Links: devpost and linkedin, not github.
 
 **Controls**
-- As few as possible. There is no settings screen and no sound. Two floating pills: `about` at the top, `recalibrate` at the bottom.
+- As few as possible. There is no settings screen and no sound. One floating bar at the bottom middle: `menu` (in a game), `recalibrate`, `about`.
 - Never make the player configure anything.

@@ -883,6 +883,12 @@ svg {
   padding: 64px 28px 120px;
   animation: enter 0.4s var(--ease);
 }
+.about__back {
+  position: fixed;
+  left: 50%;
+  bottom: 14px;
+  translate: -50% 0;
+}
 .about article {
   display: grid;
   gap: 26px;

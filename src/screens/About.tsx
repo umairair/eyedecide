@@ -18,12 +18,10 @@ export function About({ onBack }: { onBack: () => void }) {
           </a>
         </nav>
       </article>
-      {/* back sits where info was: the bottom middle, same bar as every other control */}
-      <nav className="bar">
-        <button onClick={onBack} autoFocus>
-          back
-        </button>
-      </nav>
+      {/* back sits where info was, at the bottom middle: just the word */}
+      <button className="link about__back" onClick={onBack} autoFocus>
+        back
+      </button>
     </div>
   );
 }

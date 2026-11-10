@@ -776,10 +776,10 @@ button.chip:hover {
 .about a:hover {
   border-color: var(--text);
 }
-.about footer {
-  margin-top: 20px;
-  font-size: 13px;
-  color: rgb(255 255 255 / 0.32);
+.about__sign {
+  color: var(--text);
+  font-size: clamp(20px, 2.2vw, 28px);
+  letter-spacing: -0.02em;
 }
 
 /* ---------- motion ---------- */

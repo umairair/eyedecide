@@ -11,15 +11,15 @@ export function About({ onBack }: { onBack: () => void }) {
         <p>it started as a 36 hour solo build at cuhacking 6, where it took third place overall and the wolfram award among 350+ people, mostly in teams of four</p>
         <p>look at an answer and hold to pick it, close your eyes to pause</p>
         <p>your data is safe as there is no backend server, the face detection model is loaded locally into your browser</p>
+        <p className="about__sign">- umair</p>
         <nav>
           <a href="https://devpost.com/software/eyedecide-4dwxhn" target="_blank" rel="noreferrer">
             devpost
           </a>
-          <a href="https://github.com/umairair/cuhacking2025" target="_blank" rel="noreferrer">
-            github
+          <a href="https://www.linkedin.com/in/umairmal/" target="_blank" rel="noreferrer">
+            linkedin
           </a>
         </nav>
-        <footer>built by umair</footer>
       </article>
     </div>
   );

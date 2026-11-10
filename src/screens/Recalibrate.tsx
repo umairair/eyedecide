@@ -28,7 +28,7 @@ export function Recalibrate(props: { reason: SetupReason; onDone: () => void; on
     <div className="overlay" role="dialog" aria-modal="true" aria-label="set up again">
       {phase === "notice" ? (
         <main className="page">
-          <h2 className="head">{props.reason === "moved" ? "you moved" : "lost track"}</h2>
+          <h2 className="head">{props.reason === "moved" ? "you moved" : "tracking is off"}</h2>
           <button className="btn" onClick={() => setPhase("setup")} autoFocus>
             redo setup {count}
           </button>

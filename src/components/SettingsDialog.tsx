@@ -33,7 +33,7 @@ export function SettingsDialog(props: {
     <dialog ref={ref} className="settings" onClose={props.onClose} aria-label={info ? "about" : "settings"}>
       {info ? (
         <div className="about">
-          <p>i built an eye tracking pipeline that runs entirely in the browser, then made this game to show it off</p>
+          <p>i built an eye tracking pipeline that runs entirely in the browser, then made this game to showcase it</p>
           <p>it started as a 36 hour solo build at cuhacking 6, where it took third place overall and the wolfram award</p>
           <p>look at an answer to pick it, close your eyes to pause</p>
           <nav>

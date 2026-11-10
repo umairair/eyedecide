@@ -11,6 +11,15 @@ This folder is a clone of `github.com/umairair/eyedecide`. Use git for everythin
 - Push to `origin` when a piece of work is done.
 - Run `npm test` and `npm run build` before pushing.
 
+## Deploy
+
+Vercel builds from GitHub. There is no other way to ship.
+
+- Every change is committed and pushed. A push to `main` is a production deploy.
+- Any other branch or pull request gets its own preview URL.
+- Never deploy from the laptop with the Vercel CLI: what is live must always be what is on GitHub.
+- Build settings live in `vercel.json`. No server, no environment variables: it is static files.
+
 ## Commands
 
 - `npm run dev` dev server on 5173

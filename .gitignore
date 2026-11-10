@@ -7,3 +7,4 @@ public/models
 *.log
 coverage
 .vite
+.vercel

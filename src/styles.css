@@ -484,26 +484,6 @@ svg {
 .label.is-new {
   color: var(--good);
 }
-.dots {
-  display: flex;
-  padding: 4px 8px;
-  border-radius: 999px;
-  background: var(--raised);
-  -webkit-backdrop-filter: blur(28px);
-  backdrop-filter: blur(28px);
-}
-.dots button {
-  width: 14px;
-  height: 14px;
-  padding: 0;
-  border: 4px solid transparent;
-  border-radius: 50%;
-  background: rgb(255 255 255 / 0.2) content-box;
-  cursor: pointer;
-}
-.dots button.is-on {
-  background: var(--text) content-box;
-}
 .help {
   display: grid;
   justify-items: center;
@@ -515,21 +495,6 @@ svg {
 }
 
 /* ---------- setup ---------- */
-.steps {
-  display: flex;
-  gap: 7px;
-}
-.steps span {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgb(255 255 255 / 0.18);
-  transition: background 0.3s;
-}
-.steps .is-on,
-.steps .is-done {
-  background: var(--text);
-}
 .arrow-up {
   width: 44px;
   color: var(--mute);

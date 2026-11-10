@@ -179,7 +179,6 @@ export function Calibrate({ onDone, onKeys }: { onDone: () => void; onKeys: () =
     const loading = status !== "ready";
     return (
       <main className="page">
-        <Steps at={0} />
         <Camera ok={fit === "ok"} oval progress={progress} />
         <h2 className="head">{loading ? "loading" : dark && fit === "none" ? "more light" : FIT_TEXT[fit]}</h2>
         {keys}
@@ -201,7 +200,6 @@ export function Calibrate({ onDone, onKeys }: { onDone: () => void; onKeys: () =
   return (
     <main className="calib">
       <div className="calib__text">
-        <Steps at={ALL.indexOf(step) + 1} />
         <h2 className="head">{face ? "look at the dot" : "face the camera"}</h2>
       </div>
       <div className="dot" style={{ left: `${X[step]}%`, "--p": progress } as React.CSSProperties} aria-hidden>
@@ -210,16 +208,5 @@ export function Calibrate({ onDone, onKeys }: { onDone: () => void; onKeys: () =
       {/* the dots keep failing: never trap anyone in setup */}
       {attempt >= HELP_AFTER && <div className="calib__help">{keys}</div>}
     </main>
-  );
-}
-
-/** where you are in setup: face, then three dots */
-function Steps({ at }: { at: number }) {
-  return (
-    <div className="steps" role="img" aria-label={`step ${at + 1} of 4`}>
-      {[0, 1, 2, 3].map((k) => (
-        <span key={k} className={k < at ? "is-done" : k === at ? "is-on" : ""} />
-      ))}
-    </div>
   );
 }

@@ -21,16 +21,7 @@ export function Menu(props: { best: Record<string, number>; index: number; onPla
 
   return (
     <Stage className="menu">
-      <Plate
-        foot={
-          // with a mouse: jump straight to a game
-          <div className="dots">
-            {ALL_MODES.map((m, k) => (
-              <button key={m.id} className={k === i ? "is-on" : ""} aria-label={m.title} aria-current={k === i} onClick={() => setI(k)} />
-            ))}
-          </div>
-        }
-      >
+      <Plate>
         <Headline as="h1" text={mode.title} />
         <p className="note">{mode.tagline}</p>
         {best > 0 && <span className="label">best {best}</span>}

@@ -763,19 +763,13 @@ button.chip:hover {
   line-height: 1.3;
   letter-spacing: -0.02em;
 }
-.about dl {
+.about ul {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 12px 28px;
+  gap: 10px;
   margin: 0;
   padding: 22px 0;
   border-block: 1px solid var(--line);
-}
-.about dt {
-  color: var(--text);
-}
-.about dd {
-  margin: 0;
+  list-style: none;
 }
 .about nav {
   display: flex;

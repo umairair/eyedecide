@@ -1,7 +1,7 @@
 /** What this is, on its own page. Opens over whatever you were doing; back returns you to it. */
 export function About({ onBack }: { onBack: () => void }) {
   return (
-    <div className="overlay about" role="dialog" aria-modal="true" aria-label="about">
+    <div className="overlay about" role="dialog" aria-modal="true" aria-label="info">
       <button className="about__back" onClick={onBack} autoFocus>
         back
       </button>

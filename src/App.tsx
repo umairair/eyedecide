@@ -205,7 +205,7 @@ export function App() {
               recalibrate
             </button>
           )}
-          <button onClick={() => setAbout(true)}>about</button>
+          <button onClick={() => setAbout(true)}>info</button>
         </nav>
       )}
 

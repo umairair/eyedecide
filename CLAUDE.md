@@ -43,11 +43,11 @@ Umair's taste. Get this right the first time.
 - Nothing decorative. If it doesn't help someone play, it goes.
 
 **Words in the game**
-- Lowercase, one or two plain words: `play`, `next`, `menu`, `again`, `recalibrate`, `about`.
+- Lowercase, one or two plain words: `play`, `next`, `menu`, `again`, `recalibrate`, `info`.
 - No taglines, no helper sentences, no reassurance copy, no hints. If a control needs explaining, redesign it.
 - Say what is happening, plainly. `recalibrating`, not `lost track`.
 
-**Sentences (the about page, anything longer)**
+**Sentences (the info page, anything longer)**
 - Write like a person talking, in full flowing sentences. Sentence case, real names capitalised (`cuHacking 6`, `Wolfram Award`, `Umair`).
 - Join related thoughts with a comma instead of chopping them into short sentences. One period at the end.
 - Never: clipped fragments ("two things. one question."), haiku-style line lists, labelled feature rows (`pick`, `pause`, `local`), salesy or techbro phrasing, em-dashes.
@@ -56,5 +56,5 @@ Umair's taste. Get this right the first time.
 - Signed `- Umair`. Links: devpost and linkedin, not github.
 
 **Controls**
-- As few as possible. There is no settings screen and no sound. One floating bar at the bottom middle: `menu` (in a game), `recalibrate`, `about`.
+- As few as possible. There is no settings screen and no sound. One floating bar at the bottom middle: `menu` (in a game), `recalibrate`, `info`.
 - Never make the player configure anything.

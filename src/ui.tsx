@@ -77,7 +77,7 @@ export function Half(props: {
 
 const stroke = { fill: "none", stroke: "currentColor", strokeWidth: 2.2, strokeLinecap: "round", strokeLinejoin: "round" } as const;
 
-export function Icon({ name, className }: { name: "check" | "cross" | "left" | "right" | "up" | "gear"; className?: string }) {
+export function Icon({ name, className }: { name: "check" | "cross" | "left" | "right" | "up"; className?: string }) {
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden {...stroke}>
       {name === "check" && <path d="M4.5 12.5l5 5 10-11" />}
@@ -85,9 +85,6 @@ export function Icon({ name, className }: { name: "check" | "cross" | "left" | "
       {name === "left" && <path d="M20 12H4m7-7l-7 7 7 7" />}
       {name === "right" && <path d="M4 12h16m-7-7l7 7-7 7" />}
       {name === "up" && <path d="M12 20V4m-7 7l7-7 7 7" />}
-      {name === "gear" && (
-        <path d="M4 8h9m4 0h3M4 16h3m4 0h9M15 5.5v5M9 13.5v5" />
-      )}
     </svg>
   );
 }

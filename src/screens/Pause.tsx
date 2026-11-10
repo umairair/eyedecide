@@ -1,12 +1,9 @@
-import { sounds } from "../core/sound";
 import { Half, Plate, Stage } from "../ui";
-import { useBinaryChoice, useSettings } from "../hooks";
+import { useBinaryChoice } from "../hooks";
 
 /** Over the game after you hold your eyes shut: leave, or carry on. */
 export function Pause(props: { onMenu: () => void; onResume: () => void }) {
-  const { settings } = useSettings();
   const choice = useBinaryChoice(true, (side) => {
-    if (settings.sound) sounds.pick();
     side === "left" ? props.onMenu() : props.onResume();
   });
   return (

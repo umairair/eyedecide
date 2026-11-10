@@ -1,11 +1,8 @@
-import { sounds } from "../core/sound";
 import { Half, Plate, Stage } from "../ui";
-import { useBinaryChoice, useSettings } from "../hooks";
+import { useBinaryChoice } from "../hooks";
 
 export function Over(props: { score: number; best: number; newBest: boolean; onMenu: () => void; onAgain: () => void }) {
-  const { settings } = useSettings();
   const choice = useBinaryChoice(true, (side) => {
-    if (settings.sound) sounds.pick();
     side === "left" ? props.onMenu() : props.onAgain();
   });
 

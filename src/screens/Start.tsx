@@ -1,15 +1,9 @@
-export function Start({ onCamera, onKeys, onAbout }: { onCamera: () => void; onKeys: () => void; onAbout: () => void }) {
+export function Start({ onPlay }: { onPlay: () => void }) {
   return (
     <main className="page">
       <h1 className="wordmark">eyedecide</h1>
-      <button className="btn" onClick={onCamera} autoFocus>
+      <button className="btn" onClick={onPlay} autoFocus>
         play
-      </button>
-      <button className="link" onClick={onKeys}>
-        use mouse
-      </button>
-      <button className="link about-link" onClick={onAbout}>
-        about
       </button>
     </main>
   );

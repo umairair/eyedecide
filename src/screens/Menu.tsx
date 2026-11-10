@@ -1,13 +1,11 @@
 import { useState } from "react";
-import { sounds } from "../core/sound";
 import { ALL_MODES, coverItems, type Mode } from "../data/modes";
 import { Collage } from "../pictures";
 import { Half, Headline, Plate, Stage } from "../ui";
-import { useBinaryChoice, useSettings } from "../hooks";
+import { useBinaryChoice } from "../hooks";
 
 /** Left flips to the next game (quick). Right plays the one showing. */
 export function Menu(props: { best: Record<string, number>; index: number; onPlay: (mode: Mode, index: number) => void }) {
-  const { settings } = useSettings();
   const [i, setI] = useState(props.index % ALL_MODES.length);
   const mode = ALL_MODES[i];
   const best = props.best[mode.id] ?? 0;
@@ -15,7 +13,6 @@ export function Menu(props: { best: Record<string, number>; index: number; onPla
   const choice = useBinaryChoice(
     true,
     (side) => {
-      if (settings.sound) sounds.pick();
       if (side === "left") setI((n) => (n + 1) % ALL_MODES.length);
       else props.onPlay(mode, i);
     },

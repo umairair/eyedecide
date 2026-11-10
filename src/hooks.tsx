@@ -1,53 +1,14 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-  useSyncExternalStore,
-  type ReactNode,
-} from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { DwellMachine, type Side } from "./core/dwell";
 import type { RecalReason } from "./core/watchdog";
-import { load, save } from "./core/storage";
 import { hub } from "./tracking/InputHub";
 
-export interface Settings {
-  dwellMs: number;
-  deadZone: number;
-  smoothing: number;
-  sound: boolean;
-  /** show what the camera sees whenever it loses the player's face */
-  preview: boolean;
-}
-
-export const DEFAULT_SETTINGS: Settings = {
-  dwellMs: 1100,
-  deadZone: 0.3,
-  smoothing: 0.5,
-  sound: true,
-  preview: true,
-};
-
-const SETTINGS_KEY = "settings.v2";
-
-const SettingsCtx = createContext<{
-  settings: Settings;
-  update: (patch: Partial<Settings>) => void;
-}>({ settings: DEFAULT_SETTINGS, update: () => {} });
-
-export function SettingsProvider({ children }: { children: ReactNode }) {
-  const [settings, setSettings] = useState(() => ({ ...DEFAULT_SETTINGS, ...load(SETTINGS_KEY, DEFAULT_SETTINGS) }));
-  useEffect(() => {
-    save(SETTINGS_KEY, settings);
-    hub.setSmoothing(settings.smoothing);
-  }, [settings]);
-  const update = useCallback((patch: Partial<Settings>) => setSettings((s) => ({ ...s, ...patch })), []);
-  return <SettingsCtx.Provider value={{ settings, update }}>{children}</SettingsCtx.Provider>;
-}
-
-export const useSettings = () => useContext(SettingsCtx);
+/** how long a look has to hold to pick */
+const DWELL_MS = 1100;
+/** how far from the middle a look has to be to count as a side (the setup dots are ±1) */
+const DEAD_ZONE = 0.3;
+// 0 = raw and twitchy, 1 = smooth and a little late
+hub.setSmoothing(0.5);
 
 export function useCameraStatus() {
   return useSyncExternalStore(
@@ -133,7 +94,6 @@ export function useBinaryChoice(
   onChoose: (side: Side) => void,
   scale?: Partial<Record<Side, number>>,
 ) {
-  const { settings } = useSettings();
   const [zone, setZone] = useState<Side | null>(null);
   const cb = useRef(onChoose);
   cb.current = onChoose;
@@ -154,8 +114,8 @@ export function useBinaryChoice(
     // so wobble alone can't reach a side
     const noise = hub.calibration?.noise ?? 0;
     const machine = new DwellMachine({
-      dwellMs: settings.dwellMs,
-      deadZone: Math.max(settings.deadZone, Math.min(0.45, 2.5 * noise)),
+      dwellMs: DWELL_MS,
+      deadZone: Math.max(DEAD_ZONE, Math.min(0.45, 2.5 * noise)),
       scale: { left: sl, right: sr },
       requireCenter: true,
     });
@@ -191,7 +151,7 @@ export function useBinaryChoice(
       window.removeEventListener("keydown", onKey);
       delete document.body.dataset.armed;
     };
-  }, [active, settings.dwellMs, settings.deadZone, scaleKey]);
+  }, [active, scaleKey]);
 
   const choose = useCallback(
     (side: Side) => {

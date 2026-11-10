@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { load, save } from "./core/storage";
 import type { Mode } from "./data/modes";
-import { SettingsDialog } from "./components/SettingsDialog";
-import { useCameraStatus, useFaceLost, useRecalNeeded, useSettings, useTrackingHealth } from "./hooks";
+import { useCameraStatus, useFaceLost, useRecalNeeded, useTrackingHealth } from "./hooks";
 import { Recalibrate, type SetupReason } from "./screens/Recalibrate";
 import { hub } from "./tracking/InputHub";
 import { Start } from "./screens/Start";
@@ -12,7 +11,8 @@ import { Game } from "./screens/Game";
 import { Over } from "./screens/Over";
 import { Practice } from "./screens/Practice";
 import { Pause } from "./screens/Pause";
-import { Camera, Icon } from "./ui";
+import { About } from "./screens/About";
+import { Camera } from "./ui";
 
 type Pick = Mode;
 
@@ -29,12 +29,11 @@ const idOf = (m: Pick) => m.id;
 
 export function App() {
   const status = useCameraStatus();
-  const { settings } = useSettings();
   const [screen, setScreen] = useState<Screen>({ name: "start" });
   const [camera, setCamera] = useState(false);
   const [best, setBest] = useState<Record<string, number>>(() => load("best", {}));
   const [menuIndex, setMenuIndex] = useState(0);
-  const [settingsOpen, setSettingsOpen] = useState<false | "settings" | "info">(false);
+  const [about, setAbout] = useState(false);
   /** setup is showing again over the current screen: the calibration stopped fitting, or the player asked */
   const [recal, setRecal] = useState<SetupReason | null>(null);
 
@@ -91,27 +90,27 @@ export function App() {
   const inGame = screen.name === "game";
   useEffect(() => {
     if (!inGame) return setPaused(false);
-    if (!camera || paused || recal || settingsOpen) return;
+    if (!camera || paused || recal || about) return;
     return hub.subscribe((f) => {
       if (f.hold) setPaused(true);
     });
-  }, [inGame, camera, paused, recal, settingsOpen]);
+  }, [inGame, camera, paused, recal, about]);
 
-  // nothing gets picked while settings or a re-setup is open
+  // nothing gets picked while about or a re-setup covers the screen
   useEffect(() => {
-    hub.paused = settingsOpen !== false || recal !== null;
-  }, [settingsOpen, recal]);
+    hub.paused = about || recal !== null;
+  }, [about, recal]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (settingsOpen || (e.target as HTMLElement)?.closest?.("input")) return;
-      if (e.key.toLowerCase() === "s" && screen.name !== "start") setSettingsOpen("settings");
-      if (e.key === "Escape" && paused) return setPaused(false);
-      if (e.key === "Escape" && (screen.name === "game" || screen.name === "over" || screen.name === "practice")) setScreen({ name: "menu" });
+      if (e.key !== "Escape") return;
+      if (about) return setAbout(false);
+      if (paused) return setPaused(false);
+      if ((screen.name === "game" || screen.name === "over" || screen.name === "practice")) setScreen({ name: "menu" });
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [settingsOpen, screen.name, paused]);
+  }, [about, screen.name, paused]);
 
   const lost = useFaceLost(camera && status === "ready" && playing, 800);
   const health = useTrackingHealth(camera && status === "ready" && playing && !recal);
@@ -138,7 +137,7 @@ export function App() {
 
   return (
     <>
-      {screen.name === "start" && <Start onCamera={startCam} onKeys={startKeys} onAbout={() => setSettingsOpen("info")} />}
+      {screen.name === "start" && <Start onPlay={startCam} />}
       {screen.name === "calibrate" && <Calibrate onDone={calibrated} onKeys={startKeys} />}
       {screen.name === "practice" && <Practice onDone={practiced} onRecalibrate={resetup} />}
       {screen.name === "menu" && (
@@ -187,47 +186,30 @@ export function App() {
         />
       )}
 
-      {health && !lost && !recal && (
-        <span className={`health is-${health}`} role="status" title={health === "ok" ? "Tracking well" : "Tracking is unsure. Picks wait until it is sure."}>
-          {health === "ok" ? "" : "Hold still"}
-        </span>
-      )}
-      {screen.name !== "start" && (
-        <button className="gear" onClick={() => setSettingsOpen("settings")} aria-label="settings" title="Settings (S)">
-          <Icon name="gear" />
-        </button>
-      )}
-
-      {lost && !recal && (
+      {lost && !recal && !about && (
         <div className="lost" role="status">
           {/* what the camera sees, so it's obvious how to get back in view */}
-          {settings.preview && <Camera ok={false} />}
+          <Camera ok={false} />
           <b className="head">can't see you</b>
         </div>
       )}
 
-      <SettingsDialog
-        open={settingsOpen}
-        camera={camera}
-        infoOnly={screen.name === "start"}
-        onMenu={
-          screen.name === "game" || screen.name === "over"
-            ? () => {
-                setSettingsOpen(false);
-                setScreen({ name: "menu" });
-              }
-            : undefined
-        }
-        onClose={() => setSettingsOpen(false)}
-        onRecalibrate={() => {
-          setSettingsOpen(false);
-          resetup();
-        }}
-        onSwitchInput={() => {
-          setSettingsOpen(false);
-          camera ? startKeys() : startCam();
-        }}
-      />
+      {/* the only two controls: both in the middle, where a glance picks nothing */}
+      <button className="chip chip--top" onClick={() => setAbout(true)}>
+        about
+      </button>
+      {playing && (
+        <div className="chip chip--bottom">
+          {(screen.name === "game" || screen.name === "over") && <button onClick={() => setScreen({ name: "menu" })}>menu</button>}
+          {/* with the mouse, this is also how you switch to your eyes */}
+          <button onClick={() => (camera ? resetup() : startCam())}>
+            {health && <i className={`light is-${health}`} title={health === "ok" ? "tracking" : "hold still"} />}
+            recalibrate
+          </button>
+        </div>
+      )}
+
+      {about && <About onBack={() => setAbout(false)} />}
     </>
   );
 }

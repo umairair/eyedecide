@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { buildCalibration, F, MIN_QUALITY, type CalibrationSamples, type Dot } from "../core/calibration";
-import { sounds } from "../core/sound";
 import { Camera, Icon } from "../ui";
-import { useCameraStatus, useSettings } from "../hooks";
+import { useCameraStatus } from "../hooks";
 import { hub } from "../tracking/InputHub";
 
 type Step = "face" | Dot | "done";
@@ -47,7 +46,6 @@ function fitOf(f: number[] | null): Fit {
 
 export function Calibrate({ onDone, onKeys }: { onDone: () => void; onKeys: () => void }) {
   const status = useCameraStatus();
-  const { settings } = useSettings();
   const [queue, setQueue] = useState<Dot[]>(ALL);
   const [step, setStep] = useState<Step>("face");
   const [attempt, setAttempt] = useState(0);
@@ -97,7 +95,6 @@ export function Calibrate({ onDone, onKeys }: { onDone: () => void; onKeys: () =
         if (p >= 1 || giveUp) {
           over = true;
           setProgress(0);
-          if (settings.sound) sounds.step();
           setStep(queue[0]);
         }
         return;
@@ -119,14 +116,12 @@ export function Calibrate({ onDone, onKeys }: { onDone: () => void; onKeys: () =
 
       over = true;
       setProgress(0);
-      if (settings.sound) sounds.step();
       const rest = queue.slice(queue.indexOf(step) + 1);
       if (rest.length) return setStep(rest[0]);
 
       const res = buildCalibration(samples.current, qualityFor(attempt));
       if (res.ok) {
         hub.setCalibration(res.model);
-        if (settings.sound) sounds.correct();
         setStep("done");
         window.setTimeout(() => done.current(), 1000);
         return;
@@ -138,11 +133,11 @@ export function Calibrate({ onDone, onKeys }: { onDone: () => void; onKeys: () =
       setQueue(again);
       setStep(again[0]);
     });
-  }, [status, step, queue, attempt, settings.sound]);
+  }, [status, step, queue, attempt]);
 
   const keys = (
     <button className="link" onClick={onKeys}>
-      use mouse
+      skip
     </button>
   );
 

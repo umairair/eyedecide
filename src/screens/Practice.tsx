@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Side } from "../core/dwell";
-import { sounds } from "../core/sound";
 import { Half, Headline, Icon, Plate, Stage } from "../ui";
-import { useBinaryChoice, useSettings } from "../hooks";
+import { useBinaryChoice } from "../hooks";
 
 type Phase = Side | "done";
 
@@ -15,7 +14,6 @@ const STUCK_MS = 14000;
  * calibration works before any real question.
  */
 export function Practice(props: { onDone: () => void; onRecalibrate: () => void }) {
-  const { settings } = useSettings();
   const [phase, setPhase] = useState<Phase>("left");
   const [oops, setOops] = useState(false);
   const [stuck, setStuck] = useState(false);
@@ -37,7 +35,6 @@ export function Practice(props: { onDone: () => void; onRecalibrate: () => void 
       return;
     }
     setOops(false);
-    if (settings.sound) sounds.correct();
     setPhase(side === "left" ? "right" : "done");
   });
 
@@ -67,7 +64,7 @@ export function Practice(props: { onDone: () => void; onRecalibrate: () => void 
           phase !== "done" && (
             <div className="help">
               <button className="btn btn--small btn--line" onClick={props.onRecalibrate}>
-                redo setup
+                recalibrate
               </button>
               <button className="link" onClick={props.onDone}>
                 skip

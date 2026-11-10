@@ -1,11 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Side } from "../core/dwell";
 import { firstRound, nextRound, pointsFor, Recent, type Round } from "../core/rounds";
-import { sounds } from "../core/sound";
 import type { Mode } from "../data/modes";
 import { Picture, preload } from "../pictures";
 import { CountUp, Half, Headline, Icon, Lives, Plate, Stage } from "../ui";
-import { useBinaryChoice, useSettings } from "../hooks";
+import { useBinaryChoice } from "../hooks";
 import { load, save } from "../core/storage";
 
 const LIVES = 3;
@@ -38,7 +37,6 @@ export function Game(props: {
   const { mode } = props;
   const [played] = useState(() => load("prefs", { rounds: 0 }).rounds);
   const [stuck, setStuck] = useState(false);
-  const { settings } = useSettings();
   const recent = useMemo(() => new Recent(storage(), mode.id), [mode.id]);
   const [round, setRound] = useState<Round>(() => firstRound(mode, recent));
   const [score, setScore] = useState(0);
@@ -73,7 +71,6 @@ export function Game(props: {
     setStreak(nextStreak);
     setLives(nextLives);
     if (right) props.onScore(nextScore);
-    if (settings.sound) (right ? sounds.correct : sounds.wrong)();
 
     // deal the next round now so its pictures load during the reveal
     const upcoming = nextLives > 0 ? nextRound(mode, round, nextScore, recent) : null;
@@ -129,7 +126,7 @@ export function Game(props: {
           {stuck && (
             <div className="help">
               <button className="btn btn--small btn--line" onClick={props.onRecalibrate}>
-                redo setup
+                recalibrate
               </button>
             </div>
           )}

@@ -194,14 +194,14 @@ svg {
 .ask.is-answered {
   visibility: hidden;
 }
-/* the tab at the bottom of the seam: lives, score, and room for the gear */
+/* a small extra at the bottom of the seam, above the controls: where you are in the menu */
 .foot {
   place-self: end center;
-  align-content: center;
-  width: clamp(120px, 12vw, 170px);
-  gap: 8px;
-  padding: 16px 10px 54px;
-  border-radius: var(--r);
+  margin-bottom: 58px;
+  border: 0;
+  background: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 .half {
@@ -486,9 +486,11 @@ svg {
 }
 .dots {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 120px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--raised);
+  -webkit-backdrop-filter: blur(28px);
+  backdrop-filter: blur(28px);
 }
 .dots button {
   width: 14px;
@@ -641,55 +643,6 @@ svg {
   z-index: 30;
   background: var(--bg);
 }
-.gear {
-  position: fixed;
-  left: 50%;
-  bottom: 18px;
-  z-index: 10;
-  translate: -50% 0;
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
-  border: 0;
-  border-radius: 50%;
-  background: none;
-  color: var(--mute);
-  cursor: pointer;
-  transition: color 0.2s, background 0.2s;
-}
-.gear:hover {
-  background: rgb(255 255 255 / 0.08);
-  color: var(--text);
-}
-.gear svg {
-  width: 20px;
-}
-/* tracking light: a badge on the gear */
-.health {
-  position: fixed;
-  left: 50%;
-  bottom: 46px;
-  z-index: 11;
-  translate: 9px 0;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  color: var(--mute);
-  text-transform: lowercase;
-  white-space: nowrap;
-}
-.health::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--good);
-}
-.health.is-degraded::before {
-  background: var(--bad);
-}
 .lost {
   position: fixed;
   left: 50%;
@@ -718,81 +671,129 @@ svg {
   letter-spacing: -0.02em;
 }
 
-/* the one sheet: a few rows, or a few lines about the game */
-.settings {
-  width: min(300px, calc(100vw - 24px));
-  padding: 10px;
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  background: #1c1c1e;
-  color: var(--text);
-  text-transform: lowercase;
-}
-.settings[open] {
-  display: grid;
-  gap: 10px;
-  animation: stamp 0.25s var(--ease);
-}
-.settings::backdrop {
-  background: rgb(0 0 0 / 0.6);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-}
-.rows {
-  display: grid;
-}
-.rows > * {
+/* The only two controls, floating in the middle of the top and bottom edges:
+   out of the way, and where a glance picks nothing. */
+.chip {
+  position: fixed;
+  left: 50%;
+  z-index: 10;
+  translate: -50% 0;
   display: flex;
-  justify-content: space-between;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--raised);
+  -webkit-backdrop-filter: blur(28px) saturate(1.4);
+  backdrop-filter: blur(28px) saturate(1.4);
+  color: var(--mute);
+  font-size: 13px;
+  text-transform: lowercase;
+  transition: color 0.2s;
+}
+.chip--top {
+  top: 16px;
+  padding: 7px 14px;
+  cursor: pointer;
+}
+.chip--bottom {
+  bottom: 16px;
+}
+.chip button {
+  display: flex;
   align-items: center;
-  padding: 14px;
+  gap: 7px;
+  padding: 8px 14px;
   border: 0;
-  border-radius: 18px;
+  border-radius: 999px;
   background: none;
-  text-align: left;
+  color: inherit;
   text-transform: lowercase;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: color 0.2s;
 }
-.rows > *:hover {
-  background: rgb(255 255 255 / 0.06);
-}
-.rows input {
-  width: 18px;
-  height: 18px;
-  accent-color: #fff;
-}
-.about {
-  display: grid;
-  gap: 10px;
-  padding: 16px 14px 8px;
-  color: var(--mute);
-}
-.about p:first-child {
+.chip button:hover,
+button.chip:hover {
   color: var(--text);
+}
+/* tracking light */
+.light {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--good);
+}
+.light.is-degraded {
+  background: var(--bad);
+}
+
+/* ---------- about: its own page ---------- */
+.about {
+  z-index: 40;
+  overflow-y: auto;
+  display: grid;
+  place-items: center;
+  padding: 88px 28px 64px;
+  animation: enter 0.4s var(--ease);
+}
+.about__back {
+  top: 16px;
+  left: 16px;
+  translate: none;
+  padding: 7px 14px;
+  cursor: pointer;
+}
+.about article {
+  display: grid;
+  gap: 26px;
+  width: min(560px, 100%);
+  color: var(--mute);
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.5;
+}
+.about h1 {
+  color: var(--text);
+  font-weight: 600;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+.about__lead {
+  color: var(--text);
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+.about dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px 28px;
+  margin: 0;
+  padding: 22px 0;
+  border-block: 1px solid var(--line);
+}
+.about dt {
+  color: var(--text);
+}
+.about dd {
+  margin: 0;
 }
 .about nav {
   display: flex;
-  gap: 16px;
-  margin-top: 6px;
+  gap: 22px;
 }
 .about a {
   color: var(--text);
   text-decoration: none;
   border-bottom: 1px solid rgb(255 255 255 / 0.25);
+  transition: border-color 0.2s;
 }
 .about a:hover {
   border-color: var(--text);
 }
-.about small {
-  margin-top: 18px;
-  font-size: 12px;
-  color: rgb(255 255 255 / 0.3);
-}
-.about-link {
-  position: fixed;
-  inset: auto 0 18px 0;
+.about footer {
+  margin-top: 20px;
   font-size: 13px;
+  color: rgb(255 255 255 / 0.32);
 }
 
 /* ---------- motion ---------- */
@@ -833,8 +834,7 @@ svg {
     gap: 8px;
     padding: 8px;
   }
-  .plate,
-  .foot {
+  .plate {
     grid-area: plate;
   }
   .plate {
@@ -844,7 +844,7 @@ svg {
     width: auto;
     align-content: center;
     min-height: 84px;
-    padding: 10px 72px;
+    padding: 10px 16px;
   }
   .plate .head {
     font-size: clamp(20px, 6.4vw, 32px);
@@ -852,22 +852,11 @@ svg {
   .ask {
     min-height: 0;
   }
-  /* lives on the left of the strip, score on the right */
   .foot {
-    place-self: stretch;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: auto;
-    padding: 0 18px;
-    border: 0;
-    background: none;
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
-    pointer-events: none;
+    grid-area: 1 / 1 / -1 / -1;
   }
-  .foot > :not(.lives, .score) {
-    display: none;
+  .plate {
+    margin-top: 44px;
   }
   .score b {
     font-size: 30px;

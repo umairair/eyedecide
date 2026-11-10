@@ -13,7 +13,7 @@ npm run dev
 
 Open http://localhost:5173, press Start, allow the camera, follow the 3 dots. Everything runs in the browser; video never leaves the computer.
 
-Settings (the gear, or `S`) can redo the camera setup or swap between eyes and mouse in the middle of a game: the run is paused and carries on afterwards. `Esc` goes back to the menu; points count toward your best as you score them, so leaving early never loses a record.
+`recalibrate` at the bottom redoes the camera setup mid-game and the run carries on after. Clicking works at any time. Close your eyes for a moment to pause. `Esc` goes back to the menu; points count toward your best as you score them.
 
 ## Commands
 

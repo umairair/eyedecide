@@ -30,7 +30,7 @@ export function Recalibrate(props: { reason: SetupReason; onDone: () => void; on
         <main className="page">
           <h2 className="head">{props.reason === "moved" ? "you moved" : "recalibrating"}</h2>
           <button className="btn" onClick={() => setPhase("setup")} autoFocus>
-            redo setup {count}
+            recalibrate {count}
           </button>
           <button className="link" onClick={props.onSnooze}>
             not now

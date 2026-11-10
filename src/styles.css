@@ -763,14 +763,6 @@ button.chip:hover {
   line-height: 1.3;
   letter-spacing: -0.02em;
 }
-.about ul {
-  display: grid;
-  gap: 10px;
-  margin: 0;
-  padding: 22px 0;
-  border-block: 1px solid var(--line);
-  list-style: none;
-}
 .about nav {
   display: flex;
   gap: 22px;

@@ -6,7 +6,7 @@ export function Start({ onPlay, onAbout }: { onPlay: () => void; onAbout: () => 
         play
       </button>
       <button className="link" onClick={onAbout}>
-        about
+        info
       </button>
     </main>
   );

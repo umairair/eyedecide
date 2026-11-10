@@ -30,5 +30,29 @@ Vercel builds from GitHub. There is no other way to ship.
 
 - The two choices must each fill exactly half the screen. The tracker is tuned and tested for choices a quarter in from each edge (`CARD` in `src/core/adapt.ts`). Moving them makes the tracking tests fail.
 - Everything you look at or read is centred on the eye line (`--eye` in `src/styles.css`, the height of the setup dots): words at 25% and 75% across, the plate at 50%. Keep readable things off the bottom edge.
-- UI copy: lowercase, one to three words, no emoji, no helper sentences.
-- Look: black, white, rounded, system font. No colour except green and red for right and wrong.
+
+## Style
+
+Umair's taste. Get this right the first time.
+
+**Look**
+- Pitch black, white text, grey for anything secondary. System font. Rounded, soft, frosted. Think ChatGPT on an iPhone.
+- No colour except green and red for right and wrong. No emoji. No icons where a word will do. No sharp rectangles.
+- Nothing decorative. If it doesn't help someone play, it goes.
+
+**Words in the game**
+- Lowercase, one or two plain words: `play`, `next`, `menu`, `again`, `recalibrate`, `about`.
+- No taglines, no helper sentences, no reassurance copy, no hints. If a control needs explaining, redesign it.
+- Say what is happening, plainly. `recalibrating`, not `lost track`.
+
+**Sentences (the about page, anything longer)**
+- Write like a person talking, in full flowing sentences. Sentence case, real names capitalised (`cuHacking 6`, `Wolfram Award`, `Umair`).
+- Join related thoughts with a comma instead of chopping them into short sentences. One period at the end.
+- Never: clipped fragments ("two things. one question."), haiku-style line lists, labelled feature rows (`pick`, `pause`, `local`), salesy or techbro phrasing, em-dashes.
+- Humble. "to showcase it", not "to show it off". State facts and stop.
+- Don't explain what should be obvious. Clicking works everywhere and is never mentioned.
+- Signed `- Umair`. Links: devpost and linkedin, not github.
+
+**Controls**
+- As few as possible. There is no settings screen and no sound. Two floating pills: `about` at the top, `recalibrate` at the bottom.
+- Never make the player configure anything.

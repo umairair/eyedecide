@@ -1,6 +1,6 @@
 # eyedecide
 
-A higher-or-lower game you play with your eyes. Two pictures, one question ("Richer?", "Who's older?", "More views?"). Look at your answer and hold until it fills up. No mouse needed, though the mouse and arrow keys work too.
+A higher-or-lower game you play with your eyes. Two pictures, one question ("Richer?", "Who's older?", "More views?"). Look at your answer and hold until the frame closes around it. No mouse needed, though the mouse and arrow keys work too.
 
 Rebuilt from the [cuHacking 2025 original](https://github.com/umairair/cuhacking2025).
 
@@ -12,6 +12,8 @@ npm run dev
 ```
 
 Open http://localhost:5173, press Start, allow the camera, follow the 3 dots. Everything runs in the browser; video never leaves the computer.
+
+Settings (the gear, or `S`) can redo the camera setup or swap between eyes and mouse in the middle of a game: the run is paused and carries on afterwards. `Esc` goes back to the menu; points count toward your best as you score them, so leaving early never loses a record.
 
 ## Commands
 

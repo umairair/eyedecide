@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Side } from "../core/dwell";
 import { sounds } from "../core/sound";
-import { Half, Split } from "../ui";
+import { Half, Headline, Icon, Plate, Stage } from "../ui";
 import { useBinaryChoice, useSettings } from "../hooks";
 
 type Phase = Side | "done";
@@ -23,7 +23,7 @@ export function Practice(props: { onDone: () => void; onRecalibrate: () => void 
   useEffect(() => {
     setStuck(false);
     if (phase === "done") {
-      const t = window.setTimeout(props.onDone, 2200);
+      const t = window.setTimeout(props.onDone, 1400);
       return () => clearTimeout(t);
     }
     const t = window.setTimeout(() => setStuck(true), STUCK_MS);
@@ -43,7 +43,7 @@ export function Practice(props: { onDone: () => void; onRecalibrate: () => void 
 
   const panel = (side: Side) => {
     const target = phase === side;
-    const doneSide = phase === "done" || (side === "left" && phase === "right");
+    const passed = phase === "done" || (side === "left" && phase === "right");
     return (
       <Half
         side={side}
@@ -51,44 +51,35 @@ export function Practice(props: { onDone: () => void; onRecalibrate: () => void 
         focused={choice.zone === side}
         label={`${side} side`}
         onClick={() => choice.choose(side)}
-        dim={!target && !doneSide}
-        hint={target}
-        result={doneSide ? "correct" : null}
+        dim={!target && !passed}
+        result={passed ? "correct" : null}
       >
-        <span className="practice__arrow" aria-hidden>
-          {side === "left" ? "←" : "→"}
-        </span>
-        <span className="practice__label">{doneSide ? "Done!" : target ? "Look here" : ""}</span>
+        <Icon name={passed ? "check" : side} className="glyph" />
       </Half>
     );
   };
 
   return (
-    <Split className="practice" color="#a855f7">
-      <header className="practice__head">
-        <span className="chip">Practice</span>
-        <h2 className="title1">
-          {phase === "done"
-            ? "You've got it!"
-            : oops
-              ? `Other side. Look at the ${phase} side`
-              : `Look at the ${phase} side and keep looking`}
-        </h2>
-        <p className="lead">{phase === "done" ? "That's how you answer. Let's play." : "It fills up as you look. When it's full, it's picked."}</p>
-        {stuck && phase !== "done" && (
-          <div className="helpbar">
-            <span>Not working?</span>
-            <button className="btn btn--small" onClick={props.onRecalibrate}>
-              Set up again
-            </button>
-            <button className="link link--big" onClick={() => choice.choose(phase)}>
-              Just click it
-            </button>
-          </div>
-        )}
-      </header>
+    <Stage className="practice">
+      <Plate
+        foot={
+          stuck &&
+          phase !== "done" && (
+            <div className="help">
+              <button className="btn btn--small btn--line" onClick={props.onRecalibrate}>
+                redo setup
+              </button>
+              <button className="link" onClick={props.onDone}>
+                skip
+              </button>
+            </div>
+          )
+        }
+      >
+        <Headline text={phase === "done" ? "nice" : oops ? "other side" : `look ${phase}`} />
+      </Plate>
       {panel("left")}
       {panel("right")}
-    </Split>
+    </Stage>
   );
 }

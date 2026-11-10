@@ -5,6 +5,7 @@ import { EyeCloseDetector } from "./eyes";
 import { OneEuroFilter } from "./oneEuro";
 import { difficulty, pickChallenger, pickPair, ranking, type Item } from "./questions";
 import { ALL_MODES, coverItems } from "../data/modes";
+import { flagUrl } from "../flags";
 import { firstRound, MAX_REIGN, nextRound, pointsFor, Recent, type Round } from "./rounds";
 
 /** deterministic noise */
@@ -345,6 +346,15 @@ describe("game data", () => {
       if (d.picture !== "photo" && d.picture !== "wide") continue;
       const missing = d.items.filter((x) => !x.image && !x.images?.length);
       expect(missing.length / d.items.length, `${m.id}/${d.id}`).toBeLessThan(0.1);
+    }
+  });
+
+  it("has a flag file for every country in a flag deck", () => {
+    const flagDecks = decks.filter(({ d }) => d.picture === "flag");
+    expect(flagDecks.length).toBeGreaterThan(0);
+    for (const { m, d } of flagDecks) {
+      const missing = d.items.filter((x) => !x.code || !flagUrl(x.code)).map((x) => x.name);
+      expect(missing, `${m.id}/${d.id}`).toEqual([]);
     }
   });
 

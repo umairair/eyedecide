@@ -48,6 +48,8 @@ export class InputHub {
   private landmarkerPromise: Promise<FaceLandmarker> | null = null;
   private video: HTMLVideoElement | null = null;
   private raf = 0;
+  /** counts camera starts and stops, so a start can tell it was overtaken */
+  private session = 0;
   private lastVideoTime = -1;
   readonly gaze = new GazeProcessor();
   private lastFaceT = -Infinity;
@@ -71,6 +73,11 @@ export class InputHub {
 
   async startCamera() {
     if (this.status === "starting" || this.status === "camera" || this.status === "ready") return;
+    // Every wait below can outlive this start: the player picks the mouse while
+    // the permission popup is up, or while the model loads. A start that was
+    // stopped in the meantime must not switch the camera on behind their back.
+    const session = ++this.session;
+    const stale = () => session !== this.session;
     this.setStatus("starting");
     this.preload();
     try {
@@ -78,7 +85,15 @@ export class InputHub {
         video: { facingMode: "user", width: { ideal: 640 }, height: { ideal: 480 } },
         audio: false,
       });
+      if (stale()) {
+        stream.getTracks().forEach((t) => t.stop());
+        return;
+      }
       this.stream = stream;
+      // unplugged, switched off, or taken over by another app
+      stream.getVideoTracks()[0]?.addEventListener("ended", () => {
+        if (this.stream === stream) this.fail("The camera stopped.");
+      });
       const video = document.createElement("video");
       video.muted = true;
       video.playsInline = true;
@@ -86,21 +101,29 @@ export class InputHub {
       // Kept in the DOM (invisible) so every browser keeps decoding frames.
       video.style.cssText = "position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;";
       document.body.appendChild(video);
-      await video.play();
       this.video = video;
+      await video.play();
+      if (stale()) return;
       this.setStatus("camera"); // preview can show while the model finishes loading
 
       this.landmarker ??= await this.preload();
+      if (stale()) return;
       this.setStatus("ready");
       this.loop();
     } catch (err) {
-      this.stopCamera();
-      this.error = describeError(err);
-      this.setStatus("error");
+      if (!stale()) this.fail(describeError(err));
     }
   }
 
+  private fail(message: string) {
+    this.status = "error"; // set first, so stopCamera doesn't announce "off" on the way
+    this.stopCamera();
+    this.error = message;
+    this.setStatus("error");
+  }
+
   stopCamera() {
+    this.session++;
     cancelAnimationFrame(this.raf);
     this.stream?.getTracks().forEach((t) => t.stop());
     this.stream = null;
@@ -192,11 +215,11 @@ export class InputHub {
 function describeError(err: unknown): string {
   const name = (err as { name?: string })?.name;
   if (name === "NotAllowedError" || name === "SecurityError") return "blocked";
-  if (name === "NotFoundError" || name === "OverconstrainedError") return "No camera found. Plug one in, or play with the mouse.";
-  if (name === "NotReadableError") return "Another app is using the camera. Close it (Zoom, FaceTime, Teams…), then try again.";
+  if (name === "NotFoundError" || name === "OverconstrainedError") return "Plug one in.";
+  if (name === "NotReadableError") return "Another app is using it. Close Zoom, FaceTime or Teams.";
   const msg = err instanceof Error ? err.message : String(err);
-  if (/fetch|network|load/i.test(msg)) return "Couldn't load. Check the internet connection, then try again.";
-  return `Something went wrong: ${msg}`;
+  if (/fetch|network|load/i.test(msg)) return "Check your internet.";
+  return msg;
 }
 
 export const hub = new InputHub();

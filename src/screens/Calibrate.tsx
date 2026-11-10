@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { buildCalibration, F, MIN_QUALITY, type CalibrationSamples, type Dot } from "../core/calibration";
 import { sounds } from "../core/sound";
-import { Camera } from "../ui";
+import { Camera, Icon } from "../ui";
 import { useCameraStatus, useSettings } from "../hooks";
 import { hub } from "../tracking/InputHub";
 
@@ -17,17 +17,22 @@ const SETTLE_MS = 250;
 const CAPTURE_MS = 1400;
 const X: Record<Dot, number> = { center: 50, left: 8, right: 92 };
 const ALL: Dot[] = ["center", "left", "right"];
+/** the browser's own popup usually answers itself (already allowed): only point at it if it lingers */
+const ASK_AFTER_MS = 700;
+
+/** after this many failed rounds of dots, offer the mouse */
+const HELP_AFTER = 2;
 
 /** a struggling player still gets in: each retry asks a little less */
 const qualityFor = (attempt: number) => (attempt < 2 ? MIN_QUALITY : attempt < 4 ? 4.5 : 3.5);
 
 type Fit = "none" | "far" | "close" | "off" | "ok";
 const FIT_TEXT: Record<Fit, string> = {
-  none: "Sit in front of the camera",
-  far: "Come a little closer",
-  close: "Move back a little",
-  off: "Put your face in the oval",
-  ok: "Perfect. Hold still",
+  none: "face the camera",
+  far: "closer",
+  close: "back",
+  off: "center",
+  ok: "hold still",
 };
 
 /** rough framing check from the face's position and distance (centimetres, as MediaPipe estimates them) */
@@ -46,28 +51,28 @@ export function Calibrate({ onDone, onKeys }: { onDone: () => void; onKeys: () =
   const [queue, setQueue] = useState<Dot[]>(ALL);
   const [step, setStep] = useState<Step>("face");
   const [attempt, setAttempt] = useState(0);
-  const [retry, setRetry] = useState(false);
   const [progress, setProgress] = useState(0);
   const [face, setFace] = useState(false);
   const [fit, setFit] = useState<Fit>("none");
-  const [slow, setSlow] = useState(false);
+  const [dark, setDark] = useState(false);
+  const [asking, setAsking] = useState(false);
   const samples = useRef<CalibrationSamples>({ center: [], left: [], right: [] });
   const done = useRef(onDone);
   done.current = onDone;
 
-  useEffect(() => hub.setCalibration(null), []);
-
-  // If the camera was allowed before, don't make anyone read the explainer again.
+  // Getting here means the player chose the camera: ask for it straight away.
   useEffect(() => {
-    if (hub.status !== "off") return;
-    navigator.permissions
-      ?.query({ name: "camera" as PermissionName })
-      .then((p) => {
-        if (p.state === "granted") hub.startCamera();
-      })
-      .catch(() => {});
+    hub.setCalibration(null);
+    if (hub.status === "off") hub.startCamera();
   }, []);
 
+  const waiting = status === "off" || status === "starting";
+  useEffect(() => {
+    setAsking(false);
+    if (!waiting) return;
+    const t = window.setTimeout(() => setAsking(true), ASK_AFTER_MS);
+    return () => clearTimeout(t);
+  }, [waiting]);
 
   useEffect(() => {
     if (status !== "ready" || step === "done") return;
@@ -75,7 +80,7 @@ export function Calibrate({ onDone, onKeys }: { onDone: () => void; onKeys: () =
     let okSince: number | null = null;
     let over = false;
     const begun = performance.now();
-    setSlow(false);
+    setDark(false);
 
     return hub.subscribe((f) => {
       if (over) return;
@@ -84,7 +89,7 @@ export function Calibrate({ onDone, onKeys }: { onDone: () => void; onKeys: () =
       if (step === "face") {
         const now = fitOf(f.face ? f.features : null);
         setFit(now);
-        if (f.t - begun > 4000 && now !== "ok") setSlow(true);
+        if (f.t - begun > 4000 && now === "none") setDark(true);
         okSince = now === "ok" ? (okSince ?? f.t) : null;
         const p = okSince === null ? 0 : Math.min(1, (f.t - okSince) / FACE_OK_MS);
         setProgress(p);
@@ -123,59 +128,31 @@ export function Calibrate({ onDone, onKeys }: { onDone: () => void; onKeys: () =
         hub.setCalibration(res.model);
         if (settings.sound) sounds.correct();
         setStep("done");
-        window.setTimeout(() => done.current(), 1300);
+        window.setTimeout(() => done.current(), 1000);
         return;
       }
       // quietly redo just the dots that went wrong
       const again = ALL.filter((d) => res.retry.includes(d));
       for (const d of again) samples.current[d] = [];
       setAttempt((a) => a + 1);
-      setRetry(true);
       setQueue(again);
       setStep(again[0]);
     });
   }, [status, step, queue, attempt, settings.sound]);
 
   const keys = (
-    <button className="link link--big" onClick={onKeys}>
-      Play with the mouse instead
+    <button className="link" onClick={onKeys}>
+      use mouse
     </button>
   );
 
-  // 1. before the browser's own popup: say what's coming
-  if (status === "off") {
+  // 1. the browser asks for the camera
+  if (waiting) {
+    if (!asking) return <main className="page" />;
     return (
-      <main className="center setup">
-        <BrowserAsk />
-        <h2 className="title1">Your browser will ask to use the camera</h2>
-        <p className="lead">
-          Click <b className="allow">Allow</b> when it asks.
-        </p>
-        <button
-          className="btn btn--big"
-          autoFocus
-          onClick={() => {
-            hub.startCamera();
-          }}
-        >
-          OK
-        </button>
-        <p className="fine">🔒 The video stays on this computer. Nothing is recorded or sent.</p>
-        {keys}
-      </main>
-    );
-  }
-
-  if (status === "starting") {
-    return (
-      <main className="center setup">
-        <div className="point-up" aria-hidden>
-          ↑
-        </div>
-        <h2 className="title1">
-          Click <b className="allow">Allow</b> at the top of the screen
-        </h2>
-        <p className="lead">Look for the little box near the address bar.</p>
+      <main className="page">
+        <Icon name="up" className="arrow-up" />
+        <h2 className="head">allow camera</h2>
         {keys}
       </main>
     );
@@ -184,41 +161,32 @@ export function Calibrate({ onDone, onKeys }: { onDone: () => void; onKeys: () =
   if (status === "error") {
     const blocked = hub.error === "blocked";
     return (
-      <main className="center setup">
-        <h2 className="title1">{blocked ? "The camera is blocked" : "The camera isn't working"}</h2>
+      <main className="page">
+        <h2 className="head">{blocked ? "camera blocked" : "no camera"}</h2>
         {blocked ? (
-          <ol className="steps">
-            <li>
-              Click the <b>camera 📷</b> or <b>lock 🔒</b> icon at the top, next to the web address
-            </li>
-            <li>
-              Choose <b className="allow">Allow</b>
-            </li>
-            <li>Press the button below</li>
+          <ol className="todo">
+            <li>click the camera icon in the address bar</li>
+            <li>allow</li>
           </ol>
         ) : (
-          <p className="lead">{hub.error}</p>
+          <p className="note">{hub.error}</p>
         )}
-        <button className="btn btn--big" onClick={() => (blocked ? location.reload() : hub.startCamera())}>
-          Try again
+        <button className="btn" onClick={() => (blocked ? location.reload() : hub.startCamera())}>
+          try again
         </button>
         {keys}
       </main>
     );
   }
 
-  // 2. framing: a live mirror with an oval to put your face in
+  // 2. framing: a mirror with an oval to put your face in
   if (status !== "ready" || step === "face") {
     const loading = status !== "ready";
     return (
-      <main className="center setup">
+      <main className="page">
         <Steps at={0} />
         <Camera ok={fit === "ok"} oval progress={progress} />
-        <h2 className={`title1 ${fit === "ok" ? "is-good" : ""}`}>
-          {loading ? "Getting ready…" : FIT_TEXT[fit]}
-        </h2>
-        {!loading && slow && fit === "none" && <p className="lead">Is the room bright enough? Try turning on a light.</p>}
-        {!loading && slow && fit !== "none" && fit !== "ok" && <p className="lead">Almost. Starting in a moment…</p>}
+        <h2 className="head">{loading ? "loading" : dark && fit === "none" ? "more light" : FIT_TEXT[fit]}</h2>
         {keys}
       </main>
     );
@@ -226,57 +194,37 @@ export function Calibrate({ onDone, onKeys }: { onDone: () => void; onKeys: () =
 
   if (step === "done") {
     return (
-      <main className="center setup">
-        <div className="bigcheck" aria-hidden>
-          ✓
+      <main className="page">
+        <div className="done">
+          <Icon name="check" />
         </div>
-        <h2 className="title1 is-good">All set!</h2>
       </main>
     );
   }
 
   // 3. the dots
-  const n = ALL.indexOf(step);
   return (
     <main className="calib">
       <div className="calib__text">
-        <Steps at={n + 1} />
-        <h2 className="title1">{!face ? "I can't see you. Look at the screen" : retry && step !== "center" ? "Once more. Turn toward the dot" : "Look at the dot"}</h2>
-        <p className="lead">Keep looking until the circle fills up</p>
+        <Steps at={ALL.indexOf(step) + 1} />
+        <h2 className="head">{face ? "look at the dot" : "face the camera"}</h2>
       </div>
-      <div className="calib__dot" style={{ left: `${X[step]}%`, "--p": progress } as React.CSSProperties} aria-hidden />
+      <div className="dot" style={{ left: `${X[step]}%`, "--p": progress } as React.CSSProperties} aria-hidden>
+        <span className="ring" />
+      </div>
+      {/* the dots keep failing: never trap anyone in setup */}
+      {attempt >= HELP_AFTER && <div className="calib__help">{keys}</div>}
     </main>
   );
 }
 
-/** ● ● ○ ○: where you are in setup (face, then three dots) */
+/** where you are in setup: face, then three dots */
 function Steps({ at }: { at: number }) {
   return (
-    <div className="steps-dots" aria-label={`step ${at + 1} of 4`}>
+    <div className="steps" role="img" aria-label={`step ${at + 1} of 4`}>
       {[0, 1, 2, 3].map((k) => (
         <span key={k} className={k < at ? "is-done" : k === at ? "is-on" : ""} />
       ))}
-    </div>
-  );
-}
-
-/** A drawing of the browser's permission popup, so it's familiar when it shows up. */
-function BrowserAsk() {
-  return (
-    <div className="ask" aria-hidden>
-      <div className="ask__bar">
-        <span />
-        <span />
-        <span />
-        <i>{location.host}</i>
-      </div>
-      <div className="ask__pop">
-        <p>📷 Use your camera?</p>
-        <div>
-          <em>Block</em>
-          <b>Allow</b>
-        </div>
-      </div>
     </div>
   );
 }

@@ -1,8 +1,4 @@
-import {
-  FaceLandmarker,
-  FilesetResolver,
-  type FaceLandmarkerResult,
-} from "@mediapipe/tasks-vision";
+import type { FaceLandmarker, FaceLandmarkerResult } from "@mediapipe/tasks-vision";
 
 const REMOTE_MODEL =
   "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task";
@@ -21,6 +17,8 @@ async function resolveModel(): Promise<string> {
 }
 
 export async function createLandmarker(): Promise<FaceLandmarker> {
+  // loaded on demand: the tracker is a third of the app's code, and mouse players never need it
+  const { FaceLandmarker, FilesetResolver } = await import("@mediapipe/tasks-vision");
   const fileset = await FilesetResolver.forVisionTasks(`${import.meta.env.BASE_URL}mediapipe`);
   const modelAssetPath = await resolveModel();
   const make = (delegate: "GPU" | "CPU") =>

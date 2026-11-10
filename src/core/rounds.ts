@@ -170,11 +170,3 @@ export function nextRound(mode: Mode, prev: Round, score: number, recent: Recent
     ? { ...round, left: champ, right: next, known: "left" }
     : { ...round, left: next, right: champ, known: "right" };
 }
-
-/** Warm the browser cache so the next card's picture is there when it's dealt. */
-export function preload(...items: Item[]) {
-  for (const it of items) {
-    const src = it.images?.[0] ?? it.image;
-    if (src) new Image().src = src;
-  }
-}

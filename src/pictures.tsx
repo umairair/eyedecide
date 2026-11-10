@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { Item } from "./core/questions";
 import type { Deck, Picture as Kind } from "./data/modes";
+import { flagUrl } from "./flags";
 
 function hash(s: string) {
   let h = 2166136261;
@@ -8,12 +9,24 @@ function hash(s: string) {
   return h >>> 0;
 }
 
+/** Warm the browser cache so the next card's picture is there when it's dealt. */
+export function preload(kind: Kind, ...items: Item[]) {
+  for (const it of items) {
+    const src = kind === "flag" ? it.code && flagUrl(it.code) : (it.images?.[0] ?? it.image);
+    if (!src) continue;
+    const img = new Image();
+    img.referrerPolicy = "no-referrer"; // the same request the card will make
+    img.src = src;
+  }
+}
+
 /** The picture for an item. Always fills its container; the container decides size. */
 export function Picture({ kind, item }: { kind: Kind; item: Item }) {
-  if (kind === "flag" && item.code) {
+  const flag = kind === "flag" && item.code ? flagUrl(item.code) : undefined;
+  if (flag) {
     return (
       <div className="pic pic--flag">
-        <span className={`fi fi-${item.code}`} />
+        <img src={flag} alt="" draggable={false} />
       </div>
     );
   }
@@ -51,11 +64,9 @@ function Photo({ sources, name, wide }: { sources: string[]; name: string; wide:
   );
 }
 
-/** Generated art for things without a picture (artist photos are copyrighted). */
+/** Initials on a flat colour, for things without a picture (artist photos are copyrighted). */
 function Cover({ name }: { name: string }) {
-  const h = hash(name);
-  const a = h % 360;
-  const b = (a + 30 + ((h >> 9) % 90)) % 360;
+  const hue = hash(name) % 360;
   const initials = name
     .replace(/^the\s+/i, "")
     .split(/\s+/)
@@ -64,19 +75,18 @@ function Cover({ name }: { name: string }) {
     .map((w) => w[0].toUpperCase())
     .join("");
   return (
-    <div className="pic pic--cover" style={{ background: `linear-gradient(135deg, hsl(${a} 75% 55%), hsl(${b} 70% 30%))` }}>
-      <span className="cover__ring" />
-      <span className="cover__initials">{initials}</span>
+    <div className="pic pic--cover" style={{ background: `hsl(${hue} 55% 42%)` }}>
+      {initials}
     </div>
   );
 }
 
-/** 2×2 grid of a mode's pictures: its identity on the menu. */
+/** A mode's face on the menu: one big picture, or a 2×2 grid when given four. */
 export function Collage({ entries }: { entries: { deck: Deck; item: Item }[] }) {
   return (
-    <div className="collage">
+    <div className={`collage ${entries.length > 1 ? "collage--grid" : ""}`}>
       {entries.map(({ deck, item }) => (
-        <div className="collage__cell" key={deck.id + item.name}>
+        <div key={deck.id + item.name}>
           <Picture kind={deck.picture} item={item} />
         </div>
       ))}

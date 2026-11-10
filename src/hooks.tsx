@@ -18,6 +18,7 @@ export interface Settings {
   deadZone: number;
   smoothing: number;
   sound: boolean;
+  /** show what the camera sees whenever it loses the player's face */
   preview: boolean;
 }
 
@@ -175,6 +176,8 @@ export function useBinaryChoice(
     });
     const onKey = (e: KeyboardEvent) => {
       if (e.repeat || e.metaKey || e.ctrlKey || e.altKey) return;
+      // a re-setup is covering this screen: don't answer the question hidden underneath
+      if (hub.paused) return;
       if ((e.target as HTMLElement)?.closest?.("input, select, textarea, dialog")) return;
       const side: Side | null = e.key === "ArrowLeft" ? "left" : e.key === "ArrowRight" ? "right" : null;
       if (!side) return;

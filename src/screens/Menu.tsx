@@ -2,20 +2,14 @@ import { useState } from "react";
 import { sounds } from "../core/sound";
 import { ALL_MODES, coverItems, type Mode } from "../data/modes";
 import { Collage } from "../pictures";
-import { Half, Split } from "../ui";
+import { Half, Headline, Plate, Stage } from "../ui";
 import { useBinaryChoice, useSettings } from "../hooks";
 
-/** Look left to flip to the next mode (quick), look right to play it. */
-export function Menu(props: {
-  camera: boolean;
-  best: Record<string, number>;
-  index: number;
-  onPlay: (mode: Mode, index: number) => void;
-}) {
+/** Left flips to the next game (quick). Right plays the one showing. */
+export function Menu(props: { best: Record<string, number>; index: number; onPlay: (mode: Mode, index: number) => void }) {
   const { settings } = useSettings();
   const [i, setI] = useState(props.index % ALL_MODES.length);
   const mode = ALL_MODES[i];
-  const next = ALL_MODES[(i + 1) % ALL_MODES.length];
   const best = props.best[mode.id] ?? 0;
 
   const choice = useBinaryChoice(
@@ -29,40 +23,24 @@ export function Menu(props: {
   );
 
   return (
-    <Split className="menu" color={mode.color}>
-      <header className="menu__head">
-        <h1 className="logo logo--small">eyedecide</h1>
-        <p className="howto">
-          {props.camera ? (
-            <>
-              Look at <b>Play</b> to start this game. Look at the other side to see a different one.
-            </>
-          ) : (
-            <>
-              Click <b>Play</b> to start this game, or the other side to see a different one.
-            </>
-          )}
-        </p>
-        <div className="dots" aria-label={`${i + 1} of ${ALL_MODES.length}`}>
-          {ALL_MODES.map((m, k) => (
-            <span key={m.id} className={k === i ? "is-on" : ""} style={{ background: k === i ? m.color : undefined }} />
-          ))}
-        </div>
-      </header>
-
-      <Half
-        side="left"
-        panelRef={choice.leftRef}
-        focused={choice.zone === "left"}
-        label={`next: ${next.title}`}
-        onClick={() => choice.choose("left")}
-        color={next.color}
-        dim
-        badge="Other game"
-        hint={props.camera}
-        media={<Collage key={next.id} entries={coverItems(next)} />}
+    <Stage className="menu">
+      <Plate
+        foot={
+          // with a mouse: jump straight to a game
+          <div className="dots">
+            {ALL_MODES.map((m, k) => (
+              <button key={m.id} className={k === i ? "is-on" : ""} aria-label={m.title} aria-current={k === i} onClick={() => setI(k)} />
+            ))}
+          </div>
+        }
       >
-        <span className="card__name">{next.title}</span>
+        <Headline as="h1" text={mode.title} />
+        <p className="note">{mode.tagline}</p>
+        {best > 0 && <span className="label">best {best}</span>}
+      </Plate>
+
+      <Half side="left" panelRef={choice.leftRef} focused={choice.zone === "left"} label="next game" onClick={() => choice.choose("left")}>
+        <span className="word">next</span>
       </Half>
 
       <Half
@@ -71,17 +49,10 @@ export function Menu(props: {
         focused={choice.zone === "right"}
         label={`play ${mode.title}`}
         onClick={() => choice.choose("right")}
-        color={mode.color}
-        badge="Play"
-        hint={props.camera}
-        media={<Collage key={mode.id} entries={coverItems(mode)} />}
+        media={<Collage key={mode.id} entries={coverItems(mode, mode.id === "shuffle" ? 4 : 1)} />}
       >
-        <span key={mode.id} className="mode__title">
-          {mode.title}
-        </span>
-        <span className="card__sub">{mode.tagline}</span>
-        {best > 0 && <span className="mode__best">Best {best}</span>}
+        <span className="word">play</span>
       </Half>
-    </Split>
+    </Stage>
   );
 }

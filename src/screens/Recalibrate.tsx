@@ -4,13 +4,17 @@ import { Calibrate } from "./Calibrate";
 
 const COUNTDOWN = 3;
 
+/** why setup is running again: the watchdog's verdict, or the player asked for it */
+export type SetupReason = RecalReason | "asked";
+
 /**
  * Shown over whatever you're doing when the calibration stops fitting (you
- * sat up, moved the laptop…). A short notice, then the usual setup; the game
- * underneath is paused and carries on afterwards, streak and all.
+ * sat up, moved the laptop…) or when you ask to set up again. A short notice
+ * (skipped if you asked), then the usual setup; the game underneath is paused
+ * and carries on afterwards, streak and all.
  */
-export function Recalibrate(props: { reason: RecalReason; onDone: () => void; onKeys: () => void; onSnooze: () => void }) {
-  const [phase, setPhase] = useState<"notice" | "setup">("notice");
+export function Recalibrate(props: { reason: SetupReason; onDone: () => void; onKeys: () => void; onSnooze: () => void }) {
+  const [phase, setPhase] = useState<"notice" | "setup">(props.reason === "asked" ? "setup" : "notice");
   const [count, setCount] = useState(COUNTDOWN);
 
   useEffect(() => {
@@ -23,17 +27,13 @@ export function Recalibrate(props: { reason: RecalReason; onDone: () => void; on
   return (
     <div className="overlay" role="dialog" aria-modal="true" aria-label="set up again">
       {phase === "notice" ? (
-        <main className="center setup">
-          <div className="bigicon" aria-hidden>
-            ↻
-          </div>
-          <h2 className="title1">{props.reason === "moved" ? "You moved" : "Tracking slipped"}</h2>
-          <p className="lead">Quick setup again so it stays accurate. Your game is paused.</p>
-          <button className="btn btn--big" onClick={() => setPhase("setup")} autoFocus>
-            Start ({count})
+        <main className="page">
+          <h2 className="head">{props.reason === "moved" ? "you moved" : "lost track"}</h2>
+          <button className="btn" onClick={() => setPhase("setup")} autoFocus>
+            redo setup {count}
           </button>
-          <button className="link link--big" onClick={props.onSnooze}>
-            Not now
+          <button className="link" onClick={props.onSnooze}>
+            not now
           </button>
         </main>
       ) : (

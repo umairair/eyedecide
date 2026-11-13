@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { Side } from "../core/dwell";
 import { clockFor, heatFor, MAX_MULT, multiplier, REVEAL_MS } from "../core/pace";
 import { firstRound, nextRound, pointsFor, Recent, type Round } from "../core/rounds";
-import type { Mode } from "../data/modes";
+import { DECKS } from "../data/decks";
 import { Picture, preload } from "../pictures";
 import { CountUp, Half, Headline, Icon, Lives, Plate, Stage } from "../ui";
 import { useBinaryChoice } from "../hooks";
@@ -33,7 +33,6 @@ interface Outcome {
 }
 
 export function Game(props: {
-  mode: Mode;
   camera: boolean;
   /** something is showing over the game: don't take answers */
   paused: boolean;
@@ -43,10 +42,9 @@ export function Game(props: {
   onOver: (score: number) => void;
   onRecalibrate: () => void;
 }) {
-  const { mode } = props;
   const [played] = useState(() => load("prefs", { rounds: 0 }).rounds);
-  const recent = useMemo(() => new Recent(storage(), mode.id), [mode.id]);
-  const [round, setRound] = useState<Round>(() => firstRound(mode, recent));
+  const recent = useMemo(() => new Recent(storage()), []);
+  const [round, setRound] = useState<Round>(() => firstRound(DECKS, recent));
   const [score, setScore] = useState(0);
   /** rounds won, close calls counting double: what the difficulty climbs on (the score runs away with the multiplier) */
   const [level, setLevel] = useState(0);
@@ -90,7 +88,7 @@ export function Game(props: {
     if (right) props.onScore(nextScore);
 
     // deal the next round now so its pictures load during the reveal
-    const upcoming = nextLives > 0 ? nextRound(mode, round, nextLevel, recent) : null;
+    const upcoming = nextLives > 0 ? nextRound(DECKS, round, nextLevel, recent) : null;
     if (upcoming) preload(upcoming.deck.picture, upcoming.left, upcoming.right);
 
     timer.current = window.setTimeout(
@@ -114,7 +112,7 @@ export function Game(props: {
   useEffect(() => {
     if (revealed) return;
     const el = clock.current;
-    const total = clockFor(round.n, mode.mixed);
+    const total = clockFor(round.n);
     let ms = total;
     let last = performance.now();
     let low = false;
@@ -140,13 +138,12 @@ export function Game(props: {
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [round, revealed, mode.mixed]);
+  }, [round, revealed]);
 
   const countUp = deck.countUp !== false;
 
   const card = (side: Side) => {
     const item = round[side];
-    const known = round.known === side;
     const unit = [deck.unit, deck.datedSub ? item.sub : null].filter(Boolean).join(" · ");
     return (
       <Half
@@ -164,8 +161,8 @@ export function Game(props: {
       >
         <span className="name">{item.name}</span>
         {item.sub && !deck.datedSub && <span className="sub">{item.sub}</span>}
-        <span className={`value ${revealed || known ? "" : "is-hidden"}`}>
-          {known || (revealed && !countUp) ? deck.format(item.value) : revealed ? <CountUp value={item.value} format={deck.format} /> : "?"}
+        <span className={`value ${revealed ? "" : "is-hidden"}`}>
+          {!revealed ? "?" : countUp ? <CountUp value={item.value} format={deck.format} /> : deck.format(item.value)}
         </span>
         {unit && <span className="unit">{unit}</span>}
       </Half>

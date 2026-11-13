@@ -17,7 +17,7 @@ export interface DwellConfig {
   graceMs?: number;
   /** pause after a choice so one long look doesn't fire twice */
   cooldownMs?: number;
-  /** per-side multiplier on dwellMs, e.g. a quick "next" and a deliberate "play" */
+  /** per-side multiplier on dwellMs; Infinity makes a side unpickable */
   scale?: Partial<Record<Side, number>>;
   /**
    * Only start listening once the gaze has passed through the middle, and

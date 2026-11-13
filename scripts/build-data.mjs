@@ -1,6 +1,6 @@
-// Builds the data snapshots in src/data/*.json for the newer game modes.
+// Builds the data snapshots in src/data/*.json that the questions are drawn from.
 //
-//   npm run data            all modes
+//   npm run data            all of them
 //   npm run data steam      just one (steam, billionaires, youtube, wikipedia, countries,
 //                           deadliest, prices, knowledge, social, spotify, older, animals)
 //

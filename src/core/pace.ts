@@ -20,11 +20,10 @@ export const heatFor = (left: number) => (left >= QUICK ? 2 : 1);
 
 /**
  * Milliseconds on the clock for round `n` (0 = first). It tightens as the run
- * goes on. Mixed modes ask a new question every round, so they get longer to read it.
+ * goes on, down to a floor that still leaves time to read a new question.
  */
-export function clockFor(n: number, mixed = false) {
-  const [start, floor] = mixed ? [8000, 4500] : [7000, 3500];
-  return Math.max(floor, start - 250 * n);
+export function clockFor(n: number) {
+  return Math.max(4500, 8000 - 250 * n);
 }
 
 /** how long the answer stays up before the next round */

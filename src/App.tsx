@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import { load, save } from "./core/storage";
-import type { Mode } from "./data/modes";
 import { useCameraStatus, useFaceLost, useRecalNeeded, useTrackingHealth } from "./hooks";
 import { Recalibrate, type SetupReason } from "./screens/Recalibrate";
 import { hub } from "./tracking/InputHub";
 import { Start } from "./screens/Start";
 import { Calibrate } from "./screens/Calibrate";
-import { Menu } from "./screens/Menu";
 import { Game } from "./screens/Game";
 import { Over } from "./screens/Over";
 import { Practice } from "./screens/Practice";
@@ -14,25 +12,22 @@ import { Pause } from "./screens/Pause";
 import { About } from "./screens/About";
 import { Camera } from "./ui";
 
-type Pick = Mode;
-
 type Screen =
   | { name: "start" }
   | { name: "calibrate" }
   | { name: "practice" }
-  | { name: "menu" }
   /** prevBest: the best before this run, so the end can tell a new one */
-  | { name: "game"; mode: Pick; run: number; prevBest: number }
-  | { name: "over"; mode: Pick; score: number; newBest: boolean };
+  | { name: "game"; run: number; prevBest: number }
+  | { name: "over"; score: number; newBest: boolean };
 
-const idOf = (m: Pick) => m.id;
+/** saved under the name it had when this was one game of several, so a best from then carries over */
+const loadBest = () => load("best", { shuffle: 0 }).shuffle;
 
 export function App() {
   const status = useCameraStatus();
   const [screen, setScreen] = useState<Screen>({ name: "start" });
   const [camera, setCamera] = useState(false);
-  const [best, setBest] = useState<Record<string, number>>(() => load("best", {}));
-  const [menuIndex, setMenuIndex] = useState(0);
+  const [best, setBest] = useState(loadBest);
   const [about, setAbout] = useState(false);
   /** setup is showing again over the current screen: the calibration stopped fitting, or the player asked */
   const [recal, setRecal] = useState<SetupReason | null>(null);
@@ -40,7 +35,8 @@ export function App() {
   /** eyes held shut mid-game: the hands-free way out */
   const [paused, setPaused] = useState(false);
 
-  const playing = screen.name === "menu" || screen.name === "game" || screen.name === "over" || screen.name === "practice";
+  const playing = screen.name === "game" || screen.name === "over" || screen.name === "practice";
+  const play = () => setScreen({ name: "game", run: Date.now(), prevBest: best });
 
   // the setup screen asks for the camera as it opens
   const startCam = () => {
@@ -53,11 +49,11 @@ export function App() {
   const calibrated = () => {
     // first time on this device: a short practice before any real question
     if (!load("prefs", { practiced: false }).practiced) setScreen({ name: "practice" });
-    else setScreen({ name: "menu" });
+    else play();
   };
   const practiced = () => {
     save("prefs", { ...load("prefs", {}), practiced: true });
-    setScreen({ name: "menu" });
+    play();
   };
   const startKeys = () => {
     setCamera(false);
@@ -66,7 +62,7 @@ export function App() {
     hub.setCalibration(null);
     setRecal(null);
     // a run in progress carries on with the mouse
-    setScreen((s) => (s.name === "game" || s.name === "over" ? s : { name: "menu" }));
+    if (screen.name !== "game" && screen.name !== "over") play();
   };
   /** set up the camera again without losing your place: over the current screen, which carries on after */
   const resetup = () => (playing ? setRecal("asked") : setScreen({ name: "calibrate" }));
@@ -86,7 +82,7 @@ export function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // hold your eyes shut for a moment in a game: pause, then look at menu or resume
+  // hold your eyes shut for a moment in a game: pause, then look at resume
   const inGame = screen.name === "game";
   useEffect(() => {
     if (!inGame) return setPaused(false);
@@ -106,11 +102,10 @@ export function App() {
       if (e.key !== "Escape") return;
       if (about) return setAbout(false);
       if (paused) return setPaused(false);
-      if ((screen.name === "game" || screen.name === "over" || screen.name === "practice")) setScreen({ name: "menu" });
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [about, screen.name, paused]);
+  }, [about, paused]);
 
   const lost = useFaceLost(camera && status === "ready" && playing, 800);
   const health = useTrackingHealth(camera && status === "ready" && playing && !recal);
@@ -124,55 +119,34 @@ export function App() {
     if (camera && status === "error" && playing) setRecal((r) => r ?? "asked");
   }, [camera, status, playing]);
 
-  // scores count as they're made, so leaving a run early (Esc, the menu, a closed tab) keeps a new best
-  useEffect(() => save("best", best), [best]);
-  const record = (mode: Pick, score: number) =>
-    setBest((b) => (score > (b[idOf(mode)] ?? 0) ? { ...b, [idOf(mode)]: score } : b));
+  // scores count as they're made, so leaving a run early (a closed tab) keeps a new best
+  useEffect(() => save("best", { shuffle: best }), [best]);
+  const record = (score: number) => setBest((b) => Math.max(b, score));
 
-  const finish = (mode: Pick, score: number, prevBest: number) => {
-    record(mode, score);
-    setScreen({ name: "over", mode, score, newBest: score > prevBest });
+  const finish = (score: number, prevBest: number) => {
+    record(score);
+    setScreen({ name: "over", score, newBest: score > prevBest });
   };
-  const play = (mode: Pick) => setScreen({ name: "game", mode, run: Date.now(), prevBest: best[idOf(mode)] ?? 0 });
 
   return (
     <>
       {screen.name === "start" && <Start onPlay={startCam} onAbout={() => setAbout(true)} />}
       {screen.name === "calibrate" && <Calibrate onDone={calibrated} onKeys={startKeys} />}
       {screen.name === "practice" && <Practice onDone={practiced} onRecalibrate={resetup} />}
-      {screen.name === "menu" && (
-        <Menu
-          best={best}
-          index={menuIndex}
-          onPlay={(mode, i) => {
-            setMenuIndex(i);
-            play(mode);
-          }}
-        />
-      )}
       {screen.name === "game" && (
         <Game
           key={screen.run}
-          mode={screen.mode}
           camera={camera}
           paused={paused}
-          best={best[idOf(screen.mode)] ?? 0}
-          onScore={(s) => record(screen.mode, s)}
-          onOver={(s) => finish(screen.mode, s, screen.prevBest)}
+          best={best}
+          onScore={record}
+          onOver={(s) => finish(s, screen.prevBest)}
           onRecalibrate={resetup}
         />
       )}
-      {screen.name === "over" && (
-        <Over
-          score={screen.score}
-          best={best[idOf(screen.mode)] ?? 0}
-          newBest={screen.newBest}
-          onMenu={() => setScreen({ name: "menu" })}
-          onAgain={() => play(screen.mode)}
-        />
-      )}
+      {screen.name === "over" && <Over score={screen.score} best={best} newBest={screen.newBest} onAgain={play} />}
 
-      {paused && !recal && <Pause onMenu={() => setScreen({ name: "menu" })} onResume={() => setPaused(false)} />}
+      {paused && !recal && <Pause onResume={() => setPaused(false)} />}
 
       {recal && (
         <Recalibrate
@@ -197,7 +171,6 @@ export function App() {
       {/* every control there is, in one quiet bar at the bottom middle, where a glance picks nothing */}
       {screen.name !== "start" && (
         <nav className="bar">
-          {(screen.name === "game" || screen.name === "over") && <button onClick={() => setScreen({ name: "menu" })}>menu</button>}
           {playing && (
             // with the mouse, this is also how you switch to your eyes
             <button onClick={() => (camera ? resetup() : startCam())}>

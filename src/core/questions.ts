@@ -77,9 +77,8 @@ const distinct = (a: Item, b: Item) => Math.max(a.value, b.value) / Math.min(a.v
 
 /**
  * Picks an opponent for `champion` at the given difficulty, on the requested
- * side of it (`higher` true = the challenger should be bigger). Returns null
- * when nothing fits: the caller retires the champion instead of falling back
- * to a predictable matchup.
+ * side of it (`higher` true = the challenger should be bigger; null = either).
+ * Returns null when nothing fits.
  */
 export function pickChallenger(
   pool: Item[],
@@ -88,7 +87,6 @@ export function pickChallenger(
   higher: boolean | null,
   used: Set<string>,
   rng: Rng = Math.random,
-  allowUsed = true,
 ): Item | null {
   const r = ranking(pool);
   const at = r.rank(champion);
@@ -103,7 +101,6 @@ export function pickChallenger(
   // widen the band for fresh cards first, repeat only as a last resort.
   const steps: [number, boolean][] = [[1, false], [1.5, false], [2.2, false], [3.5, false], [1, true], [2.2, true]];
   for (const [widen, repeat] of steps) {
-    if (repeat && !allowUsed) break;
     const c = r.items.filter((x) => (repeat || !used.has(x.name)) && fits(x, widen));
     if (c.length) return c[Math.floor(rng() * c.length)];
   }

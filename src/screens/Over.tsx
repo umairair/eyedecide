@@ -1,10 +1,9 @@
 import { CountUp, Half, Plate, Stage } from "../ui";
 import { useBinaryChoice } from "../hooks";
 
-export function Over(props: { score: number; best: number; newBest: boolean; onMenu: () => void; onAgain: () => void }) {
-  const choice = useBinaryChoice(true, (side) => {
-    side === "left" ? props.onMenu() : props.onAgain();
-  });
+/** The run is over: what it scored, and one thing to do about it. */
+export function Over(props: { score: number; best: number; newBest: boolean; onAgain: () => void }) {
+  const choice = useBinaryChoice(true, props.onAgain, "right");
 
   return (
     <Stage className="over">
@@ -16,9 +15,6 @@ export function Over(props: { score: number; best: number; newBest: boolean; onM
         </div>
         <span className="label">{props.newBest ? "new best" : `best ${props.best}`}</span>
       </Plate>
-      <Half side="left" panelRef={choice.leftRef} focused={choice.zone === "left"} label="menu" onClick={() => choice.choose("left")}>
-        <span className="word">menu</span>
-      </Half>
       <Half side="right" panelRef={choice.rightRef} focused={choice.zone === "right"} label="play again" onClick={() => choice.choose("right")}>
         <span className="word">again</span>
       </Half>

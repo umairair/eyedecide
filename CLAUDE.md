@@ -1,6 +1,6 @@
 # eyedecide
 
-Higher-or-lower game played with your eyes. Vite + React + TypeScript, MediaPipe face tracking.
+Trivia game played with your eyes. One game, no modes and no menu: setup goes straight into the first question, and every round asks something new. Vite + React + TypeScript, MediaPipe face tracking.
 
 ## Git
 
@@ -43,7 +43,7 @@ Umair's taste. Get this right the first time.
 - Nothing decorative. If it doesn't help someone play, it goes.
 
 **Words in the game**
-- Lowercase, one or two plain words: `play`, `next`, `menu`, `again`, `recalibrate`, `info`.
+- Lowercase, one or two plain words: `play`, `again`, `resume`, `recalibrate`, `info`.
 - No taglines, no helper sentences, no reassurance copy, no hints. If a control needs explaining, redesign it.
 - Say what is happening, plainly. `recalibrating`, not `lost track`.
 
@@ -56,5 +56,5 @@ Umair's taste. Get this right the first time.
 - Signed `- Umair`. Links: devpost and linkedin, not github.
 
 **Controls**
-- As few as possible. There is no settings screen and no sound. One floating bar at the bottom middle: `menu` (in a game), `recalibrate`, `info`.
+- As few as possible. There is no settings screen and no sound. One floating bar at the bottom middle: `recalibrate`, `info`.
 - Never make the player configure anything.

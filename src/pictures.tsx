@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { Item } from "./core/questions";
-import type { Deck, Picture as Kind } from "./data/modes";
+import type { Picture as Kind } from "./data/decks";
 import { flagUrl } from "./flags";
 
 function hash(s: string) {
@@ -77,19 +77,6 @@ function Cover({ name }: { name: string }) {
   return (
     <div className="pic pic--cover" style={{ background: `hsl(${hue} 55% 42%)` }}>
       {initials}
-    </div>
-  );
-}
-
-/** A mode's face on the menu: one big picture, or a 2×2 grid when given four. */
-export function Collage({ entries }: { entries: { deck: Deck; item: Item }[] }) {
-  return (
-    <div className={`collage ${entries.length > 1 ? "collage--grid" : ""}`}>
-      {entries.map(({ deck, item }) => (
-        <div key={deck.id + item.name}>
-          <Picture kind={deck.picture} item={item} />
-        </div>
-      ))}
     </div>
   );
 }

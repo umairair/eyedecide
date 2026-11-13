@@ -83,7 +83,8 @@ type PanelRef = (el: HTMLElement | null) => void;
 
 /**
  * The one input primitive the whole app is built on: a left/right choice.
- * Fed by gaze dwell, the arrow keys, or a click (via `choose`).
+ * Fed by gaze dwell, the arrow keys, or a click (via `choose`). With `only`,
+ * there is a single thing to pick and the other side does nothing.
  *
  * Dwell progress is written straight to each panel's `--p` CSS variable
  * instead of React state, so a tracked frame never re-renders the screen.
@@ -92,13 +93,12 @@ type PanelRef = (el: HTMLElement | null) => void;
 export function useBinaryChoice(
   active: boolean,
   onChoose: (side: Side) => void,
-  scale?: Partial<Record<Side, number>>,
+  only?: Side,
 ) {
   const [zone, setZone] = useState<Side | null>(null);
   const cb = useRef(onChoose);
   cb.current = onChoose;
   const els = useRef<Record<Side, HTMLElement | null>>({ left: null, right: null });
-  const scaleKey = `${scale?.left ?? 1}:${scale?.right ?? 1}`;
 
   useEffect(() => {
     const paint = (l: number, r: number) => {
@@ -109,14 +109,13 @@ export function useBinaryChoice(
     setZone(null);
     if (!active) return;
 
-    const [sl, sr] = scaleKey.split(":").map(Number);
     // a shaky calibration (heavy breathing, a wobbly lap) gets a wider middle,
     // so wobble alone can't reach a side
     const noise = hub.calibration?.noise ?? 0;
     const machine = new DwellMachine({
       dwellMs: DWELL_MS,
       deadZone: Math.max(DEAD_ZONE, Math.min(0.45, 2.5 * noise)),
-      scale: { left: sl, right: sr },
+      scale: only && { [only === "left" ? "right" : "left"]: Infinity },
       requireCenter: true,
     });
     let last = performance.now();
@@ -127,7 +126,8 @@ export function useBinaryChoice(
       last = f.t;
       const r = machine.update(f.s, dt, f.sigma); // s is null when the face is missing: progress freezes
       paint(r.left, r.right);
-      if (r.zone !== lastZone) setZone((lastZone = r.zone));
+      const zone = only && r.zone !== only ? null : r.zone;
+      if (zone !== lastZone) setZone((lastZone = zone));
       if (r.armed !== lastArmed) document.body.dataset.armed = String((lastArmed = r.armed));
       if (r.committed) {
         hub.learn(r.committed, "gaze");
@@ -140,7 +140,7 @@ export function useBinaryChoice(
       if (hub.paused) return;
       if ((e.target as HTMLElement)?.closest?.("input, select, textarea, dialog")) return;
       const side: Side | null = e.key === "ArrowLeft" ? "left" : e.key === "ArrowRight" ? "right" : null;
-      if (!side) return;
+      if (!side || (only && side !== only)) return;
       hub.learn(side, "manual");
       cb.current(side);
       e.preventDefault();
@@ -151,7 +151,7 @@ export function useBinaryChoice(
       window.removeEventListener("keydown", onKey);
       delete document.body.dataset.armed;
     };
-  }, [active, scaleKey]);
+  }, [active, only]);
 
   const choose = useCallback(
     (side: Side) => {

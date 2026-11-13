@@ -1,6 +1,6 @@
 // Inputs for scripts/build-data.mjs.
-// Live-fetched modes only list *what* to fetch; the numbers come from the APIs.
-// Curated modes (deadliest, prices, knowledge) carry their own figure + source.
+// Live-fetched subjects only list *what* to fetch; the numbers come from the APIs.
+// Curated ones (deadliest, prices, knowledge) carry their own figure + source.
 // `wiki` is the English Wikipedia article used for the picture.
 
 // ---------- Steam: app ids (peak players come from SteamCharts) ----------
@@ -191,7 +191,7 @@ export const PRICES = [
   { name: "iPhone 16 Pro Max", wiki: "iPhone 16 Pro", value: 1199, sub: "Launch, 2024" },
 ];
 
-// ---------- The Knowledge Test: one deck per topic ----------
+// ---------- General knowledge: one deck per topic ----------
 const yearsAgo = (y) => 2026 - y; // stored as age so "higher" = older
 export const KNOWLEDGE = [
   {

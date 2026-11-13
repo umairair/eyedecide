@@ -4,9 +4,9 @@ import { DriftCorrector } from "./drift";
 import { EyeCloseDetector } from "./eyes";
 import { OneEuroFilter } from "./oneEuro";
 import { difficulty, pickChallenger, pickPair, ranking, type Item } from "./questions";
-import { ALL_MODES, coverItems } from "../data/modes";
+import { DECKS } from "../data/decks";
 import { flagUrl } from "../flags";
-import { firstRound, MAX_REIGN, nextRound, pointsFor, Recent, type Round } from "./rounds";
+import { firstRound, nextRound, pointsFor, Recent, subjectOf, type Round } from "./rounds";
 import { clockFor, heatFor, MAX_MULT, multiplier, TIERS } from "./pace";
 
 /** deterministic noise */
@@ -220,81 +220,23 @@ describe("game logic, simulated perfect player", () => {
     return { getItem: (k: string) => box.get(k) ?? null, setItem: (k: string, v: string) => void box.set(k, v) };
   };
   /** plays `n` rounds always answering right */
-  const playRun = (modeId: string, n: number, seed: number) => {
-    const mode = ALL_MODES.find((m) => m.id === modeId)!;
-    const recent = new Recent(memory(), modeId);
+  const playRun = (n: number, seed: number) => {
+    const recent = new Recent(memory());
     const r = rng(seed);
-    const rounds: Round[] = [firstRound(mode, recent, r)];
+    const rounds: Round[] = [firstRound(DECKS, recent, r)];
     let score = 0;
     for (let i = 1; i < n; i++) {
       score += pointsFor(rounds[i - 1]);
-      rounds.push(nextRound(mode, rounds[i - 1], score, recent, r));
+      rounds.push(nextRound(DECKS, rounds[i - 1], score, recent, r));
     }
     return rounds;
   };
-  const single = ALL_MODES.filter((m) => !m.mixed);
 
-  it.each(single.map((m) => m.id))("%s: no card ever hogs the game", (id) => {
-    for (const seed of [1, 2, 3]) {
-      const rounds = playRun(id, 60, seed);
-      let holder = "";
-      let run = 0;
-      for (const rd of rounds) {
-        const k = rd.known ? rd[rd.known].name : "";
-        run = k && k === holder ? run + 1 : 1;
-        holder = k;
-        expect(run, `${id}: ${k}`).toBeLessThanOrEqual(MAX_REIGN + 1);
-      }
-    }
-  });
-
-  it.each(single.map((m) => m.id))("%s: 'higher' and 'lower' come up about equally, never 3 times running", (id) => {
-    let higher = 0;
-    let total = 0;
-    let longest = 0;
-    for (const seed of [4, 5, 6]) {
-      let streak = 0;
-      let last: boolean | null = null;
-      for (const rd of playRun(id, 60, seed)) {
-        if (!rd.known || rd.retired) {
-          last = null;
-          streak = 0;
-          continue;
-        }
-        const known = rd[rd.known];
-        const other = rd.known === "left" ? rd.right : rd.left;
-        const up = other.value > known.value;
-        higher += up ? 1 : 0;
-        total++;
-        streak = up === last ? streak + 1 : 1;
-        last = up;
-        longest = Math.max(longest, streak);
-      }
-    }
-    expect(higher / total, id).toBeGreaterThan(0.35);
-    expect(higher / total, id).toBeLessThan(0.65);
-    expect(longest, id).toBeLessThanOrEqual(2);
-  });
-
-  it("the biggest thing in a deck retires instead of winning forever", () => {
-    const mode = ALL_MODES.find((m) => m.id === "billionaires")!;
-    const deck = mode.decks[0];
-    const top = [...deck.items].sort((a, b) => b.value - a.value)[0];
-    const second = [...deck.items].sort((a, b) => b.value - a.value)[5];
-    let rd: Round = { deck, left: top, right: second, known: "left", kind: "normal", reign: 1, trend: [false, false], seen: [], n: 3 };
-    const recent = new Recent(memory(), "b");
-    rd = nextRound(mode, rd, 3, recent, rng(1));
-    // asked for "higher" after two "lowers", and nothing beats the top: it retires
-    expect(rd.retired).toBe(top.name);
-    expect([rd.left.name, rd.right.name]).not.toContain(top.name);
-  });
-
-  it.each(ALL_MODES.map((m) => m.id))("%s: gets harder as the score climbs", (id) => {
+  it("gets harder as the score climbs", () => {
     const gaps: number[][] = [[], []];
     for (const seed of [7, 8, 9, 10]) {
-      const rounds = playRun(id, 30, seed);
       let score = 0;
-      for (const rd of rounds) {
+      for (const rd of playRun(30, seed)) {
         const rk = ranking(rd.deck.items);
         const g = Math.abs(rk.rank(rd.left) - rk.rank(rd.right));
         if (score <= 3) gaps[0].push(g);
@@ -303,35 +245,39 @@ describe("game logic, simulated perfect player", () => {
       }
     }
     const avg = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
-    expect(avg(gaps[0]), id).toBeGreaterThan(avg(gaps[1]) * 2);
+    expect(avg(gaps[0])).toBeGreaterThan(avg(gaps[1]) * 2);
   });
 
-  it.each(ALL_MODES.filter((m) => m.decks.every((d) => d.items.length >= 40)).map((m) => m.id))(
-    "%s: no repeats in a 25-round game",
-    (id) => {
-      const rounds = playRun(id, 25, 11);
-      const dealt = rounds.flatMap((rd, i) => (i === 0 || rd.retired || !rd.known ? [rd.left, rd.right] : [rd.known === "left" ? rd.right : rd.left]));
-      const keys = dealt.map((x) => x.name);
-      const deckKeys = rounds.flatMap((rd, i) => (i === 0 || rd.retired || !rd.known ? [rd, rd] : [rd]).map((r) => r.deck.id));
-      const pairs = keys.map((k, i) => `${deckKeys[i]}|${k}`);
-      expect(new Set(pairs).size, id).toBe(pairs.length);
-    },
-  );
-});
-
-describe("game data", () => {
-  const decks = ALL_MODES.flatMap((m) => m.decks.map((d) => ({ m, d })));
-
-  it("has 13 modes, each playable, and no mountains", () => {
-    expect(ALL_MODES).toHaveLength(13);
-    expect(ALL_MODES.map((m) => m.id)).not.toContain("mountains");
-    for (const m of ALL_MODES) {
-      expect(m.decks.length, m.id).toBeGreaterThan(0);
-      expect(m.decks.reduce((n, d) => n + d.items.length, 0), m.id).toBeGreaterThan(20);
+  it("no repeats in a 25-round game, from any deck big enough to avoid them", () => {
+    for (const seed of [11, 12, 13]) {
+      const big = playRun(25, seed).filter((rd) => rd.deck.items.length >= 40);
+      const dealt = big.flatMap((rd) => [rd.left, rd.right].map((x) => `${rd.deck.id}|${x.name}`));
+      expect(dealt.length).toBeGreaterThan(10);
+      expect(new Set(dealt).size).toBe(dealt.length);
     }
   });
 
-  it.each(decks.map(({ m, d }) => [`${m.id}/${d.id}`, d] as const))("%s: clean, unique, positive", (_, d) => {
+  it("the bigger one is on either side about equally", () => {
+    const rounds = [14, 15, 16].flatMap((seed) => playRun(100, seed));
+    const left = rounds.filter((rd) => rd.left.value > rd.right.value).length / rounds.length;
+    expect(left).toBeGreaterThan(0.4);
+    expect(left).toBeLessThan(0.6);
+  });
+});
+
+describe("game data", () => {
+  const deck = (id: string) => DECKS.find((d) => d.id === id)!;
+
+  it("has twelve subjects, each with plenty to ask", () => {
+    const subjects = new Map<string, number>();
+    for (const d of DECKS) subjects.set(subjectOf(d), (subjects.get(subjectOf(d)) ?? 0) + d.items.length);
+    expect(subjects.size).toBe(12);
+    for (const [id, n] of subjects) expect(n, id).toBeGreaterThan(20);
+    expect(new Set(DECKS.map((d) => d.id)).size).toBe(DECKS.length);
+  });
+
+  it.each(DECKS.map((d) => [d.id, d] as const))("%s: clean, unique, positive", (_, d) => {
+    expect(d.question.length).toBeGreaterThan(0);
     expect(d.items.length).toBeGreaterThanOrEqual(10);
     expect(new Set(d.items.map((x) => x.name)).size).toBe(d.items.length);
     for (const it of d.items) {
@@ -343,35 +289,30 @@ describe("game data", () => {
   });
 
   it("gives every photo deck a picture for (nearly) every item", () => {
-    for (const { m, d } of decks) {
+    for (const d of DECKS) {
       if (d.picture !== "photo" && d.picture !== "wide") continue;
       const missing = d.items.filter((x) => !x.image && !x.images?.length);
-      expect(missing.length / d.items.length, `${m.id}/${d.id}`).toBeLessThan(0.1);
+      expect(missing.length / d.items.length, d.id).toBeLessThan(0.1);
     }
   });
 
   it("has a flag file for every country in a flag deck", () => {
-    const flagDecks = decks.filter(({ d }) => d.picture === "flag");
+    const flagDecks = DECKS.filter((d) => d.picture === "flag");
     expect(flagDecks.length).toBeGreaterThan(0);
-    for (const { m, d } of flagDecks) {
+    for (const d of flagDecks) {
       const missing = d.items.filter((x) => !x.code || !flagUrl(x.code)).map((x) => x.name);
-      expect(missing, `${m.id}/${d.id}`).toEqual([]);
+      expect(missing, d.id).toEqual([]);
     }
   });
 
   it("formats the tricky units", () => {
-    const year = ALL_MODES.find((m) => m.id === "knowledge")!.decks.find((d) => d.id === "knowledge-landmarks")!;
+    const year = deck("knowledge-landmarks");
     expect(year.format(year.items.find((x) => x.name === "Great Pyramid")!.value)).toBe("2560 BC");
     expect(year.format(year.items.find((x) => x.name === "Eiffel Tower")!.value)).toBe("1889");
-    const hot = ALL_MODES.find((m) => m.id === "knowledge")!.decks.find((d) => d.id === "knowledge-hot")!;
-    expect(hot.format(310)).toBe("37°C");
-    expect(hot.format(77)).toBe("-196°C");
-    const older = ALL_MODES.find((m) => m.id === "older")!.decks[0];
+    expect(deck("knowledge-hot").format(310)).toBe("37°C");
+    expect(deck("knowledge-hot").format(77)).toBe("-196°C");
+    const older = deck("older");
     expect(older.format(older.items.find((x) => x.name === "Keanu Reeves")!.value)).toBe("Sep 2, 1964");
-  });
-
-  it("has a cover collage of 4 pictures for every mode", () => {
-    for (const m of ALL_MODES) expect(coverItems(m), m.id).toHaveLength(4);
   });
 });
 
@@ -380,50 +321,49 @@ describe("rounds", () => {
     const box = new Map<string, string>();
     return { getItem: (k: string) => box.get(k) ?? null, setItem: (k: string, v: string) => void box.set(k, v) };
   };
-  const steam = ALL_MODES.find((m) => m.id === "steam")!;
-  const countries = ALL_MODES.find((m) => m.id === "countries")!;
+  const steam = DECKS.find((d) => d.id === "steam")!;
+  const countries = DECKS.filter((d) => subjectOf(d) === "countries");
 
   it("never deals a tie or the same item twice", () => {
-    const recent = new Recent(memory(), "t");
-    for (const m of ALL_MODES) {
-      let r = firstRound(m, recent, rng(4));
-      for (let i = 0; i < 25; i++) {
-        expect(r.left.name, m.id).not.toBe(r.right.name);
-        expect(r.left.value, m.id).not.toBe(r.right.value);
-        r = nextRound(m, r, i, recent, rng(i + 9));
-      }
+    const recent = new Recent(memory());
+    let r = firstRound(DECKS, recent, rng(4));
+    for (let i = 0; i < 300; i++) {
+      expect(r.left.name, r.deck.id).not.toBe(r.right.name);
+      expect(r.left.value, r.deck.id).not.toBe(r.right.value);
+      r = nextRound(DECKS, r, i % 30, recent, rng(i + 9));
     }
   });
 
-  it("keeps the winner in single-deck modes", () => {
-    const r = firstRound(steam, new Recent(memory(), "s"), rng(2));
-    const next = nextRound(steam, r, 1, new Recent(memory(), "s"), rng(3));
-    const winner = r.left.value > r.right.value ? r.left : r.right;
-    expect([next.left.name, next.right.name]).toContain(winner.name);
-    expect(next.known).not.toBeNull();
-  });
-
-  it("switches stat every round in Country Wars", () => {
-    const recent = new Recent(memory(), "c");
-    let r = firstRound(countries, recent, rng(5));
-    for (let i = 0; i < 10; i++) {
-      const next = nextRound(countries, r, i, recent, rng(i + 20));
-      expect(next.deck.id).not.toBe(r.deck.id);
-      expect(next.known).toBeNull();
+  it("asks about something else every round", () => {
+    const recent = new Recent(memory());
+    const rand = rng(5);
+    let r = firstRound(DECKS, recent, rand);
+    for (let i = 0; i < 100; i++) {
+      const next = nextRound(DECKS, r, i % 20, recent, rand);
+      expect(subjectOf(next.deck)).not.toBe(subjectOf(r.deck));
       r = next;
     }
   });
 
-  it("Shuffle gives every mode a fair share", () => {
-    const shuffle = ALL_MODES.find((m) => m.id === "shuffle")!;
-    const recent = new Recent(memory(), "sh");
+  it("switches stat every round when there is only one subject", () => {
+    const recent = new Recent(memory());
+    let r = firstRound(countries, recent, rng(5));
+    for (let i = 0; i < 10; i++) {
+      const next = nextRound(countries, r, i, recent, rng(i + 20));
+      expect(next.deck.id).not.toBe(r.deck.id);
+      r = next;
+    }
+  });
+
+  it("gives every subject a fair share", () => {
+    const recent = new Recent(memory());
     const counts = new Map<string, number>();
     const rand = rng(3);
-    let r = firstRound(shuffle, recent, rand);
+    let r = firstRound(DECKS, recent, rand);
     for (let i = 0; i < 600; i++) {
-      const g = r.deck.id.split("-")[0];
+      const g = subjectOf(r.deck);
       counts.set(g, (counts.get(g) ?? 0) + 1);
-      r = nextRound(shuffle, r, i % 20, recent, rand);
+      r = nextRound(DECKS, r, i % 20, recent, rand);
     }
     const shares = [...counts.values()].map((c) => c / 600);
     expect(counts.size).toBe(12);
@@ -432,17 +372,16 @@ describe("rounds", () => {
 
   it("remembers recent items across games", () => {
     const store = memory();
-    const a = new Recent(store, "x");
-    const deck = steam.decks[0];
-    a.add(deck, deck.items[0], deck.items[1]);
-    const b = new Recent(store, "x");
-    expect(b.names(deck).has(deck.items[0].name)).toBe(true);
+    const a = new Recent(store);
+    a.add(steam, steam.items[0], steam.items[1]);
+    const b = new Recent(store);
+    expect(b.names(steam).has(steam.items[0].name)).toBe(true);
   });
 
   it("survives broken storage", () => {
     const bad = { getItem: () => "{not json", setItem: () => { throw new Error("full"); } };
-    const r = new Recent(bad, "z");
-    expect(() => r.add(steam.decks[0], steam.decks[0].items[0])).not.toThrow();
+    const r = new Recent(bad);
+    expect(() => r.add(steam, steam.items[0])).not.toThrow();
   });
 });
 
@@ -464,18 +403,15 @@ describe("pace", () => {
   });
 
   it("the clock tightens to a floor and never goes below it", () => {
-    for (const mixed of [false, true]) {
-      let prev = Infinity;
-      for (let n = 0; n < 60; n++) {
-        const ms = clockFor(n, mixed);
-        expect(ms).toBeLessThanOrEqual(prev);
-        expect(ms).toBeGreaterThanOrEqual(3500);
-        prev = ms;
-      }
-      expect(clockFor(59, mixed)).toBe(clockFor(200, mixed));
+    let prev = Infinity;
+    for (let n = 0; n < 60; n++) {
+      const ms = clockFor(n);
+      expect(ms).toBeLessThanOrEqual(prev);
+      // a new question every round needs time to be read
+      expect(ms).toBeGreaterThanOrEqual(4500);
+      prev = ms;
     }
-    // a new question every round needs longer to read
-    expect(clockFor(0, true)).toBeGreaterThan(clockFor(0, false));
-    expect(clockFor(99, true)).toBeGreaterThan(clockFor(99, false));
+    expect(clockFor(0)).toBeGreaterThan(clockFor(59));
+    expect(clockFor(59)).toBe(clockFor(200));
   });
 });

@@ -1,6 +1,6 @@
 # eyedecide
 
-A higher-or-lower game you play with your eyes. Two pictures, one question ("Richer?", "Who's older?", "More views?"). Look at your answer and hold until the frame closes around it. No mouse needed, though the mouse and arrow keys work too.
+A trivia game you play with your eyes. Two pictures, one question ("Richer?", "Who's older?", "More views?"), and a new one every round. Look at your answer and hold until the frame closes around it. No mouse needed, though the mouse and arrow keys work too.
 
 Rebuilt from the [cuHacking 2025 original](https://github.com/umairair/cuhacking2025).
 
@@ -11,9 +11,9 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173, press Start, allow the camera, follow the 3 dots. Everything runs in the browser; video never leaves the computer.
+Open http://localhost:5173, press play, allow the camera, follow the 3 dots, and the first question comes up. Everything runs in the browser; video never leaves the computer.
 
-`recalibrate` at the bottom redoes the camera setup mid-game and the run carries on after. Clicking works at any time. Close your eyes for a moment to pause. `Esc` goes back to the menu; points count toward your best as you score them.
+`recalibrate` at the bottom redoes the camera setup mid-game and the run carries on after. Clicking works at any time. Close your eyes for a moment to pause. Points count toward your best as you score them.
 
 ## Commands
 
@@ -25,13 +25,13 @@ Open http://localhost:5173, press Start, allow the camera, follow the 3 dots. Ev
 | `npm run data` | Refresh the game data snapshots from their live sources (`npm run data steam` for one) |
 | `npm run fetch-model` | Bundle the face model locally instead of loading it from Google |
 
-## Game modes
+## Questions
 
-Billionaire Battles (Forbes), Who's Older? (Wikidata), Follower Wars (Instagram and TikTok), YouTube Legends, Steam Wars (SteamCharts), Spotify Showdown, The Internet Is Weird (Wikipedia pageviews), Deadliest Things, The Price Is Insane, Animal Kingdom, Country Wars (World Bank), The Knowledge Test, and Shuffle.
+There is one game, and every round asks about something different from the last: billionaires' net worth (Forbes), celebrity ages (Wikidata), Instagram and TikTok followers, YouTube views, Steam peak players (SteamCharts), Spotify listeners, Wikipedia pageviews, the deadliest things, what things cost, animal weight and speed, country stats (World Bank), and general knowledge.
 
-Data ships as snapshots in `src/data/*.json`, built by `scripts/build-data.mjs` from the sources listed in `scripts/sources.mjs`.
+Data ships as snapshots in `src/data/*.json`, built by `scripts/build-data.mjs` from the sources listed in `scripts/sources.mjs`, and `src/data/decks.ts` turns them into the questions.
 
-Rounds get harder as your score climbs (measured by rank, so it feels the same in every mode), with a close call worth double points and a breather every five rounds. A card can win at most three times before it retires, and higher and lower answers come up about equally often.
+Rounds get harder as your score climbs (measured by rank, so it feels the same whatever the question), with a close call worth double points and a breather every five rounds.
 
 ## How the tracking works
 

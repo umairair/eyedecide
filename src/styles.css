@@ -213,7 +213,7 @@ svg {
 .ask.is-answered {
   visibility: hidden;
 }
-/* a small extra at the bottom of the seam, above the controls: where you are in the menu */
+/* a small extra at the bottom of the seam, above the controls */
 .foot {
   place-self: end center;
   margin-bottom: 58px;
@@ -616,25 +616,8 @@ svg {
   font-size: clamp(40px, 10vh, 110px);
   letter-spacing: -0.04em;
 }
-.collage {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  gap: 2px;
-}
-.collage--grid {
-  grid-template: 1fr 1fr / 1fr 1fr;
-}
-.collage > div {
-  min-width: 0;
-  min-height: 0;
-  overflow: hidden;
-}
-.collage--grid .pic--cover {
-  font-size: clamp(24px, 5vh, 54px);
-}
 
-/* ---------- on the plate: lives, score, where you are ---------- */
+/* ---------- on the plate: lives, score ---------- */
 .lives {
   display: flex;
   gap: 7px;

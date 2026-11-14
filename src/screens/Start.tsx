@@ -15,8 +15,8 @@ export function Start({ onPlay, onAbout }: { onPlay?: () => void; onAbout: () =>
       ) : (
         <>
           <div className="elsewhere">
-            <p className="elsewhere__lead">Open this on a laptop or desktop to play.</p>
-            <p>I built it around a webcam and a bigger screen, and the eye tracking doesn't run well on a phone or tablet.</p>
+            <p className="elsewhere__lead">A laptop or desktop is required to play.</p>
+            <p>The gaze tracking is calibrated for a stationary webcam and a full-size display, and the face landmark model does not run reliably on mobile hardware.</p>
           </div>
           <button className="btn" onClick={onAbout}>
             info

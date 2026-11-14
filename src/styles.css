@@ -154,7 +154,7 @@ svg {
   letter-spacing: -0.05em;
   margin-bottom: 14px;
 }
-/* on a phone or tablet: where to play, said the way the info page talks */
+/* on a phone or tablet: what the game requires, and the technical reason */
 .elsewhere {
   display: grid;
   gap: 12px;

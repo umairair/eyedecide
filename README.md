@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173, press play, allow the camera, follow the 3 dots, and the first question comes up. Everything runs in the browser; video never leaves the computer.
+Open http://localhost:5173 on a laptop or desktop (a phone or tablet only gets the info page), press play, allow the camera, follow the 3 dots, and the first question comes up. Everything runs in the browser; video never leaves the computer.
 
 When a game is over, look left at `recalibrate` to redo the camera setup, or right at `again` to play another. Clicking works at any time. Close your eyes for a moment to pause. Points count toward your best as you score them.
 

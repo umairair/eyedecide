@@ -58,3 +58,4 @@ Umair's taste. Get this right the first time.
 **Controls**
 - As few as possible. There is no settings screen and no sound. `info` floats at the bottom middle. When a game is over the two choices are `recalibrate` on the left, which redoes the camera setup, and `again` on the right.
 - Never make the player configure anything.
+- Phones and tablets don't get the game (`handheld` in `src/device.ts`): the front door says `play on a laptop or desktop` and `info` is the one button, so the info page still opens for anyone on a phone.

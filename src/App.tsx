@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { load, save } from "./core/storage";
+import { handheld } from "./device";
 import { useCameraStatus, useFaceLost, useRecalNeeded } from "./hooks";
 import { Recalibrate, type SetupReason } from "./screens/Recalibrate";
 import { hub } from "./tracking/InputHub";
@@ -24,6 +25,8 @@ type Screen =
 const loadBest = () => load("best", { shuffle: 0 }).shuffle;
 
 export function App() {
+  /** a phone or tablet stays on the front door: no camera, no face model, just where to play and info */
+  const [mobile] = useState(handheld);
   const status = useCameraStatus();
   const [screen, setScreen] = useState<Screen>({ name: "start" });
   const [camera, setCamera] = useState(false);
@@ -67,6 +70,7 @@ export function App() {
 
   // load the face model in the background; returning players skip the start screen
   useEffect(() => {
+    if (mobile) return;
     const { input } = load("prefs", { input: "" });
     // (not for mouse players: it's megabytes of model they'd never use)
     if (input !== "keys") hub.preload();
@@ -127,7 +131,7 @@ export function App() {
 
   return (
     <>
-      {screen.name === "start" && <Start onPlay={startCam} onAbout={() => setAbout(true)} />}
+      {screen.name === "start" && <Start onPlay={mobile ? undefined : startCam} onAbout={() => setAbout(true)} />}
       {screen.name === "calibrate" && <Calibrate onDone={calibrated} onKeys={startKeys} />}
       {screen.name === "practice" && <Practice onDone={practiced} onRecalibrate={resetup} />}
       {screen.name === "game" && (

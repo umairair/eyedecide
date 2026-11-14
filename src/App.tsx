@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { load, save } from "./core/storage";
-import { useCameraStatus, useFaceLost, useRecalNeeded, useTrackingHealth } from "./hooks";
+import { useCameraStatus, useFaceLost, useRecalNeeded } from "./hooks";
 import { Recalibrate, type SetupReason } from "./screens/Recalibrate";
 import { hub } from "./tracking/InputHub";
 import { Start } from "./screens/Start";
@@ -42,9 +42,7 @@ export function App() {
   const startCam = () => {
     setCamera(true);
     save("prefs", { ...load("prefs", {}), input: "camera" });
-    // switching mid-run keeps the run (a first-timer gets the full setup and its practice instead)
-    if (screen.name === "game" && load("prefs", { practiced: false }).practiced) setRecal("asked");
-    else setScreen({ name: "calibrate" });
+    setScreen({ name: "calibrate" });
   };
   const calibrated = () => {
     // first time on this device: a short practice before any real question
@@ -65,7 +63,7 @@ export function App() {
     if (screen.name !== "game" && screen.name !== "over") play();
   };
   /** set up the camera again without losing your place: over the current screen, which carries on after */
-  const resetup = () => (playing ? setRecal("asked") : setScreen({ name: "calibrate" }));
+  const resetup = () => setRecal("asked");
 
   // load the face model in the background; returning players skip the start screen
   useEffect(() => {
@@ -108,7 +106,6 @@ export function App() {
   }, [about, paused]);
 
   const lost = useFaceLost(camera && status === "ready" && playing, 800);
-  const health = useTrackingHealth(camera && status === "ready" && playing && !recal);
   const needed = useRecalNeeded(camera && status === "ready" && playing && !recal);
   useEffect(() => {
     if (needed) setRecal(needed);
@@ -144,7 +141,16 @@ export function App() {
           onRecalibrate={resetup}
         />
       )}
-      {screen.name === "over" && <Over score={screen.score} best={best} newBest={screen.newBest} onAgain={play} />}
+      {screen.name === "over" && (
+        <Over
+          score={screen.score}
+          best={best}
+          newBest={screen.newBest}
+          // with the mouse, this is also how you switch to your eyes
+          onRecalibrate={camera ? resetup : startCam}
+          onAgain={play}
+        />
+      )}
 
       {paused && !recal && <Pause onResume={() => setPaused(false)} />}
 
@@ -168,16 +174,9 @@ export function App() {
         </div>
       )}
 
-      {/* every control there is, in one quiet bar at the bottom middle, where a glance picks nothing */}
+      {/* the one control off the stage, at the bottom middle, where a glance picks nothing */}
       {screen.name !== "start" && (
         <nav className="bar">
-          {playing && (
-            // with the mouse, this is also how you switch to your eyes
-            <button onClick={() => (camera ? resetup() : startCam())}>
-              {health && <i className={`light is-${health}`} title={health === "ok" ? "tracking" : "hold still"} />}
-              recalibrate
-            </button>
-          )}
           <button onClick={() => setAbout(true)}>info</button>
         </nav>
       )}

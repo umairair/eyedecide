@@ -56,5 +56,5 @@ Umair's taste. Get this right the first time.
 - Signed `- Umair`. Links: devpost and linkedin, not github.
 
 **Controls**
-- As few as possible. There is no settings screen and no sound. One floating bar at the bottom middle: `recalibrate`, `info`.
+- As few as possible. There is no settings screen and no sound. `info` floats at the bottom middle. When a game is over the two choices are `recalibrate` on the left, which redoes the camera setup, and `again` on the right.
 - Never make the player configure anything.

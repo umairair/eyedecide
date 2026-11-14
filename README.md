@@ -13,7 +13,7 @@ npm run dev
 
 Open http://localhost:5173, press play, allow the camera, follow the 3 dots, and the first question comes up. Everything runs in the browser; video never leaves the computer.
 
-`recalibrate` at the bottom redoes the camera setup mid-game and the run carries on after. Clicking works at any time. Close your eyes for a moment to pause. Points count toward your best as you score them.
+When a game is over, look left at `recalibrate` to redo the camera setup, or right at `again` to play another. Clicking works at any time. Close your eyes for a moment to pause. Points count toward your best as you score them.
 
 ## Commands
 

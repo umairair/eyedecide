@@ -848,16 +848,6 @@ svg {
     color: var(--text);
   }
 }
-/* tracking light */
-.light {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--good);
-}
-.light.is-degraded {
-  background: var(--bad);
-}
 
 /* ---------- about: its own page ---------- */
 .about {

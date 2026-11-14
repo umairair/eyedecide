@@ -38,33 +38,6 @@ export function useFaceLost(enabled: boolean, graceMs = 600) {
   return lost;
 }
 
-/**
- * Tracking health for the status light: "ok", "degraded" (a sensor is out or
- * the signal is shaky, so picks wait until sure), or null when not tracking.
- * Changes only after holding for a second, so the light doesn't flicker.
- */
-export function useTrackingHealth(enabled: boolean) {
-  const [health, setHealth] = useState<"ok" | "degraded" | null>(null);
-  useEffect(() => {
-    if (!enabled) {
-      setHealth(null);
-      return;
-    }
-    let shown: "ok" | "degraded" | null = null;
-    let pending: "ok" | "degraded" | null = null;
-    let since = 0;
-    return hub.subscribe((f) => {
-      if (!f.face || !hub.calibration) return;
-      if (f.health !== pending) {
-        pending = f.health;
-        since = f.t;
-      }
-      if (pending !== shown && (shown === null || f.t - since >= 1000)) setHealth((shown = pending));
-    });
-  }, [enabled]);
-  return health;
-}
-
 /** Why the calibration needs redoing, as soon as the tracker's watchdog says so; null otherwise. */
 export function useRecalNeeded(enabled: boolean) {
   const [reason, setReason] = useState<RecalReason | null>(null);

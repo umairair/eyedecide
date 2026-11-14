@@ -14,7 +14,10 @@ export function Start({ onPlay, onAbout }: { onPlay?: () => void; onAbout: () =>
         </>
       ) : (
         <>
-          <p className="note">play on a laptop or desktop</p>
+          <div className="elsewhere">
+            <p className="elsewhere__lead">Open this on a laptop or desktop to play.</p>
+            <p>I built it around a webcam and a bigger screen, and the eye tracking doesn't run well on a phone or tablet.</p>
+          </div>
           <button className="btn" onClick={onAbout}>
             info
           </button>

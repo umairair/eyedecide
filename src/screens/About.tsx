@@ -16,6 +16,9 @@ export function About({ onBack }: { onBack: () => void }) {
           <a href="https://www.linkedin.com/in/umairmal/" target="_blank" rel="noreferrer">
             linkedin
           </a>
+          <a href="https://github.com/umairair/eyedecide" target="_blank" rel="noreferrer">
+            github repo
+          </a>
         </nav>
       </article>
       {/* back sits where info was, at the bottom middle: just the word */}

@@ -53,7 +53,7 @@ Umair's taste. Get this right the first time.
 - Never: clipped fragments ("two things. one question."), haiku-style line lists, labelled feature rows (`pick`, `pause`, `local`), salesy or techbro phrasing, em-dashes.
 - Humble. "to showcase it", not "to show it off". State facts and stop.
 - Don't explain what should be obvious. Clicking works everywhere and is never mentioned.
-- Signed `- Umair`. Links: devpost and linkedin, not github.
+- Signed `- Umair`. Links: devpost, linkedin and the github repo, in that order.
 
 **Controls**
 - As few as possible. There is no settings screen and no sound. `info` floats at the bottom middle. When a game is over the two choices are `recalibrate` on the left, which redoes the camera setup, and `again` on the right.

@@ -10,6 +10,8 @@
 }
 
 :root {
+  /* base tokens (--bg through --mute, and --ease) are shared with sloverb, a
+     sibling project on the same site: change them in both */
   --bg: #000;
   --card: #111113;
   --raised: rgb(28 28 30 / 0.78);

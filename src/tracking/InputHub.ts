@@ -43,7 +43,7 @@ export class InputHub {
   stream: MediaStream | null = null;
   calibration: CalibrationModel | null = null;
   latest: InputFrame = { t: 0, ...EMPTY };
-  /** while true (e.g. settings open) frames still flow but carry no signal, so nothing gets picked */
+  /** while true (info open, setup running again) frames still flow but carry no signal, so nothing gets picked */
   paused = false;
 
   private landmarker: FaceLandmarker | null = null;

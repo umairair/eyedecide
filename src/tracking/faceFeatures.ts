@@ -90,26 +90,23 @@ export function extractFeatures(res: FaceLandmarkerResult, aspect = 4 / 3): Face
     dist = -30 * Math.log(width);
   }
 
-  // A second, independent head-turn reading: where the nose tip sits along the
-  // line between the cheeks (2D geometry, no pose solver). Fusion cross-checks
-  // it against the 3D pose to catch pose glitches.
-  const along2 = (i: number, a: number, b: number) => {
+  /** where landmark `i` projects onto the line from `a` to `b`, in pixel space (0 = midpoint) */
+  const along = (i: number, a: number, b: number) => {
     const ex = (lm[b].x - lm[a].x) * aspect, ey = lm[b].y - lm[a].y;
     const px = (lm[i].x - lm[a].x) * aspect, py = lm[i].y - lm[a].y;
     return (px * ex + py * ey) / (ex * ex + ey * ey || 1e-9) - 0.5;
   };
-  const yaw2 = along2(1, 234, 454) * 90;
+
+  // A second, independent head-turn reading: where the nose tip sits along the
+  // line between the cheeks (2D geometry, no pose solver). Fusion cross-checks
+  // it against the 3D pose to catch pose glitches.
+  const yaw2 = along(1, 234, 454) * 90;
 
   // iris position along the line between the eye corners, in pixel space, so
   // a tilted head or camera doesn't leak into it
   let irisR = 0;
   let irisL = 0;
   if (lm.length >= 478) {
-    const along = (i: number, a: number, b: number) => {
-      const ex = (lm[b].x - lm[a].x) * aspect, ey = lm[b].y - lm[a].y;
-      const px = (lm[i].x - lm[a].x) * aspect, py = lm[i].y - lm[a].y;
-      return (px * ex + py * ey) / (ex * ex + ey * ey || 1e-9) - 0.5;
-    };
     irisR = along(468, 33, 133);
     irisL = along(473, 362, 263);
   }
